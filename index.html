@@ -370,33 +370,7 @@ body[data-theme="light"] .navbar {
   gap: 1.5rem;
   min-width: 0;
 }
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  min-width: 0;
-}
-.nav-link {
-  color: var(--ink-muted);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: var(--transition);
-  position: relative;
-  padding: 0.25rem 0;
-  white-space: nowrap;
-}
-.nav-link:hover, .nav-link.active { color: var(--ink); }
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--gold);
-  border-radius: 2px;
-}
+/* Nav links are now inside the logo dropdown panel — hidden from navbar */
 
 .action-btn {
   background: rgba(255, 255, 255, 0.055);
@@ -424,9 +398,9 @@ body[data-theme="light"] .action-btn {
   border-color: var(--gold);
   box-shadow: 0 4px 16px rgba(201, 169, 110, 0.28);
 }
-/* Hamburger menu button — hidden on laptop/desktop */
+/* Hamburger menu button — always visible */
 .menu-toggle {
-  display: none;
+  display: flex;
   width: 44px;
   height: 40px;
   border: 1px solid var(--border);
@@ -440,7 +414,6 @@ body[data-theme="light"] .action-btn {
   gap: 5px;
   transition: var(--transition);
 }
-
 .menu-toggle span {
   width: 18px;
   height: 1.5px;
@@ -448,11 +421,9 @@ body[data-theme="light"] .action-btn {
   background: currentColor;
   transition: var(--transition);
 }
-
 body[data-theme="light"] .menu-toggle {
   background: rgba(255, 255, 255, 0.54);
 }
-
 .menu-toggle:hover {
   border-color: var(--gold);
   color: var(--gold);
@@ -477,6 +448,57 @@ body[data-theme="light"] .menu-toggle {
   background: var(--gold);
   color: #09090b;
   border-color: var(--gold);
+}
+
+.nav-links {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  width: 220px;
+  display: none;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(9, 9, 11, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+  z-index: 1100;
+}
+body[data-theme="light"] .nav-links {
+  background: rgba(251, 242, 223, 0.96);
+}
+.navbar.menu-open .nav-links {
+  display: flex;
+}
+.nav-link {
+  color: var(--ink-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+  padding: 0.6rem 0.75rem;
+  white-space: nowrap;
+  border-radius: 10px;
+  display: block;
+}
+.nav-link:hover { background: rgba(201, 169, 110, 0.1); color: var(--ink); }
+.nav-link.active { color: var(--gold); background: rgba(201, 169, 110, 0.1); }
+.nav-link.active::after {
+  display: none;
+}
+
+/* Hamburger turns into X when open */
+.navbar.menu-open .menu-toggle span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.navbar.menu-open .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.navbar.menu-open .menu-toggle span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
 }
 
 .hero-dashboard,
@@ -895,7 +917,6 @@ footer {
 @media (max-width: 900px) {
   .pinterest-grid { columns: 2 240px; }
   .nav-controls { gap: 1rem; }
-  .nav-links { gap: 1rem; }
 }
 
 @media (max-width: 768px) {
@@ -947,77 +968,6 @@ footer {
   height: 40px;
   min-height: 40px;
   padding: 0;
-}
-
-/* Show hamburger only on mobile */
-.menu-toggle {
-  display: flex;
-}
-
-/* Dropdown menu hidden by default */
-.nav-links {
-  position: absolute;
-  top: calc(100% + 0.45rem);
-  right: 0.9rem;
-  left: 0.9rem;
-  width: auto;
-  display: none;
-  grid-template-columns: 1fr;
-  gap: 0.55rem;
-  padding: 0.8rem;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: rgba(9, 9, 11, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
-  overflow: hidden;
-}
-
-body[data-theme="light"] .nav-links {
-  background: rgba(251, 242, 223, 0.94);
-}
-
-/* Menu opens only when navbar has this class */
-.navbar.menu-open .nav-links {
-  display: grid;
-}
-
-.nav-link {
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0.72rem 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: rgba(128, 128, 128, 0.06);
-  font-size: 0.92rem;
-  white-space: normal;
-  line-height: 1.15;
-}
-
-.nav-link.active {
-  border-color: var(--gold);
-  background: rgba(201, 169, 110, 0.14);
-}
-
-.nav-link.active::after {
-  display: none;
-}
-
-/* Hamburger turns into X when open */
-.navbar.menu-open .menu-toggle span:nth-child(1) {
-  transform: translateY(6.5px) rotate(45deg);
-}
-
-.navbar.menu-open .menu-toggle span:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar.menu-open .menu-toggle span:nth-child(3) {
-  transform: translateY(-6.5px) rotate(-45deg);
 }
 
   .hero-dashboard {
@@ -1105,7 +1055,6 @@ body[data-theme="light"] .nav-links {
 }
 
 @media (max-width: 380px) {
-  .nav-link { font-size: 0.8rem; padding-left: 0.35rem; padding-right: 0.35rem; }
   .corpus-highlight h2 { font-size: 2.05rem; }
   .card-title { font-size: 1.52rem; }
   .site-logo {
@@ -1116,7 +1065,7 @@ body[data-theme="light"] .nav-links {
 }
 
 
-/* FINAL MOBILE NAVIGATION OVERRIDE: dropdown menu from phone/tablet widths */
+/* FINAL MOBILE NAVIGATION OVERRIDE: sizing for phone/tablet */
 @media (max-width: 900px) {
   .navbar {
     position: sticky;
@@ -1139,8 +1088,6 @@ body[data-theme="light"] .nav-links {
     white-space: nowrap;
     overflow: visible;
   }
-
-
 
   .site-logo {
     width: 32px;
@@ -1178,76 +1125,14 @@ body[data-theme="light"] .nav-links {
   }
 
   .menu-toggle {
-    display: flex;
     flex-shrink: 0;
   }
 
+  /* On mobile, dropdown spans full width */
   .nav-links {
-    position: absolute;
-    top: calc(100% + 0.45rem);
-    right: 0.9rem;
     left: 0.9rem;
+    right: 0.9rem;
     width: auto;
-    display: none !important;
-    grid-template-columns: 1fr;
-    gap: 0.55rem;
-    padding: 0.8rem;
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    background: rgba(9, 9, 11, 0.94);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
-    overflow: hidden;
-    z-index: 1100;
-  }
-
-  body[data-theme="light"] .nav-links {
-    background: rgba(251, 242, 223, 0.96);
-  }
-
-  .navbar.menu-open .nav-links {
-    display: grid !important;
-  }
-
-  .nav-link {
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0.72rem 0.75rem;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: rgba(128, 128, 128, 0.06);
-    font-size: 0.92rem;
-    white-space: normal;
-    line-height: 1.15;
-  }
-
-  .nav-link.active {
-    border-color: var(--gold);
-    background: rgba(201, 169, 110, 0.14);
-  }
-
-  .nav-link.active::after {
-    display: none;
-  }
-
-  .nav-link-surprise {
-    display: none !important;
-  }
-
-  .navbar.menu-open .menu-toggle span:nth-child(1) {
-    transform: translateY(6.5px) rotate(45deg);
-  }
-
-  .navbar.menu-open .menu-toggle span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .navbar.menu-open .menu-toggle span:nth-child(3) {
-    transform: translateY(-6.5px) rotate(-45deg);
   }
 
   .hero-dashboard {
@@ -1260,15 +1145,12 @@ body[data-theme="light"] .nav-links {
     font-size: 0.68rem;
     padding: 0 0.62rem;
   }
-
   .nav-brand {
     font-size: 1.02rem !important;
   }
-
   .nav-controls {
     gap: 0.38rem;
   }
-
   .action-btn,
   .menu-toggle {
     width: 38px;
@@ -1369,8 +1251,8 @@ body[data-theme="light"] .scroll-top-btn:hover {
   position: absolute;
   top: calc(100% + 12px);
   left: 0;
-  min-width: 300px;
-  padding: 1.5rem 1.75rem;
+  min-width: 280px;
+  padding: 1.5rem 1.5rem;
   background: rgba(14, 14, 17, 0.88);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -1430,27 +1312,82 @@ body[data-theme="light"] .logo-dropdown-panel::before {
   border-left: 2px solid var(--border-glow);
 }
 
+.logo-dropdown-divider {
+  height: 1px;
+  background: var(--border-glow);
+  margin: 1rem 0;
+  opacity: 0.5;
+}
+
+.logo-signin-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+body[data-theme="light"] .logo-signin-btn {
+  background: rgba(255, 255, 255, 0.54);
+}
+.logo-signin-btn:hover {
+  background: var(--gold);
+  color: #09090b;
+  border-color: var(--gold);
+}
+.logo-signin-btn.signed-in {
+  border-color: var(--border-glow);
+}
+.logo-signin-btn.signed-in:hover {
+  background: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+.logo-signin-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #09090b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
 /* Logo dropdown panel responsive — mobile */
 @media (max-width: 900px) {
   .logo-dropdown-panel {
     position: fixed;
     top: auto;
-    left: 1rem;
-    right: 1rem;
+    left: 0.75rem;
+    right: 0.75rem;
     width: auto;
     min-width: unset;
     max-width: none;
-    padding: 1.25rem 1.35rem;
+    padding: 1.25rem 1.15rem;
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
   }
   .logo-dropdown-heading {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     white-space: normal;
   }
   .logo-dropdown-excerpt {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -1461,15 +1398,15 @@ body[data-theme="light"] .logo-dropdown-panel::before {
 }
 @media (max-width: 380px) {
   .logo-dropdown-panel {
-    left: 0.75rem;
-    right: 0.75rem;
-    padding: 1rem 1.1rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    padding: 1rem 1rem;
   }
   .logo-dropdown-heading {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
   .logo-dropdown-excerpt {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
   }
 }
 
@@ -1511,56 +1448,7 @@ body[data-theme="light"] .logo-dropdown-panel::before {
   color: #c0392b;
 }
 
-/* Sign In Button */
-.sign-in-btn {
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid var(--border);
-  color: var(--ink);
-  padding: 0.45rem 0.85rem;
-  min-height: 36px;
-  border-radius: 999px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 500;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  transition: var(--transition);
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-body[data-theme="light"] .sign-in-btn {
-  background: rgba(255, 255, 255, 0.54);
-}
-.sign-in-btn:hover {
-  background: var(--gold);
-  color: #09090b;
-  border-color: var(--gold);
-}
-.sign-in-avatar {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--gold);
-  color: #09090b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.72rem;
-  font-weight: 700;
-}
-.sign-in-btn.signed-in {
-  border-color: var(--border-glow);
-}
-.sign-in-btn.signed-in:hover {
-  background: rgba(231, 76, 60, 0.15);
-  color: #e74c3c;
-  border-color: #e74c3c;
-}
-
-/* Sign In Modal */
+/* Sign In Button — inside logo dropdown only now */
 .sign-in-modal {
   position: fixed;
   inset: 0;
@@ -1669,23 +1557,7 @@ body[data-theme="dark"] .sign-in-input {
   background: var(--gold-glow);
 }
 
-/* Sign-in responsive */
-@media (max-width: 900px) {
-  .sign-in-btn {
-    width: 36px;
-    height: 36px;
-    min-height: 36px;
-    padding: 0;
-  }
-  .sign-in-text {
-    display: none;
-  }
-  .sign-in-avatar {
-    width: 20px;
-    height: 20px;
-    font-size: 0.65rem;
-  }
-}
+
 </style>
 </head>
 <body data-theme="dark">
@@ -1748,14 +1620,15 @@ body[data-theme="dark"] .sign-in-input {
     <div class="logo-dropdown-panel" id="logoDropdownPanel">
       <div class="logo-dropdown-heading">Dhruva Burande</div>
       <div class="logo-dropdown-excerpt">Softly now, paper child—mind the sudden gust, for you are written in ink and easily torn.</div>
+      <div class="logo-dropdown-divider"></div>
+      <button class="logo-signin-btn" id="logoSignInBtn" onclick="handleLogoSignInClick()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span class="logo-signin-text">Sign In</span>
+      </button>
     </div>
   </div>
 
   <div class="nav-controls">
-    <button class="sign-in-btn" id="signInBtn" aria-label="Sign in">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-      <span class="sign-in-text">Sign In</span>
-    </button>
     <button class="mobile-surprise-btn" onclick="triggerSurpriseMe(event)" aria-label="Open a random poem">Surprise Me</button>
 
     <button class="action-btn" id="themeToggle" aria-label="Toggle visual theme">
@@ -1776,8 +1649,7 @@ body[data-theme="dark"] .sign-in-input {
       <a href="#" class="nav-link" onclick="switchGridCollection('Borrowed Ledger', this, event)">Borrowed Ledger</a>
       <a href="#" class="nav-link" onclick="switchGridCollection('Research', this, event)">Research</a>
       <a href="comments.html" class="nav-link">Comment</a>
-      <a href="/cdn-cgi/l/email-protection#690d0b1c1b08070d0c59585b5d290e04080005470a0604" class="nav-link">Contact</a>
-      <a href="#" class="nav-link nav-link-surprise" style="color: var(--gold); font-weight: 700;" onclick="triggerSurpriseMe(event)">Surprise Me</a>
+      <a href="/cdn-cgi/l/email-protection#86e2e4f3f4e7e8e2e3b6b7b4b2c6e1ebe7efeaa8e5e9eb" class="nav-link">Contact</a>
     </div>
   </div>
 </nav>
@@ -1823,7 +1695,7 @@ body[data-theme="dark"] .sign-in-input {
   <h3>Copyright & Attribution Notice</h3>
   <p style="margin-bottom: 1rem; margin-top: 0.5rem;">Except for content designated as "Written by Hand," which is the exclusive intellectual property of the author, all literary works featured on this site are believed to be in the public domain. Every reasonable effort has been made to ensure proper attribution and verify the public domain status of third-party content.</p>
   <p><strong>Notice to Copyright Holders:</strong><br>
-  <p style="margin-bottom: 1rem;">This site does not claim ownership of, nor assume liability for, works authored by third parties. If you are a rights holder and believe that any content herein infringes upon an active copyright, please contact the site administrator at <!-- email_off --><i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="83e7e1f6f1e2ede7e6b3b2b1b7c3e4eee2eaefade0ecee">[email&#160;protected]</a></i><!-- /email_off --> immediately. Upon verification of a valid claim, such content will be promptly removed.</p>
+  <p style="margin-bottom: 1rem;">This site does not claim ownership of, nor assume liability for, works authored by third parties. If you are a rights holder and believe that any content herein infringes upon an active copyright, please contact the site administrator at <i><a href="/cdn-cgi/l/email-protection#5236302720333c36376263606612353f333b3e7c313d3f" style="color: var(--gold);"><span class="__cf_email__" data-cfemail="3c585e494e5d5258590c0d0e087c5b515d5550125f5351">[email&#160;protected]</span></a></i> immediately. Upon verification of a valid claim, such content will be promptly removed.</p>
 </footer>
 
 <div class="reader-modal" id="immersiveReader" role="dialog" aria-hidden="true">
@@ -1881,7 +1753,7 @@ body[data-theme="dark"] .sign-in-input {
 
 <div class="toast-box" id="toastBox"><span id="toastMsg">Feedback loop initialized.</span></div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="poems.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="poems.js"></script>
 <script>
 /* DATA ARCHIVE LOADED FROM poems.js */
 const database = Array.isArray(window.database) ? window.database : [];
@@ -1994,11 +1866,17 @@ function switchGridCollection(col, el, ev) {
   globalActiveMood = 'all';
   
   document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-  el.classList.add('active');
+  if (el) el.classList.add('active');
   document.getElementById('gridTitleLabel').textContent = col;
   buildInterfaceGrids();
   rebuildMoodSelectorTags();
   rebuildLanguageSelectorTags();
+
+  // Close hamburger menu after selection
+  var siteNavbar = document.getElementById('siteNavbar');
+  var menuToggle = document.getElementById('menuToggle');
+  if (siteNavbar) siteNavbar.classList.remove('menu-open');
+  if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
 }
 
 function filterByMood(mood) {
@@ -2044,13 +1922,11 @@ document.getElementById('immersiveReader').addEventListener('click', function(e)
 function triggerSurpriseMe(ev) {
   if (ev) ev.preventDefault();
 
-  const siteNavbar = document.getElementById('siteNavbar');
-  const menuToggle = document.getElementById('menuToggle');
-
-  if (siteNavbar && menuToggle) {
-    siteNavbar.classList.remove('menu-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  }
+  // Close hamburger menu
+  var siteNavbar = document.getElementById('siteNavbar');
+  var menuToggle = document.getElementById('menuToggle');
+  if (siteNavbar) siteNavbar.classList.remove('menu-open');
+  if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
 
   if (!database.length) {
     showToast('Poem archive missing. Please check poems.js.');
@@ -2094,7 +1970,7 @@ document.getElementById('themeToggle').addEventListener('click', () => {
   const current = body.getAttribute('data-theme');
   body.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
 });
-// Mobile hamburger dropdown
+// Mobile hamburger dropdown toggle
 const siteNavbar = document.getElementById('siteNavbar');
 const menuToggle = document.getElementById('menuToggle');
 
@@ -2113,13 +1989,13 @@ if (siteNavbar && menuToggle) {
 
   document.addEventListener('click', event => {
     const clickedInsideNavbar = siteNavbar.contains(event.target);
-
     if (!clickedInsideNavbar) {
       siteNavbar.classList.remove('menu-open');
       menuToggle.setAttribute('aria-expanded', 'false');
     }
   });
 }
+
 
 // Pen Ink Scroll Effect Calculation
 window.addEventListener('scroll', () => {
@@ -2284,6 +2160,17 @@ function triggerProtectionBlur(duration) {
 })();
 
 
+// Sign-In via Logo Dropdown
+function handleLogoSignInClick() {
+  var user = getUser();
+  if (user) {
+    // Signed in — sign out
+    handleSignOut();
+  } else {
+    openSignInModal();
+  }
+}
+
 // Heart / Like Toggle
 function toggleHeart(poemId) {
   var user = JSON.parse(localStorage.getItem('anthology_user') || 'null');
@@ -2310,16 +2197,14 @@ function getUser() {
 
 function updateSignInButton() {
   var user = getUser();
-  var btn = document.getElementById('signInBtn');
+  var btn = document.getElementById('logoSignInBtn');
   if (!btn) return;
   if (user) {
     btn.classList.add('signed-in');
-    btn.innerHTML = '<span class="sign-in-avatar">' + user.name.charAt(0).toUpperCase() + '</span><span class="sign-in-text">' + user.name + '</span>';
-    btn.onclick = handleSignOut;
+    btn.innerHTML = '<span class="logo-signin-avatar">' + user.name.charAt(0).toUpperCase() + '</span><span class="logo-signin-text">' + user.name + '</span>';
   } else {
     btn.classList.remove('signed-in');
-    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span class="sign-in-text">Sign In</span>';
-    btn.onclick = openSignInModal;
+    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span class="logo-signin-text">Sign In</span>';
   }
 }
 
@@ -2349,6 +2234,12 @@ function completeSignIn() {
   updateSignInButton();
   showToast('Welcome, ' + name + '!');
   if (typeof buildInterfaceGrids === 'function') buildInterfaceGrids();
+
+  // Close the logo dropdown after sign in
+  var panel = document.getElementById('logoDropdownPanel');
+  var toggle = document.getElementById('logoDropdownToggle');
+  if (panel) panel.classList.remove('open');
+  if (toggle) { toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
 }
 
 function handleSignOut() {
@@ -2390,4 +2281,6 @@ updateSignInButton();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();
-</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0895efcbe5d1eed',t:'MTc4MDkzNzE2OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a08a5bdedc838371',t:'MTc4MDk0NzUyNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a08a6362f898eccd',t:'MTc4MDk0NzgzNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</script>
+</body>
+</html>
