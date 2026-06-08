@@ -452,40 +452,83 @@ body[data-theme="light"] .menu-toggle {
 
 .nav-links {
   position: absolute;
-  top: calc(100% + 0.45rem);
+  top: calc(100% + 12px);
   right: 0;
-  width: 220px;
+  left: auto;
+  width: clamp(360px, 35vw, 560px);
   display: none;
   flex-direction: column;
-  gap: 0.35rem;
-  padding: 0.6rem;
-  border: 1px solid var(--border);
+  gap: 0.45rem;
+  padding: 1.5rem;
+  background: rgba(14, 14, 17, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border-glow);
   border-radius: 14px;
-  background: rgba(9, 9, 11, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(201, 169, 110, 0.08);
   z-index: 1100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 body[data-theme="light"] .nav-links {
-  background: rgba(251, 242, 223, 0.96);
+  background: rgba(251, 242, 223, 0.92);
+  border: 1px solid rgba(156, 122, 60, 0.22);
+  box-shadow: 0 20px 50px rgba(96, 74, 40, 0.14), 0 0 0 1px rgba(156, 122, 60, 0.1);
+}
+.nav-links::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 18px;
+  width: 12px;
+  height: 12px;
+  border-left: 1px solid var(--border-glow);
+  border-top: 1px solid var(--border-glow);
+  background: rgba(14, 14, 17, 0.88);
+  transform: rotate(45deg);
+}
+body[data-theme="light"] .nav-links::before {
+  background: rgba(251, 242, 223, 0.92);
+  border-color: rgba(156, 122, 60, 0.22);
 }
 .navbar.menu-open .nav-links {
   display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 .nav-link {
   color: var(--ink-muted);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 500;
   transition: var(--transition);
-  padding: 0.6rem 0.75rem;
+  padding: 0.7rem 1rem;
   white-space: nowrap;
-  border-radius: 10px;
-  display: block;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid var(--border);
+  background: rgba(128, 128, 128, 0.06);
+  min-height: 44px;
+  line-height: 1.15;
 }
-.nav-link:hover { background: rgba(201, 169, 110, 0.1); color: var(--ink); }
-.nav-link.active { color: var(--gold); background: rgba(201, 169, 110, 0.1); }
+.nav-link:hover {
+  background: rgba(201, 169, 110, 0.12);
+  color: var(--ink);
+  border-color: rgba(201, 169, 110, 0.25);
+}
+.nav-link.active {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: rgba(201, 169, 110, 0.14);
+}
 .nav-link.active::after {
   display: none;
 }
@@ -1130,9 +1173,14 @@ footer {
 
   /* On mobile, dropdown spans full width */
   .nav-links {
-    left: 0.9rem;
-    right: 0.9rem;
+    left: 0.75rem;
+    right: 0.75rem;
     width: auto;
+    min-width: unset;
+    max-width: none;
+  }
+  .nav-links::before {
+    display: none;
   }
 
   .hero-dashboard {
@@ -1649,7 +1697,7 @@ body[data-theme="dark"] .sign-in-input {
       <a href="#" class="nav-link" onclick="switchGridCollection('Borrowed Ledger', this, event)">Borrowed Ledger</a>
       <a href="#" class="nav-link" onclick="switchGridCollection('Research', this, event)">Research</a>
       <a href="comments.html" class="nav-link">Comment</a>
-      <a href="/cdn-cgi/l/email-protection#86e2e4f3f4e7e8e2e3b6b7b4b2c6e1ebe7efeaa8e5e9eb" class="nav-link">Contact</a>
+      <a href="/cdn-cgi/l/email-protection#a8cccadddac9c6cccd98999a9ce8cfc5c9c1c486cbc7c5" class="nav-link">Contact</a>
     </div>
   </div>
 </nav>
@@ -1695,7 +1743,7 @@ body[data-theme="dark"] .sign-in-input {
   <h3>Copyright & Attribution Notice</h3>
   <p style="margin-bottom: 1rem; margin-top: 0.5rem;">Except for content designated as "Written by Hand," which is the exclusive intellectual property of the author, all literary works featured on this site are believed to be in the public domain. Every reasonable effort has been made to ensure proper attribution and verify the public domain status of third-party content.</p>
   <p><strong>Notice to Copyright Holders:</strong><br>
-  <p style="margin-bottom: 1rem;">This site does not claim ownership of, nor assume liability for, works authored by third parties. If you are a rights holder and believe that any content herein infringes upon an active copyright, please contact the site administrator at <i><a href="/cdn-cgi/l/email-protection#5236302720333c36376263606612353f333b3e7c313d3f" style="color: var(--gold);"><span class="__cf_email__" data-cfemail="3c585e494e5d5258590c0d0e087c5b515d5550125f5351">[email&#160;protected]</span></a></i> immediately. Upon verification of a valid claim, such content will be promptly removed.</p>
+  <p style="margin-bottom: 1rem;">This site does not claim ownership of, nor assume liability for, works authored by third parties. If you are a rights holder and believe that any content herein infringes upon an active copyright, please contact the site administrator at <i><a href="/cdn-cgi/l/email-protection#1377716661727d77762322212753747e727a7f3d707c7e" style="color: var(--gold);"><span class="__cf_email__" data-cfemail="7c181e090e1d1218194c4d4e483c1b111d1510521f1311">[email&#160;protected]</span></a></i> immediately. Upon verification of a valid claim, such content will be promptly removed.</p>
 </footer>
 
 <div class="reader-modal" id="immersiveReader" role="dialog" aria-hidden="true">
@@ -2282,5 +2330,5 @@ updateSignInButton();
   });
 })();
 </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a08a9612dc9b3a58',t:'MTc4MDk0OTkxMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
