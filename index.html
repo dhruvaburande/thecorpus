@@ -1433,15 +1433,19 @@ body[data-theme="light"] .logo-dropdown-panel::before {
 /* Logo dropdown panel responsive */
 @media (max-width: 900px) {
   .logo-dropdown-panel {
-    min-width: 240px;
-    padding: 1.25rem 1.35rem;
+    min-width: unset;
+    max-width: calc(100vw - 2rem);
+    width: max-content;
     left: 0;
+    right: auto;
+    padding: 1.25rem 1.35rem;
   }
   .logo-dropdown-heading {
     font-size: 1.25rem;
   }
   .logo-dropdown-excerpt {
     font-size: 0.92rem;
+    max-width: 260px;
   }
   .logo-dropdown-panel::before {
     left: 14px;
@@ -1449,14 +1453,15 @@ body[data-theme="light"] .logo-dropdown-panel::before {
 }
 @media (max-width: 380px) {
   .logo-dropdown-panel {
-    min-width: 200px;
-    padding: 1rem 1.15rem;
+    max-width: calc(100vw - 1.5rem);
+    padding: 1rem 1.1rem;
   }
   .logo-dropdown-heading {
     font-size: 1.15rem;
   }
   .logo-dropdown-excerpt {
     font-size: 0.85rem;
+    max-width: 220px;
   }
 }
 </style>
