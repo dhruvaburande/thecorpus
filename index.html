@@ -16,6 +16,17 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-touch-callout: none;        /* iOS long-press copy/save menu */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Block image dragging / long-press save */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
 }
 
 /* Allow selection only in the search input */
@@ -1320,7 +1331,7 @@ body[data-theme="light"] .nav-links {
   <h3>Copyright & Attribution Notice</h3>
   <p style="margin-bottom: 1rem; margin-top: 0.5rem;">Except for content designated as "Written by Hand," which is the exclusive intellectual property of the author, all literary works featured on this site are believed to be in the public domain. Every reasonable effort has been made to ensure proper attribution and verify the public domain status of third-party content.</p>
   <p><strong>Notice to Copyright Holders:</strong><br>
-  <p style="margin-bottom: 1rem;">This site does not claim ownership of, nor assume liability for, works authored by third parties. If you are a rights holder and believe that any content herein infringes upon an active copyright, please contact the site administrator at dburande0124@gmail.com immediately. Upon verification of a valid claim, such content will be promptly removed.</p>
+  <p style="margin-bottom: 1rem;">This site does not claim ownership of, nor assume liability for, works authored by third parties. If you are a rights holder and believe that any content herein infringes upon an active copyright, please contact the site administrator at <!-- email_off --><i>dburande0124@gmail.com</i><!-- /email_off --> immediately. Upon verification of a valid claim, such content will be promptly removed.</p>
 </footer>
 
 <div class="reader-modal" id="immersiveReader" role="dialog" aria-hidden="true">
@@ -1620,14 +1631,37 @@ document.addEventListener('contextmenu', function(e) {
   showToast('Content is protected. Copying is not allowed.');
 });
 
-// Disable Ctrl+C, Ctrl+A, Ctrl+X, Ctrl+U, Ctrl+S, Ctrl+P
+// Disable copy/select/save/print/view-source AND devtools shortcuts
 document.addEventListener('keydown', function(e) {
-  if (
-    (e.ctrlKey || e.metaKey) && 
-    ['c', 'a', 'x', 'u', 's', 'p'].includes(e.key.toLowerCase())
-  ) {
+  const k = (e.key || '').toLowerCase();
+
+  // Ctrl/Cmd + C, A, X, U, S, P
+  if ((e.ctrlKey || e.metaKey) && ['c', 'a', 'x', 'u', 's', 'p'].includes(k)) {
     e.preventDefault();
     showToast('Content is protected.');
+    return;
+  }
+
+  // F12 (DevTools)
+  if (k === 'f12') {
+    e.preventDefault();
+    showToast('Content is protected.');
+    return;
+  }
+
+  // Ctrl/Cmd + Shift + I / J / C  and  Cmd + Opt + I / J / C  (DevTools / inspector)
+  if ((e.ctrlKey || e.metaKey) && (e.shiftKey || e.altKey) && ['i', 'j', 'c'].includes(k)) {
+    e.preventDefault();
+    showToast('Content is protected.');
+    return;
+  }
+
+  // Cmd/Ctrl + Shift + S / 3 / 4 / 5  (macOS & browser screenshot capture)
+  if ((e.metaKey || e.ctrlKey) && e.shiftKey && ['s', '3', '4', '5'].includes(k)) {
+    e.preventDefault();
+    triggerProtectionBlur();
+    showToast('Screenshots are not permitted on this site.');
+    return;
   }
 });
 
@@ -1642,39 +1676,48 @@ document.addEventListener('cut', function(e) {
   e.preventDefault();
 });
 
+// Disable selectstart (extra layer over CSS user-select: none)
+document.addEventListener('selectstart', function(e) {
+  e.preventDefault();
+});
+
+// Disable dragging of images/text (prevents drag-to-save and drag-to-copy)
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+
+// Shared blur/overlay helper for screenshot deterrence
+let __protectTimer = null;
+function showProtectionOverlay() {
+  const overlay = document.getElementById('screenshotOverlay');
+  if (overlay) overlay.style.display = 'flex';
+  document.body.style.filter = 'blur(14px)';
+}
+function hideProtectionOverlay() {
+  const overlay = document.getElementById('screenshotOverlay');
+  if (overlay) overlay.style.display = 'none';
+  document.body.style.filter = '';
+}
+function triggerProtectionBlur(duration) {
+  showProtectionOverlay();
+  if (__protectTimer) clearTimeout(__protectTimer);
+  __protectTimer = setTimeout(hideProtectionOverlay, duration || 2500);
+}
+
 // Screenshot / screen capture deterrent
 (function() {
-  const overlay = document.getElementById('screenshotOverlay');
-
   // Blur content when window loses focus (e.g. Alt+Tab, screenshot tools)
-  window.addEventListener('blur', function() {
-    if (overlay) {
-      overlay.style.display = 'flex';
-      document.body.style.filter = 'blur(12px)';
-    }
-  });
+  window.addEventListener('blur', showProtectionOverlay);
 
   // Restore when window regains focus
-  window.addEventListener('focus', function() {
-    if (overlay) {
-      overlay.style.display = 'none';
-      document.body.style.filter = '';
-    }
-  });
+  window.addEventListener('focus', hideProtectionOverlay);
 
   // Detect Print Screen key (Windows) - limited browser support
   document.addEventListener('keyup', function(e) {
     if (e.key === 'PrintScreen') {
-      // Temporarily blank the clipboard
+      // Attempt to blank the clipboard so a captured image isn't pasteable
       navigator.clipboard.writeText('').catch(() => {});
-      if (overlay) {
-        overlay.style.display = 'flex';
-        document.body.style.filter = 'blur(12px)';
-        setTimeout(() => {
-          overlay.style.display = 'none';
-          document.body.style.filter = '';
-        }, 2500);
-      }
+      triggerProtectionBlur(2500);
       showToast('Screenshots are not permitted on this site.');
     }
   });
@@ -1682,16 +1725,10 @@ document.addEventListener('cut', function(e) {
   // Detect visibility change (tab switch, screen recording apps on some devices)
   document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
-      if (overlay) {
-        overlay.style.display = 'flex';
-        document.body.style.filter = 'blur(12px)';
-      }
+      showProtectionOverlay();
     } else {
-      if (overlay) {
-        overlay.style.display = 'none';
-        document.body.style.filter = '';
-      }
+      hideProtectionOverlay();
     }
   });
 })();
-</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0894f388a145543',t:'MTc4MDkzNjUyMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0895efcbe5d1eed',t:'MTc4MDkzNzE2OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
