@@ -1156,7 +1156,7 @@ body[data-theme="light"] .nav-links {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    gap: 0.5rem;
+    gap: 0.35rem;
     flex-shrink: 0;
   }
 
@@ -1472,6 +1472,220 @@ body[data-theme="light"] .logo-dropdown-panel::before {
     font-size: 0.85rem;
   }
 }
+
+/* Card Title Row with Heart */
+.card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.card-title-row .card-title {
+  margin-bottom: 0;
+}
+
+/* Heart Like Button */
+.heart-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-dark);
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.heart-btn:hover {
+  color: #e74c3c;
+  transform: scale(1.2);
+}
+.heart-btn.liked {
+  color: #e74c3c;
+}
+.heart-btn.liked svg {
+  fill: #e74c3c;
+}
+.heart-btn.liked:hover {
+  color: #c0392b;
+}
+
+/* Sign In Button */
+.sign-in-btn {
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid var(--border);
+  color: var(--ink);
+  padding: 0.45rem 0.85rem;
+  min-height: 36px;
+  border-radius: 999px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+body[data-theme="light"] .sign-in-btn {
+  background: rgba(255, 255, 255, 0.54);
+}
+.sign-in-btn:hover {
+  background: var(--gold);
+  color: #09090b;
+  border-color: var(--gold);
+}
+.sign-in-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #09090b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.sign-in-btn.signed-in {
+  border-color: var(--border-glow);
+}
+.sign-in-btn.signed-in:hover {
+  background: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+/* Sign In Modal */
+.sign-in-modal {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 5, 6, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition);
+}
+body[data-theme="light"] .sign-in-modal {
+  background: rgba(251, 242, 223, 0.8);
+}
+.sign-in-modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+.sign-in-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  max-width: 380px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+}
+.sign-in-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--ink-dark);
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 4px 8px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+.sign-in-close:hover {
+  color: var(--ink);
+  background: rgba(128,128,128,0.1);
+}
+.sign-in-google-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1.25rem;
+}
+.sign-in-card h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--ink);
+}
+.sign-in-card p {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+}
+.sign-in-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(0,0,0,0.04);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+}
+.sign-in-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--border-glow);
+}
+body[data-theme="dark"] .sign-in-input {
+  background: rgba(0,0,0,0.2);
+}
+.sign-in-submit {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--gold);
+  color: #09090b;
+  border: none;
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.sign-in-submit:hover {
+  background: var(--gold-glow);
+}
+
+/* Sign-in responsive */
+@media (max-width: 900px) {
+  .sign-in-btn {
+    width: 36px;
+    height: 36px;
+    min-height: 36px;
+    padding: 0;
+  }
+  .sign-in-text {
+    display: none;
+  }
+  .sign-in-avatar {
+    width: 20px;
+    height: 20px;
+    font-size: 0.65rem;
+  }
+}
 </style>
 </head>
 <body data-theme="dark">
@@ -1538,6 +1752,10 @@ body[data-theme="light"] .logo-dropdown-panel::before {
   </div>
 
   <div class="nav-controls">
+    <button class="sign-in-btn" id="signInBtn" aria-label="Sign in">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      <span class="sign-in-text">Sign In</span>
+    </button>
     <button class="mobile-surprise-btn" onclick="triggerSurpriseMe(event)" aria-label="Open a random poem">Surprise Me</button>
 
     <button class="action-btn" id="themeToggle" aria-label="Toggle visual theme">
@@ -1557,6 +1775,8 @@ body[data-theme="light"] .logo-dropdown-panel::before {
       <a href="#" class="nav-link" onclick="switchGridCollection('Written by Hand', this, event)">Written by Hand</a>
       <a href="#" class="nav-link" onclick="switchGridCollection('Borrowed Ledger', this, event)">Borrowed Ledger</a>
       <a href="#" class="nav-link" onclick="switchGridCollection('Research', this, event)">Research</a>
+      <a href="comments.html" class="nav-link">Comment</a>
+      <a href="/cdn-cgi/l/email-protection#690d0b1c1b08070d0c59585b5d290e04080005470a0604" class="nav-link">Contact</a>
       <a href="#" class="nav-link nav-link-surprise" style="color: var(--gold); font-weight: 700;" onclick="triggerSurpriseMe(event)">Surprise Me</a>
     </div>
   </div>
@@ -1642,9 +1862,26 @@ body[data-theme="light"] .logo-dropdown-panel::before {
   </svg>
 </button>
 
+
+<div class="sign-in-modal" id="signInModal">
+  <div class="sign-in-card">
+    <button class="sign-in-close" onclick="closeSignInModal()">&times;</button>
+    <svg class="sign-in-google-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" fill="#EA4335"/>
+      <path d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" fill="#4285F4"/>
+      <path d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" fill="#FBBC05"/>
+      <path d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" fill="#34A853"/>
+    </svg>
+    <h3>Sign in</h3>
+    <p>to continue to Anthology Hub</p>
+    <input type="text" class="sign-in-input" id="signInNameInput" placeholder="Enter your display name" maxlength="30">
+    <button class="sign-in-submit" onclick="completeSignIn()">Continue</button>
+  </div>
+</div>
+
 <div class="toast-box" id="toastBox"><span id="toastMsg">Feedback loop initialized.</span></div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="poems.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="poems.js"></script>
 <script>
 /* DATA ARCHIVE LOADED FROM poems.js */
 const database = Array.isArray(window.database) ? window.database : [];
@@ -1701,7 +1938,7 @@ function buildInterfaceGrids() {
         <span>${item.mood}</span>
         <span class="card-lang">${langDisplay}</span>
       </div>
-      <h4 class="card-title">${item.title}</h4>
+      <div class="card-title-row"><h4 class="card-title">${item.title}</h4><button class="heart-btn ${JSON.parse(localStorage.getItem('anthology_likes') || '[]').includes(item.id) ? 'liked' : ''}" onclick="event.stopPropagation(); toggleHeart('${item.id}')" aria-label="Like"><svg width="16" height="16" viewBox="0 0 24 24" fill="${JSON.parse(localStorage.getItem('anthology_likes') || '[]').includes(item.id) ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
       <p class="card-excerpt">${item.excerpt}</p>
       <div class="card-meta">
         <span>${item.id}</span>
@@ -2046,6 +2283,96 @@ function triggerProtectionBlur(duration) {
   });
 })();
 
+
+// Heart / Like Toggle
+function toggleHeart(poemId) {
+  var user = JSON.parse(localStorage.getItem('anthology_user') || 'null');
+  if (!user) {
+    showToast('Please sign in to like poems.');
+    openSignInModal();
+    return;
+  }
+  var likes = JSON.parse(localStorage.getItem('anthology_likes') || '[]');
+  var idx = likes.indexOf(poemId);
+  if (idx > -1) {
+    likes.splice(idx, 1);
+  } else {
+    likes.push(poemId);
+  }
+  localStorage.setItem('anthology_likes', JSON.stringify(likes));
+  buildInterfaceGrids();
+}
+
+// Sign-In State
+function getUser() {
+  return JSON.parse(localStorage.getItem('anthology_user') || 'null');
+}
+
+function updateSignInButton() {
+  var user = getUser();
+  var btn = document.getElementById('signInBtn');
+  if (!btn) return;
+  if (user) {
+    btn.classList.add('signed-in');
+    btn.innerHTML = '<span class="sign-in-avatar">' + user.name.charAt(0).toUpperCase() + '</span><span class="sign-in-text">' + user.name + '</span>';
+    btn.onclick = handleSignOut;
+  } else {
+    btn.classList.remove('signed-in');
+    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span class="sign-in-text">Sign In</span>';
+    btn.onclick = openSignInModal;
+  }
+}
+
+function openSignInModal() {
+  var modal = document.getElementById('signInModal');
+  if (modal) {
+    modal.classList.add('active');
+    var input = document.getElementById('signInNameInput');
+    if (input) setTimeout(function(){ input.focus(); }, 300);
+  }
+}
+
+function closeSignInModal() {
+  var modal = document.getElementById('signInModal');
+  if (modal) modal.classList.remove('active');
+}
+
+function completeSignIn() {
+  var input = document.getElementById('signInNameInput');
+  var name = input ? input.value.trim() : '';
+  if (!name) {
+    showToast('Please enter your name.');
+    return;
+  }
+  localStorage.setItem('anthology_user', JSON.stringify({ name: name, signedIn: true }));
+  closeSignInModal();
+  updateSignInButton();
+  showToast('Welcome, ' + name + '!');
+  if (typeof buildInterfaceGrids === 'function') buildInterfaceGrids();
+}
+
+function handleSignOut() {
+  var user = getUser();
+  var name = user ? user.name : '';
+  localStorage.removeItem('anthology_user');
+  updateSignInButton();
+  showToast('Signed out' + (name ? ', ' + name : '') + '.');
+  if (typeof buildInterfaceGrids === 'function') buildInterfaceGrids();
+}
+
+// Close sign-in modal on backdrop click
+document.getElementById('signInModal').addEventListener('click', function(e) {
+  if (e.target === this) closeSignInModal();
+});
+
+// Enter key in sign-in input
+document.getElementById('signInNameInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') completeSignIn();
+});
+
+// Initialize sign-in button on load
+updateSignInButton();
+
 // Scroll-to-Top Button Logic
 (function() {
   const btn = document.getElementById('scrollTopBtn');
@@ -2063,4 +2390,4 @@ function triggerProtectionBlur(duration) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();
-</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0895efcbe5d1eed',t:'MTc4MDkzNzE2OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a08a2ed98c6885ab',t:'MTc4MDk0NTY4Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0895efcbe5d1eed',t:'MTc4MDkzNzE2OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a08a5bdedc838371',t:'MTc4MDk0NzUyNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a08a6362f898eccd',t:'MTc4MDk0NzgzNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
