@@ -924,9 +924,11 @@ footer {
   min-height: 64px;
 }
 
-/* Hide the title/header completely on mobile */
+/* Logo with dropdown visible on mobile */
 .nav-brand {
-  display: none;
+  display: flex !important;
+  align-items: center;
+  overflow: visible;
 }
 
 .nav-controls {
@@ -1135,7 +1137,7 @@ body[data-theme="light"] .nav-links {
     font-size: clamp(1.05rem, 4vw, 1.28rem) !important;
     line-height: 1;
     white-space: nowrap;
-    overflow: hidden;
+    overflow: visible;
   }
 
 
@@ -1542,7 +1544,7 @@ body[data-theme="light"] .logo-dropdown-panel::before {
       <a href="#" class="nav-link" onclick="switchGridCollection('Written by Hand', this, event)">Written by Hand</a>
       <a href="#" class="nav-link" onclick="switchGridCollection('Borrowed Ledger', this, event)">Borrowed Ledger</a>
       <a href="#" class="nav-link" onclick="switchGridCollection('Research', this, event)">Research</a>
-      <a href="#" class="nav-link nav-link-surprise" style="color: var(--gold); font-weight: 700;" onclick="triggerSurpriseMe(event)">Surprise Me ♾️</a>
+      <a href="#" class="nav-link nav-link-surprise" style="color: var(--gold); font-weight: 700;" onclick="triggerSurpriseMe(event)">Surprise Me</a>
     </div>
   </div>
 </nav>
@@ -2038,4 +2040,4 @@ function triggerProtectionBlur(duration) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();
-</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0895efcbe5d1eed',t:'MTc4MDkzNzE2OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a08a09b1fa0ffc3c',t:'MTc4MDk0NDE2MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0895efcbe5d1eed',t:'MTc4MDkzNzE2OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
