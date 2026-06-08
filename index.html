@@ -296,14 +296,42 @@ body[data-theme="light"] .navbar {
   color: var(--ink);
   text-decoration: none;
   display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.65rem;
   white-space: nowrap;
   min-width: 0;
 }
 .nav-brand span { color: var(--gold); }
 .nav-brand .brand-name { color: var(--ink); }
 .nav-brand .brand-hub { color: var(--gold); }
+
+/* Circular Logo */
+.site-logo {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border-glow);
+  box-shadow: 0 2px 10px rgba(201, 169, 110, 0.15);
+  transition: var(--transition);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-logo:hover {
+  border-color: var(--gold);
+  box-shadow: 0 3px 14px rgba(201, 169, 110, 0.3);
+  transform: scale(1.05);
+}
+.site-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
 
 .nav-controls {
   display: flex;
@@ -1049,6 +1077,11 @@ body[data-theme="light"] .nav-links {
   .nav-brand span { font-size: 1rem; }
   .corpus-highlight h2 { font-size: 2.05rem; }
   .card-title { font-size: 1.52rem; }
+  .site-logo {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+  }
 }
 
 
@@ -1084,6 +1117,13 @@ body[data-theme="light"] .nav-links {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .site-logo {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-width: 1.5px;
   }
 
   .nav-controls {
@@ -1261,6 +1301,9 @@ body[data-theme="light"] .nav-links {
 
 <nav class="navbar" id="siteNavbar">
   <a href="#" class="nav-brand" aria-label="Dhruva Burande Anthology Hub">
+    <div class="site-logo">
+      <img src="logo.jpg" alt="Anthology Hub Logo">
+    </div>
     <span class="brand-name">Dhruva Burande</span>
     <span class="brand-hub">// Anthology Hub</span>
   </a>
@@ -1285,7 +1328,7 @@ body[data-theme="light"] .nav-links {
       <a href="#" class="nav-link" onclick="switchGridCollection('Written by Hand', this, event)">Written by Hand</a>
       <a href="#" class="nav-link" onclick="switchGridCollection('Borrowed Ledger', this, event)">Borrowed Ledger</a>
       <a href="#" class="nav-link" onclick="switchGridCollection('Research', this, event)">Research</a>
-      <a href="#" class="nav-link nav-link-surprise" style="color: var(--gold); font-weight: 700;" onclick="triggerSurpriseMe(event)">Surprise Me ✨</a>
+      <a href="#" class="nav-link nav-link-surprise" style="color: var(--gold); font-weight: 700;" onclick="triggerSurpriseMe(event)">Surprise Me</a>
     </div>
   </div>
 </nav>
@@ -1331,7 +1374,7 @@ body[data-theme="light"] .nav-links {
   <h3>Copyright & Attribution Notice</h3>
   <p style="margin-bottom: 1rem; margin-top: 0.5rem;">Except for content designated as "Written by Hand," which is the exclusive intellectual property of the author, all literary works featured on this site are believed to be in the public domain. Every reasonable effort has been made to ensure proper attribution and verify the public domain status of third-party content.</p>
   <p><strong>Notice to Copyright Holders:</strong><br>
-  <p style="margin-bottom: 1rem;">This site does not claim ownership of, nor assume liability for, works authored by third parties. If you are a rights holder and believe that any content herein infringes upon an active copyright, please contact the site administrator at <!-- email_off --><i>dburande0124@gmail.com</i><!-- /email_off --> immediately. Upon verification of a valid claim, such content will be promptly removed.</p>
+  <p style="margin-bottom: 1rem;">This site does not claim ownership of, nor assume liability for, works authored by third parties. If you are a rights holder and believe that any content herein infringes upon an active copyright, please contact the site administrator at <!-- email_off --><i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="83e7e1f6f1e2ede7e6b3b2b1b7c3e4eee2eaefade0ecee">[email&#160;protected]</a></i><!-- /email_off --> immediately. Upon verification of a valid claim, such content will be promptly removed.</p>
 </footer>
 
 <div class="reader-modal" id="immersiveReader" role="dialog" aria-hidden="true">
@@ -1364,7 +1407,7 @@ body[data-theme="light"] .nav-links {
 
 <div class="toast-box" id="toastBox"><span id="toastMsg">Feedback loop initialized.</span></div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="poems.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="poems.js"></script>
 <script>
 /* DATA ARCHIVE LOADED FROM poems.js */
 const database = Array.isArray(window.database) ? window.database : [];
