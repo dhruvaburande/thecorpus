@@ -1697,7 +1697,7 @@ body[data-theme="dark"] .sign-in-input {
       <a href="#" class="nav-link" onclick="switchGridCollection('Borrowed Ledger', this, event)">Borrowed Ledger</a>
       <a href="#" class="nav-link" onclick="switchGridCollection('Research', this, event)">Research</a>
       <a href="comments.html" class="nav-link">Comment</a>
-      <a href="/cdn-cgi/l/email-protection#4024223532212e24257071727400272d21292c6e232f2d" class="nav-link">Contact</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dburande0124@gmail.com" target="_blank" rel="noopener" class="nav-link" onclick="event.stopImmediatePropagation();">Contact</a>
     </div>
   </div>
 </nav>
@@ -1743,7 +1743,7 @@ body[data-theme="dark"] .sign-in-input {
   <h3>Copyright & Attribution Notice</h3>
   <p style="margin-bottom: 1rem; margin-top: 0.5rem;">Except for content designated as "Written by Hand," which is the exclusive intellectual property of the author, all literary works featured on this site are believed to be in the public domain. Every reasonable effort has been made to ensure proper attribution and verify the public domain status of third-party content.</p>
   <p><strong>Notice to Copyright Holders:</strong><br>
-  <p style="margin-bottom: 1rem;">This site does not claim ownership of, nor assume liability for, works authored by third parties. If you are a rights holder and believe that any content herein infringes upon an active copyright, please contact the site administrator at <i><a href="/cdn-cgi/l/email-protection#6206001710030c06075253505622050f030b0e4c010d0f" style="color: var(--gold);"><span class="__cf_email__" data-cfemail="6307011611020d07065352515723040e020a0f4d000c0e">[email&#160;protected]</span></a></i> immediately. Upon verification of a valid claim, such content will be promptly removed.</p>
+  <p style="margin-bottom: 1rem;">This site does not claim ownership of, nor assume liability for, works authored by third parties. If you are a rights holder and believe that any content herein infringes upon an active copyright, please contact the site administrator at <i><a href="https://mail.google.com/mail/?view=cm&fs=1&to=dburande0124@gmail.com" target="_blank" rel="noopener" style="color: var(--gold);"><span class="__cf_email__" data-cfemail="fe9a9c8b8c9f909a9bcecfcccabe99939f9792d09d9193">[email&#160;protected]</span></a></i> immediately. Upon verification of a valid claim, such content will be promptly removed.</p>
 </footer>
 
 <div class="reader-modal" id="immersiveReader" role="dialog" aria-hidden="true">
@@ -2029,20 +2029,9 @@ if (siteNavbar && menuToggle) {
   });
 
   document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-      // For mailto and external links, let the browser handle them first
-      const href = link.getAttribute('href') || '';
-      const isMailto = href.startsWith('mailto:');
-      const isExternal = href.startsWith('http') || href.endsWith('.html');
-
+    link.addEventListener('click', () => {
       siteNavbar.classList.remove('menu-open');
       menuToggle.setAttribute('aria-expanded', 'false');
-
-      // For non-hash links that don't have onclick, navigate manually
-      if (isMailto) {
-        e.preventDefault();
-        window.location.href = href;
-      }
     });
   });
 
@@ -2341,6 +2330,5 @@ updateSignInButton();
   });
 })();
 </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a08aa8cadd913ae5',t:'MTc4MDk1MDY3OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
