@@ -443,7 +443,7 @@ function toggleHeart(poemId) {
 }
 
 // Sign-In State
-const GOOGLE_CLIENT_ID = '1068173814955-k1f7da3lna43uc7pm59m3hfec0153srm.apps.googleusercontent.com';
+const GOOGLE_CLIENT_ID = '766198434917-afp4sa1nq6f5otme8cc5rmttfdiagiu3.apps.googleusercontent.com';
 const BACKEND_URL = 'http://localhost:3000'; // Change to your production URL
 
 function getUser() {

@@ -1,3 +1,7 @@
+// === GOOGLE SIGN-IN BACKEND ===
+// Run with: node server.js
+// Frontend expects this on port 3000 by default.
+
 const express = require('express');
 const { OAuth2Client } = require('google-auth-library');
 const cors = require('cors');
@@ -12,7 +16,11 @@ const port = 3000;
 const CLIENT_ID = '1068173814955-k1f7da3lna43uc7pm59m3hfec0153srm.apps.googleusercontent.com';
 const client = new OAuth2Client(CLIENT_ID);
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5500', 'http://127.0.0.1:5500', 'http://localhost:8080', 'http://localhost:3001', '*'],
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 app.use(bodyParser.json());
 
 // Path to our "database" file
@@ -106,5 +114,7 @@ app.post('/api/comments', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Anthology Backend running at http://localhost:${port}`);
+    console.log(`✅ Anthology Backend running at http://localhost:${port}`);
+    console.log(`   → Make sure your frontend (index.html) is also open.`);
+    console.log(`   → Google Sign-In should now work.`);
 });
