@@ -2,60 +2,109 @@ const express = require('express');
 const { OAuth2Client } = require('google-auth-library');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
 const port = 3000;
 
-// Replace this with your actual Google Client ID
+// REPLACE WITH YOUR CLIENT ID
 const CLIENT_ID = '1068173814955-k1f7da3lna43uc7pm59m3hfec0153srm.apps.googleusercontent.com';
 const client = new OAuth2Client(CLIENT_ID);
 
 app.use(cors());
 app.use(bodyParser.json());
 
-// In-memory user "database" for this example
-let users = {};
+// Path to our "database" file
+const DB_FILE = path.join(__dirname, 'db.json');
 
+// Initialize database file if it doesn't exist
+if (!fs.existsSync(DB_FILE)) {
+    fs.writeFileSync(DB_FILE, JSON.stringify({ users: {}, comments: [] }, null, 2));
+}
+
+// Helper to read/write DB
+const readDB = () => JSON.parse(fs.readFileSync(DB_FILE));
+const saveDB = (data) => fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
+
+// --- AUTHENTICATION ---
 app.post('/api/auth/google', async (req, res) => {
     const { token } = req.body;
-
     try {
         const ticket = await client.verifyIdToken({
             idToken: token,
             audience: CLIENT_ID,
         });
-
         const payload = ticket.getPayload();
-        const userid = payload['sub'];
-        const email = payload['email'];
-        const name = payload['name'];
-        const picture = payload['picture'];
+        const googleId = payload['sub'];
 
-        // You can save or update the user in your database here
-        users[userid] = {
-            email,
-            name,
-            picture,
-            lastLogin: new Date()
-        };
-
-        console.log(`User ${name} (${email}) signed in.`);
+        const db = readDB();
+        // If user is new, initialize their data
+        if (!db.users[googleId]) {
+            db.users[googleId] = {
+                id: googleId,
+                name: payload['name'],
+                email: payload['email'],
+                picture: payload['picture'],
+                likes: []
+            };
+            saveDB(db);
+        }
 
         res.status(200).json({
-            message: 'Authentication successful',
-            user: {
-                id: userid,
-                name,
-                email,
-                picture
-            }
+            message: 'Auth success',
+            user: db.users[googleId]
         });
     } catch (error) {
-        console.error('Error verifying Google token:', error);
         res.status(401).json({ message: 'Invalid token' });
     }
 });
 
+// --- LIKES SYSTEM ---
+app.post('/api/like', (req, res) => {
+    const { googleId, poemId } = req.body;
+    const db = readDB();
+
+    if (!db.users[googleId]) return res.status(404).send('User not found');
+
+    const likes = db.users[googleId].likes;
+    const index = likes.indexOf(poemId);
+
+    if (index > -1) {
+        likes.splice(index, 1); // Unlike
+    } else {
+        likes.push(poemId); // Like
+    }
+
+    saveDB(db);
+    res.json({ likes });
+});
+
+// --- COMMENTS SYSTEM ---
+app.get('/api/comments', (req, res) => {
+    const db = readDB();
+    res.json(db.comments);
+});
+
+app.post('/api/comments', (req, res) => {
+    const { googleId, userName, userPicture, text } = req.body;
+    if (!text) return res.status(400).send('Empty comment');
+
+    const db = readDB();
+    const newComment = {
+        id: Date.now(),
+        googleId,
+        userName,
+        userPicture,
+        text,
+        date: new Date().toISOString()
+    };
+
+    db.comments.unshift(newComment); // Add to start of list
+    saveDB(db);
+    res.json(newComment);
+});
+
 app.listen(port, () => {
-    console.log(`Backend server running at http://localhost:${port}`);
+    console.log(`Anthology Backend running at http://localhost:${port}`);
 });
