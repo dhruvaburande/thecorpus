@@ -7,6 +7,7 @@
 <title>Dhruva Burande — Anthology Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1793,8 +1794,8 @@ body[data-theme="dark"] .sign-in-input {
     </svg>
     <h3>Sign in</h3>
     <p>to continue to Anthology Hub</p>
-    <input type="text" class="sign-in-input" id="signInNameInput" placeholder="Enter your display name" maxlength="30">
-    <button class="sign-in-submit" onclick="completeSignIn()">Continue</button>
+    <div id="g_id_signin"></div>
+    <div id="authErrorMessage" style="color: #e74c3c; font-size: 0.8rem; margin-top: 1rem; display: none;"></div>
   </div>
 </div>
 
@@ -2247,6 +2248,9 @@ function toggleHeart(poemId) {
 }
 
 // Sign-In State
+const GOOGLE_CLIENT_ID = '1068173814955-k1f7da3lna43uc7pm59m3hfec0153srm.apps.googleusercontent.com';
+const BACKEND_URL = 'http://localhost:3000'; // Change to your production URL
+
 function getUser() {
   return JSON.parse(localStorage.getItem('anthology_user') || 'null');
 }
@@ -2257,7 +2261,10 @@ function updateSignInButton() {
   if (!btn) return;
   if (user) {
     btn.classList.add('signed-in');
-    btn.innerHTML = '<span class="logo-signin-avatar">' + user.name.charAt(0).toUpperCase() + '</span><span class="logo-signin-text">' + user.name + '</span>';
+    const avatar = user.picture 
+      ? `<img src="${user.picture}" class="logo-signin-avatar" style="object-fit: cover;">`
+      : `<span class="logo-signin-avatar">${user.name.charAt(0).toUpperCase()}</span>`;
+    btn.innerHTML = avatar + '<span class="logo-signin-text">' + user.name + '</span>';
   } else {
     btn.classList.remove('signed-in');
     btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span class="logo-signin-text">Sign In</span>';
@@ -2268,34 +2275,74 @@ function openSignInModal() {
   var modal = document.getElementById('signInModal');
   if (modal) {
     modal.classList.add('active');
-    var input = document.getElementById('signInNameInput');
-    if (input) setTimeout(function(){ input.focus(); }, 300);
+    initGoogleAuth();
   }
 }
 
 function closeSignInModal() {
   var modal = document.getElementById('signInModal');
-  if (modal) modal.classList.remove('active');
+  if (modal) {
+    modal.classList.remove('active');
+    const errorMsg = document.getElementById('authErrorMessage');
+    if (errorMsg) errorMsg.style.display = 'none';
+  }
 }
 
-function completeSignIn() {
-  var input = document.getElementById('signInNameInput');
-  var name = input ? input.value.trim() : '';
-  if (!name) {
-    showToast('Please enter your name.');
+function initGoogleAuth() {
+  if (typeof google === 'undefined') {
+    setTimeout(initGoogleAuth, 100);
     return;
   }
-  localStorage.setItem('anthology_user', JSON.stringify({ name: name, signedIn: true }));
-  closeSignInModal();
-  updateSignInButton();
-  showToast('Welcome, ' + name + '!');
-  if (typeof buildInterfaceGrids === 'function') buildInterfaceGrids();
+  
+  google.accounts.id.initialize({
+    client_id: GOOGLE_CLIENT_ID,
+    callback: handleCredentialResponse
+  });
+  
+  const parent = document.getElementById('g_id_signin');
+  if (parent) {
+    parent.innerHTML = ''; // Clear previous button
+    google.accounts.id.renderButton(parent, {
+      theme: document.body.getAttribute('data-theme') === 'light' ? 'outline' : 'filled_blue',
+      size: 'large',
+      text: 'continue_with',
+      shape: 'pill',
+      width: '240'
+    });
+  }
+}
 
-  // Close the logo dropdown after sign in
-  var panel = document.getElementById('logoDropdownPanel');
-  var toggle = document.getElementById('logoDropdownToggle');
-  if (panel) panel.classList.remove('open');
-  if (toggle) { toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+async function handleCredentialResponse(response) {
+  try {
+    const res = await fetch(`${BACKEND_URL}/api/auth/google`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token: response.credential })
+    });
+
+    if (!res.ok) throw new Error('Backend verification failed');
+
+    const data = await res.json();
+    localStorage.setItem('anthology_user', JSON.stringify({ ...data.user, signedIn: true }));
+    
+    closeSignInModal();
+    updateSignInButton();
+    showToast('Welcome, ' + data.user.name + '!');
+    if (typeof buildInterfaceGrids === 'function') buildInterfaceGrids();
+
+    const panel = document.getElementById('logoDropdownPanel');
+    const toggle = document.getElementById('logoDropdownToggle');
+    if (panel) panel.classList.remove('open');
+    if (toggle) { toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+
+  } catch (error) {
+    console.error('Auth Error:', error);
+    const errorMsg = document.getElementById('authErrorMessage');
+    if (errorMsg) {
+      errorMsg.textContent = 'Authentication failed. Please check your connection or Client ID.';
+      errorMsg.style.display = 'block';
+    }
+  }
 }
 
 function handleSignOut() {
@@ -2310,11 +2357,6 @@ function handleSignOut() {
 // Close sign-in modal on backdrop click
 document.getElementById('signInModal').addEventListener('click', function(e) {
   if (e.target === this) closeSignInModal();
-});
-
-// Enter key in sign-in input
-document.getElementById('signInNameInput').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') completeSignIn();
 });
 
 // Initialize sign-in button on load
@@ -2338,5 +2380,5 @@ updateSignInButton();
   });
 })();
 </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a08ac841ad9e3fc7',t:'MTc4MDk1MTk2Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a08ac841ad9e3fc7',t:'MTc4MDk1MTk2Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a08ec51ceb6d4206',t:'MTc4MDk5Mzc4MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
