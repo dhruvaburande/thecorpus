@@ -13,7 +13,7 @@ const app = express();
 const port = 3000;
 
 // REPLACE WITH YOUR CLIENT ID
-const CLIENT_ID = '1068173814955-k1f7da3lna43uc7pm59m3hfec0153srm.apps.googleusercontent.com';
+const CLIENT_ID = '766198434917-afp4sa1nq6f5otme8cc5rmttfdiagiu3.apps.googleusercontent.com';
 const client = new OAuth2Client(CLIENT_ID);
 
 app.use(cors({
