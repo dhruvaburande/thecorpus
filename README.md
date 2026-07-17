@@ -1,22 +1,26 @@
-# The Corpus — Poet Index Selection Update
+# The Corpus — Mobile Refined Build
 
-## Latest changes
+This build keeps the current desktop site intact and adds a mobile-specific refinement layer.
 
-- Removed the Poet Index placeholder box.
-- Poet Index now shows only the search bar until someone searches.
-- Search results show selectable poet cards.
-- Selecting a poet opens a clean full list of all available poems by that poet.
-- Each poem in the selected poet view shows date, title, and a short preview.
-- Existing individual poem opening still works from that poet list.
+## Latest mobile changes
+
+- Top navigation is no longer eliminated on mobile; it becomes a horizontal scrollable nav strip.
+- The vintage pen/ink web scrollbar is visible on mobile inside the frame.
+- The Era section remains an aesthetic timeline line on mobile, using horizontal scroll instead of stacked category blocks.
+- Globe controls remain visible and usable on mobile.
+- Search clear button remains accessible on mobile.
+- Atlas, Eras, Written by Hand, Reading Paths, Poet Index, Theme Studio, and reader controls remain reachable.
+- Reader panel controls are reorganized for small screens without removing features.
+- Mobile spacing, alignment, and scroll behaviour were polished without changing the desktop layout.
 
 ## Preserved
 
-- Atlas globe
+- Desktop layout and alignment
+- Atlas globe and zoom
 - Eras timeline
+- Written by Hand section
+- Poet Index search/select behaviour
 - Reading Paths
-- Written by Hand
 - Theme Studio
-- Reader chips and metadata panel
-- Vintage pen scroll indicator
-- Unified scrollbars
+- Copy/split-screen protections
 - Admin/data/tools workflow
