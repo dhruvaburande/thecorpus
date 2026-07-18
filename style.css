@@ -16,26 +16,11 @@
   --shadow: 0 24px 80px rgba(0,0,0,.28);
   --radius: 24px;
   --radius-sm: 14px;
-  --font-sans: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
 }
 
-body[data-theme="light"] {
-  --bg: #e8ece2;
-  --bg-2: #dce4da;
-  --surface: rgba(241, 244, 236, 0.88);
-  --surface-strong: #eef2e9;
-  --paper: #edf1e8;
-  --ink: #17211f;
-  --muted: #4f605c;
-  --dim: #72807b;
-  --line: rgba(29, 54, 50, 0.14);
-  --line-strong: rgba(52, 104, 118, 0.28);
-  --gold: #7b6d33;
-  --gold-2: #3d6f78;
-  --teal: #2f6872;
-  --shadow: 0 24px 80px rgba(43, 69, 63, .13);
-}
+
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -53,7 +38,7 @@ body {
 }
 
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
@@ -317,7 +302,7 @@ main, .site-footer {
   overflow: hidden;
 }
 .hero-main::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 340px;
   height: 340px;
@@ -366,7 +351,7 @@ h1, h2, h3 { font-family: var(--font-serif); line-height: 1.04; }
   background: rgba(0,0,0,.12);
   padding: .45rem .55rem .45rem .9rem;
 }
-body[data-theme="light"] .search-row { background: rgba(255,255,255,.54); }
+
 .search-row svg {
   width: 21px;
   height: 21px;
@@ -883,7 +868,7 @@ select {
 }
 .manuscript-status strong {
   color: var(--gold);
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: .9;
   margin: .5rem 0 .65rem;
@@ -943,7 +928,7 @@ select {
 }
 .era-rail-title { padding-bottom: .85rem; border-bottom: 1px solid var(--border); margin-bottom: .7rem; }
 .era-rail-title span { color: var(--gold); font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; }
-.era-rail-title strong { display: block; font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif); font-size: 1.45rem; margin-top: .25rem; }
+.era-rail-title strong { display: block; font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif); font-size: 1.45rem; margin-top: .25rem; }
 .era-button {
   width: 100%;
   display: grid;
@@ -957,7 +942,7 @@ select {
   position: relative;
 }
 .era-button::before {
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -965,7 +950,7 @@ select {
   margin: .2rem auto 0;
 }
 .era-button:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 11px;
   top: 28px;
@@ -988,7 +973,7 @@ select {
   overflow: hidden;
 }
 .globe-card::before {
-  content: '';
+  content: "";
   position: absolute;
   width: min(620px, 84%);
   aspect-ratio: 1;
@@ -1021,11 +1006,11 @@ select {
 #globeCanvas:active { cursor: grabbing; }
 .globe-caption { position: relative; z-index: 2; color: var(--ink-dark); font-size: .86rem; margin: .5rem 0 0; text-align: center; }
 .atlas-results-panel { padding: 1rem; min-height: 640px; display: flex; flex-direction: column; }
-.atlas-results-panel h3 { font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif); font-size: 2rem; margin: .2rem 0 .55rem; }
+.atlas-results-panel h3 { font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif); font-size: 2rem; margin: .2rem 0 .55rem; }
 .atlas-results-panel > p:not(.eyebrow) { color: var(--ink-muted); line-height: 1.55; }
 .country-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem; margin: .75rem 0 1rem; }
 .country-metrics div { border: 1px solid var(--border); border-radius: 14px; padding: .75rem; }
-.country-metrics strong { display: block; color: var(--gold); font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif); font-size: 1.6rem; line-height: 1; }
+.country-metrics strong { display: block; color: var(--gold); font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif); font-size: 1.6rem; line-height: 1; }
 .country-metrics span { display: block; color: var(--ink-dark); text-transform: uppercase; letter-spacing: .1em; font-weight: 800; font-size: .66rem; margin-top: .35rem; }
 .country-results { overflow: auto; display: grid; gap: .55rem; padding-right: .15rem; }
 .country-result {
@@ -1038,7 +1023,7 @@ select {
 }
 .country-result:hover { border-color: var(--border-strong); }
 .country-result span { display: block; color: var(--gold); font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .25rem; }
-.country-result strong { display: block; font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif); font-size: 1.1rem; line-height: 1.08; }
+.country-result strong { display: block; font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif); font-size: 1.1rem; line-height: 1.08; }
 .country-result em { display: block; color: var(--ink-dark); font-style: normal; font-size: .78rem; margin-top: .35rem; }
 .publication-panel {
   display: grid;
@@ -1095,7 +1080,7 @@ select {
   margin-bottom: .9rem;
 }
 .era-results-head h3 {
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: clamp(2rem, 5vw, 3.2rem);
   margin: .2rem 0 .5rem;
 }
@@ -1118,7 +1103,7 @@ select {
 }
 .era-poem-card:hover { border-color: var(--border-strong); }
 .era-poem-card span { color: var(--gold); font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 800; }
-.era-poem-card strong { display: block; font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif); font-size: 1.18rem; line-height: 1.08; margin: .35rem 0; }
+.era-poem-card strong { display: block; font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif); font-size: 1.18rem; line-height: 1.08; margin: .35rem 0; }
 .era-poem-card em { display: block; color: var(--ink-dark); font-style: normal; font-size: .78rem; }
 @media (max-width: 1120px) {
   .atlas-section .atlas-layout { grid-template-columns: 1fr; }
@@ -1163,7 +1148,7 @@ select {
   border-radius: 14px;
   background: color-mix(in srgb, var(--bg-card) 92%, transparent);
   color: var(--gold);
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: 1.55rem;
   letter-spacing: .12em;
 }
@@ -1176,7 +1161,7 @@ select {
 .empty-country strong {
   display: block;
   color: var(--gold);
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: 1.7rem;
   letter-spacing: .12em;
   margin-bottom: .4rem;
@@ -1211,7 +1196,7 @@ select {
   padding-top: 1.25rem;
 }
 .era-rail.standalone #eraList::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 4%;
   right: 4%;
@@ -1231,7 +1216,7 @@ select {
   transition: transform .22s ease, border-color .22s ease, background .22s ease;
 }
 .era-rail.standalone .era-button::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: -.98rem;
@@ -1247,7 +1232,7 @@ select {
 .era-rail.standalone .era-button::after { display: none !important; }
 .era-rail.standalone .era-button strong {
   display: block;
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: 1.12rem;
   line-height: 1.05;
   margin-bottom: .55rem;
@@ -1310,7 +1295,7 @@ select {
   overflow: hidden;
 }
 .era-results-card::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 1rem;
   right: 1rem;
@@ -1341,7 +1326,7 @@ select {
   font-size: .86rem;
   margin: .45rem 0 .5rem;
 }
-.country-result small { font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif); font-size: 1rem; }
+.country-result small { font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif); font-size: 1rem; }
 
 /* Final Atlas/Eras usability polish */
 .section-search {
@@ -1376,7 +1361,7 @@ select {
   min-height: 46px;
   border-radius: 12px;
   padding: .78rem .9rem;
-  font-family: var(--font-sans, 'DM Sans', system-ui, sans-serif);
+  font-family: var(--font-sans, "DM Sans", system-ui, sans-serif);
 }
 .section-search input:focus {
   outline: none;
@@ -1428,7 +1413,7 @@ select {
 .country-result span,
 .era-poem-card span {
   color: var(--gold);
-  font-family: var(--font-sans, 'DM Sans', system-ui, sans-serif);
+  font-family: var(--font-sans, "DM Sans", system-ui, sans-serif);
   font-size: .72rem;
   font-weight: 800;
   letter-spacing: .12em;
@@ -1437,7 +1422,7 @@ select {
 .country-result strong,
 .era-poem-card strong {
   color: var(--ink);
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: clamp(1.38rem, 2.4vw, 1.78rem);
   line-height: 1.05;
   letter-spacing: -.025em;
@@ -1446,7 +1431,7 @@ select {
 .country-result small,
 .era-poem-card p {
   color: var(--ink-muted);
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: clamp(1.04rem, 1.8vw, 1.22rem);
   line-height: 1.42;
   margin: .35rem 0 .45rem;
@@ -1458,7 +1443,7 @@ select {
   padding-top: .65rem;
   border-top: 1px solid var(--border);
   color: var(--ink-dark);
-  font-family: var(--font-sans, 'DM Sans', system-ui, sans-serif);
+  font-family: var(--font-sans, "DM Sans", system-ui, sans-serif);
   font-style: normal;
   font-size: .78rem;
   line-height: 1.35;
@@ -1586,13 +1571,13 @@ select {
   font-weight: 800;
 }
 .hero-search-item strong {
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: 1.3rem;
   line-height: 1.05;
 }
 .hero-search-item small {
   color: var(--ink-muted);
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: 1rem;
   line-height: 1.35;
   white-space: pre-line;
@@ -1642,7 +1627,7 @@ select {
 }
 .theme-studio-head p {
   margin: 0;
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: 1.55rem;
   line-height: 1;
 }
@@ -1704,300 +1689,73 @@ select {
     var(--surface) !important;
   border-color: color-mix(in srgb, var(--teal) 34%, var(--line)) !important;
 }
-body[data-theme="light"] .hero-main {
-  background:
-    radial-gradient(circle at 86% 5%, rgba(47,104,114,.18), transparent 24rem),
-    linear-gradient(135deg, rgba(120, 161, 172, .28), rgba(119, 160, 146, .22) 52%, rgba(123,109,51,.08)),
-    var(--surface) !important;
-}
+
 
 /* Keep globe visually dark-blue in light mode too */
-body[data-theme="light"] .globe-card {
-  background: #101a22 !important;
-  border-color: rgba(101, 150, 166, .32) !important;
-}
-body[data-theme="light"] .globe-card::before { display: none !important; }
-body[data-theme="light"] .globe-caption,
-body[data-theme="light"] .globe-toolbar span { color: rgba(220,235,232,.72) !important; }
-body[data-theme="light"] .globe-toolbar select {
-  background: rgba(12,20,26,.9);
-  color: #edf7f4;
-  border-color: rgba(101,150,166,.32);
-}
+
+
+
+
 
 @media (max-width: 620px) {
   .theme-grid { grid-template-columns: 1fr; }
 }
 
 /* Light mode refinement — preserve dark mode, soften everything else */
-body[data-theme="light"] {
-  --bg: #e7e5d8;
-  --bg-2: #d9ded1;
-  --surface: rgba(241, 239, 228, 0.9);
-  --surface-strong: #efeee3;
-  --paper: #f1efe4;
-  --ink: #18211d;
-  --muted: #4f5d55;
-  --dim: #738078;
-  --line: rgba(38, 55, 48, 0.13);
-  --line-strong: rgba(64, 101, 92, 0.28);
-  --gold: #71683c;
-  --gold-2: #526b70;
-  --teal: #456f68;
-  --danger: #8f5b52;
-  --shadow: 0 22px 70px rgba(47, 62, 54, .12);
-}
-body[data-theme="light"] {
-  background:
-    radial-gradient(circle at 16% 0%, rgba(113,104,60,.08), transparent 28rem),
-    radial-gradient(circle at 86% 10%, rgba(69,111,104,.075), transparent 30rem),
-    linear-gradient(180deg, var(--bg), var(--bg-2));
-}
-body[data-theme="light"]::before {
-  background-image:
-    linear-gradient(90deg, rgba(55,75,68,.045) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(55,75,68,.035) 1px, transparent 1px);
-  opacity: .18;
-}
-body[data-theme="light"] .page-frame {
-  border-color: rgba(55,75,68,.16);
-}
-body[data-theme="light"] .site-header {
-  background: rgba(231,229,216,.82);
-  border-bottom-color: rgba(38,55,48,.12);
-}
+
+
+
+
+
 
 /* Light hero: remove the jarring blue wash, keep only a restrained green-blue undertone */
-body[data-theme="light"] .hero-main {
-  background:
-    radial-gradient(circle at 88% 4%, rgba(69,111,104,.105), transparent 24rem),
-    linear-gradient(135deg, rgba(241,239,228,.96), rgba(226,232,219,.92) 58%, rgba(231,229,216,.96)),
-    var(--surface) !important;
-  border-color: rgba(69,111,104,.22) !important;
-  box-shadow: 0 24px 70px rgba(47,62,54,.10) !important;
-}
-body[data-theme="light"] .hero-main::after {
-  border-color: rgba(69,111,104,.16);
-  box-shadow: inset 0 0 0 30px rgba(113,104,60,.035);
-}
-body[data-theme="light"] .hero-main h1,
-body[data-theme="light"] .hero-lede,
-body[data-theme="light"] .brand-copy strong {
-  color: #18211d;
-}
-body[data-theme="light"] .search-row {
-  background: rgba(238,237,226,.82);
-  border-color: rgba(69,111,104,.22);
-}
+
+
+
+
 
 /* Light Atlas: no heavy rectangular globe box, just the rotating globe and refined controls */
-body[data-theme="light"] .globe-card {
-  background: transparent !important;
-  border-color: transparent !important;
-  box-shadow: none !important;
-  border-radius: 28px;
-}
-body[data-theme="light"] .globe-card::before { display: none !important; }
-body[data-theme="light"] #globeCanvas {
-  filter: saturate(.92) contrast(.98);
-}
-body[data-theme="light"] .globe-toolbar {
-  max-width: min(820px, 100%);
-  margin-inline: auto;
-  padding: .75rem;
-  border: 1px solid rgba(38,55,48,.13);
-  border-radius: 18px;
-  background: rgba(241,239,228,.78);
-  box-shadow: 0 14px 44px rgba(47,62,54,.09);
-}
-body[data-theme="light"] .globe-toolbar span,
-body[data-theme="light"] .globe-caption {
-  color: #5d6a62 !important;
-}
-body[data-theme="light"] .globe-toolbar select {
-  background: #eef0e7 !important;
-  color: #18211d !important;
-  border-color: rgba(69,111,104,.24) !important;
-}
-body[data-theme="light"] #resetAtlas,
-body[data-theme="light"] .globe-toolbar .secondary-btn {
-  display: inline-flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  background: #263b3e !important;
-  color: #edf2ec !important;
-  border-color: #263b3e !important;
-  box-shadow: 0 10px 24px rgba(38,59,62,.12);
-}
-body[data-theme="light"] #resetAtlas:hover,
-body[data-theme="light"] .globe-toolbar .secondary-btn:hover {
-  background: #1d3033 !important;
-  border-color: #1d3033 !important;
-  color: #ffffff !important;
-}
+
+
+
+
+
+
+
+
 
 /* Light mode colour accents: muted, readable, no harsh red/pink flashes */
-body[data-theme="light"] .content-chip,
-body[data-theme="light"] .warning {
-  color: #8f5b52;
-  border-color: rgba(143,91,82,.24);
-  background: rgba(143,91,82,.07);
-}
-body[data-theme="light"] .favorite-mini.active,
-body[data-theme="light"] .heart.saved,
-body[data-theme="light"] .heart-btn.liked {
-  color: #8f5b52 !important;
-}
-body[data-theme="light"] .eyebrow,
-body[data-theme="light"] .poem-mood,
-body[data-theme="light"] .country-result span,
-body[data-theme="light"] .era-poem-card span,
-body[data-theme="light"] .theme-studio-head p {
-  color: var(--gold) !important;
-}
-body[data-theme="light"] .primary-btn,
-body[data-theme="light"] .nav-pill.active,
-body[data-theme="light"] .desktop-nav .nav-anchor.active-anchor,
-body[data-theme="light"] .tab.active {
-  background: #526b70 !important;
-  border-color: #526b70 !important;
-  color: #f4f5ef !important;
-}
-body[data-theme="light"] .secondary-btn:hover,
-body[data-theme="light"] .nav-pill:hover,
-body[data-theme="light"] .tab:hover {
-  border-color: rgba(82,107,112,.34);
-  color: #2f565c;
-}
-body[data-theme="light"] .theme-studio {
-  background: rgba(239,238,227,.96);
-  border-color: rgba(69,111,104,.22);
-}
-body[data-theme="light"] .theme-choice.active,
-body[data-theme="light"] .theme-choice:hover {
-  background: rgba(82,107,112,.08);
-  border-color: rgba(82,107,112,.34);
-}
+
+
+
+
+
+
+
 
 /* Light mode accent correction — replaces jarring gold/red with sage-complement plum/teal */
-body[data-theme="light"] {
-  --light-accent: #5f4a63;
-  --light-accent-strong: #47354b;
-  --light-accent-soft: rgba(95, 74, 99, .10);
-  --light-teal-accent: #315f64;
-  --light-teal-soft: rgba(49, 95, 100, .10);
-  --light-warm-muted: #746747;
-  --danger: #76524d;
-}
 
-body[data-theme="light"] .eyebrow,
-body[data-theme="light"] .poem-mood,
-body[data-theme="light"] .reader-kicker,
-body[data-theme="light"] .modal-poem-mood,
-body[data-theme="light"] .card-mood-badge,
-body[data-theme="light"] .country-result span,
-body[data-theme="light"] .era-poem-card span,
-body[data-theme="light"] .country-initial-group h4,
-body[data-theme="light"] .era-rail-title span,
-body[data-theme="light"] .theme-studio-head p,
-body[data-theme="light"] .filter-intro span,
-body[data-theme="light"] .section-search span,
-body[data-theme="light"] .menu-section h2,
-body[data-theme="light"] .snapshot-note span,
-body[data-theme="light"] .begin-card span,
-body[data-theme="light"] .mood-group button:hover,
-body[data-theme="light"] .mood-card button:hover,
-body[data-theme="light"] .text-link {
-  color: var(--light-accent) !important;
-}
 
-body[data-theme="light"] .stat-val,
-body[data-theme="light"] .stats-grid strong,
-body[data-theme="light"] .manuscript-status strong,
-body[data-theme="light"] .country-metrics strong,
-body[data-theme="light"] .favorite-mini.active,
-body[data-theme="light"] .heart.saved,
-body[data-theme="light"] .heart-btn.liked {
-  color: var(--light-accent-strong) !important;
-}
 
-body[data-theme="light"] .primary-btn,
-body[data-theme="light"] .close-btn,
-body[data-theme="light"] .nav-pill.active,
-body[data-theme="light"] .desktop-nav .nav-anchor.active-anchor,
-body[data-theme="light"] .tab.active,
-body[data-theme="light"] .poet-nav button.active,
-body[data-theme="light"] .poet-nav button:hover,
-body[data-theme="light"] .search-row button,
-body[data-theme="light"] .skip-link {
-  background: var(--light-teal-accent) !important;
-  border-color: var(--light-teal-accent) !important;
-  color: #f4f5ef !important;
-}
 
-body[data-theme="light"] .primary-btn:hover,
-body[data-theme="light"] .close-btn:hover,
-body[data-theme="light"] .search-row button:hover {
-  background: #284f53 !important;
-  border-color: #284f53 !important;
-  color: #ffffff !important;
-}
 
-body[data-theme="light"] .nav-pill:hover,
-body[data-theme="light"] .tab:hover,
-body[data-theme="light"] .secondary-btn:hover,
-body[data-theme="light"] .menu-item:hover,
-body[data-theme="light"] .hero-search-item:hover,
-body[data-theme="light"] .country-result:hover,
-body[data-theme="light"] .era-poem-card:hover,
-body[data-theme="light"] .poem-card:hover,
-body[data-theme="light"] .begin-card:hover,
-body[data-theme="light"] .theme-choice:hover,
-body[data-theme="light"] .theme-choice.active {
-  border-color: rgba(95, 74, 99, .28) !important;
-  background: var(--light-accent-soft) !important;
-  color: var(--light-accent-strong) !important;
-}
 
-body[data-theme="light"] .content-chip,
-body[data-theme="light"] .warning {
-  color: #76524d !important;
-  border-color: rgba(118, 82, 77, .24) !important;
-  background: rgba(118, 82, 77, .07) !important;
-}
 
-body[data-theme="light"] .search-row,
-body[data-theme="light"] .section-search,
-body[data-theme="light"] .control-bar,
-body[data-theme="light"] .written-filter-dock,
-body[data-theme="light"] .theme-studio,
-body[data-theme="light"] .hero-search-results {
-  border-color: rgba(49, 95, 100, .20) !important;
-}
 
-body[data-theme="light"] .publication-panel dt,
-body[data-theme="light"] .reader-meta span,
-body[data-theme="light"] .poem-id,
-body[data-theme="light"] .poem-collection,
-body[data-theme="light"] .reading-time,
-body[data-theme="light"] .card-lang {
-  color: #66746e !important;
-}
 
-body[data-theme="light"] a:hover,
-body[data-theme="light"] .site-footer a:hover {
-  color: var(--light-accent) !important;
-}
+
+
+
+
+
+
+
+
+
+
 
 /* Theme engine light-mode fix: defaults follow the active triadic palette. JS sets these inline after load. */
-body[data-theme="light"] {
-  --light-accent: var(--accent-third, #5f4a63);
-  --light-accent-strong: var(--accent-third, #47354b);
-  --light-accent-soft: color-mix(in srgb, var(--accent-third, #5f4a63) 12%, transparent);
-  --light-teal-accent: var(--teal, #315f64);
-  --light-teal-soft: color-mix(in srgb, var(--teal, #315f64) 12%, transparent);
-  --light-warm-muted: var(--gold, #746747);
-}
+
 
 /* Final hero contrast pass — theme-aware, stronger, not pale blue */
 .hero-main {
@@ -2011,25 +1769,9 @@ body[data-theme="light"] {
     ) !important;
   border-color: color-mix(in srgb, var(--teal) 45%, var(--border)) !important;
 }
-body[data-theme="light"] .hero-main {
-  background:
-    radial-gradient(circle at 88% 6%, color-mix(in srgb, var(--light-teal-accent, var(--teal)) 18%, transparent), transparent 25rem),
-    radial-gradient(circle at 8% 100%, color-mix(in srgb, var(--light-accent, var(--accent-third)) 14%, transparent), transparent 26rem),
-    linear-gradient(135deg,
-      color-mix(in srgb, var(--light-teal-accent, var(--teal)) 18%, #e1e4d7),
-      color-mix(in srgb, var(--light-accent, var(--accent-third)) 11%, #e4e0d4) 54%,
-      color-mix(in srgb, var(--light-warm-muted, var(--gold)) 12%, #d9ded1)
-    ) !important;
-  border-color: color-mix(in srgb, var(--light-teal-accent, var(--teal)) 28%, transparent) !important;
-  box-shadow: 0 24px 72px rgba(47,62,54,.14) !important;
-}
-body[data-theme="light"] .hero-main h1 {
-  color: #111b18;
-  text-shadow: 0 1px 0 rgba(255,255,255,.18);
-}
-body[data-theme="light"] .hero-lede {
-  color: #3d4d47;
-}
+
+
+
 
 /* Globe zoom controls */
 .globe-actions {
@@ -2084,33 +1826,11 @@ body[data-theme="dark"] .hero-lede {
   color: #b8b0a3 !important;
 }
 
-body[data-theme="light"] .hero-main {
-  background:
-    radial-gradient(circle at 88% 6%, rgba(63, 104, 102, 0.13), transparent 28rem),
-    radial-gradient(circle at 10% 100%, rgba(116, 104, 71, 0.07), transparent 25rem),
-    linear-gradient(135deg,
-      rgba(221, 229, 219, 0.96),
-      rgba(214, 224, 214, 0.94) 55%,
-      rgba(224, 222, 209, 0.96)
-    ),
-    #e2e7dc !important;
-  border-color: rgba(63, 104, 102, 0.24) !important;
-  box-shadow: 0 24px 70px rgba(47, 62, 54, .12) !important;
-}
-body[data-theme="light"] .hero-main::after {
-  border-color: rgba(63, 104, 102, 0.16) !important;
-  box-shadow: inset 0 0 0 20px rgba(116,104,71,0.035) !important;
-}
-body[data-theme="light"] .hero-main h1 {
-  color: #18211d !important;
-  text-shadow: none !important;
-}
-body[data-theme="light"] .hero-lede {
-  color: #45534e !important;
-}
-body[data-theme="light"] .hero-main .eyebrow {
-  color: #5f4a63 !important;
-}
+
+
+
+
+
 
 
 /* Content protection and anti split-screen privacy overlay */
@@ -2151,7 +1871,7 @@ body.protect-copy svg {
 }
 .privacy-card strong {
   display: block;
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: clamp(2rem, 6vw, 3.2rem);
   line-height: 1;
   color: #c9a96e;
@@ -2197,7 +1917,7 @@ body.viewport-locked .toast {
   box-shadow: var(--shadow-soft, 0 18px 45px rgba(0,0,0,.14));
 }
 .path-card h3 {
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: clamp(1.35rem, 3vw, 1.75rem);
   line-height: 1.12;
   margin: .3rem 0 1rem;
@@ -2223,7 +1943,7 @@ body.viewport-locked .toast {
 }
 .path-poems strong {
   display: block;
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: 1.08rem;
   line-height: 1.05;
 }
@@ -2263,7 +1983,7 @@ body.viewport-locked .toast {
   gap: 1rem;
 }
 .poet-index-card h3 {
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: 1.55rem;
   line-height: 1.05;
   margin-bottom: .4rem;
@@ -2304,12 +2024,8 @@ body.viewport-locked .toast {
 *::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, var(--gold), var(--teal));
 }
-body[data-theme="light"] * {
-  scrollbar-color: color-mix(in srgb, var(--light-accent) 50%, var(--light-teal-accent)) rgba(47,62,54,.06);
-}
-body[data-theme="light"] *::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--light-accent) 72%, transparent), color-mix(in srgb, var(--light-teal-accent) 66%, transparent));
-}
+
+
 
 /* Left vintage pen ink progress */
 .pen-scroll-track {
@@ -2357,7 +2073,7 @@ body[data-theme="light"] *::-webkit-scrollbar-thumb {
 }
 .pen-ink-line::before,
 .pen-ink-line::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -2366,7 +2082,7 @@ body[data-theme="light"] *::-webkit-scrollbar-thumb {
 }
 .pen-ink-line::before { bottom: -6px; width: 6px; height: 8px; }
 .pen-ink-line::after { bottom: -18px; width: 3px; height: 4px; opacity: .55; }
-body[data-theme="light"] .pen-scroll-track { opacity: .58; }
+
 @media (max-width: 1180px) { .pen-scroll-track { display: none; } }
 
 /* Reader category chips */
@@ -2396,7 +2112,7 @@ body[data-theme="light"] .pen-scroll-track { opacity: .58; }
   font-weight: 800;
   font-size: .64rem;
 }
-body[data-theme="light"] .reader-tag-cloud em { color: var(--light-accent) !important; }
+
 
 /* Softer reading paths: less text, more visual breathing room */
 .paths-grid {
@@ -2410,7 +2126,7 @@ body[data-theme="light"] .reader-tag-cloud em { color: var(--light-accent) !impo
   padding: 1.2rem 1.15rem 1.05rem;
 }
 .path-card::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -50px;
   top: -50px;
@@ -2428,7 +2144,7 @@ body[data-theme="light"] .reader-tag-cloud em { color: var(--light-accent) !impo
   border-radius: 50%;
   border: 1px solid var(--border-strong);
   color: var(--gold);
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: 1.1rem;
   margin-bottom: .85rem;
 }
@@ -2444,7 +2160,7 @@ body[data-theme="light"] .reader-tag-cloud em { color: var(--light-accent) !impo
   grid-template-columns: 1fr;
   margin-bottom: .7rem;
 }
-.path-poems.compact button:nth-child(n+3) { display: none; }
+.path-poems.compact button:nth-child(n/**/+3) { display: none; }
 .path-start {
   width: 100%;
   margin-top: auto;
@@ -2456,7 +2172,7 @@ body[data-theme="light"] .reader-tag-cloud em { color: var(--light-accent) !impo
   font-weight: 800;
 }
 .path-start:hover { background: var(--gold); color: #09090b; }
-body[data-theme="light"] .path-start:hover { background: var(--light-teal-accent) !important; color: #f4f5ef !important; }
+
 
 /* Poet index stays quiet until searched */
 .poet-index-grid:has(.poet-index-empty) {
@@ -2472,7 +2188,7 @@ body[data-theme="light"] .path-start:hover { background: var(--light-teal-accent
 }
 .poet-index-empty strong {
   display: block;
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   color: var(--ink);
   margin-bottom: .45rem;
@@ -2512,7 +2228,7 @@ body[data-theme="light"] .path-start:hover { background: var(--light-teal-accent
   background: color-mix(in srgb, var(--gold) 9%, var(--bg-card));
 }
 .poet-select-card h3 {
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: clamp(1.45rem, 3vw, 1.9rem);
   line-height: 1.03;
   margin: 0 0 .45rem;
@@ -2546,7 +2262,7 @@ body[data-theme="light"] .path-start:hover { background: var(--light-teal-accent
   margin-bottom: 1rem;
 }
 .poet-detail-head h3 {
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: clamp(2rem, 5vw, 3.2rem);
   margin: .1rem 0 .35rem;
   line-height: 1;
@@ -2586,21 +2302,18 @@ body[data-theme="light"] .path-start:hover { background: var(--light-teal-accent
   font-weight: 800;
 }
 .poet-poem-list strong {
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: 1.35rem;
   line-height: 1.05;
 }
 .poet-poem-list small {
   color: var(--ink-muted);
   white-space: pre-line;
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
   font-size: 1.05rem;
   line-height: 1.35;
 }
-body[data-theme="light"] .poet-select-card span,
-body[data-theme="light"] .poet-poem-list span {
-  color: var(--light-accent) !important;
-}
+
 @media (max-width: 760px) {
   .poet-detail-head { flex-direction: column-reverse; }
   .poet-detail-head .secondary-btn { width: 100%; }
@@ -2748,7 +2461,7 @@ body[data-theme="light"] .poet-poem-list span {
   }
   .era-rail.standalone #eraList::before {
     display: block !important;
-    content: '';
+    content: "";
     position: absolute;
     left: 1rem;
     right: 1rem;
@@ -2766,7 +2479,7 @@ body[data-theme="light"] .poet-poem-list span {
   }
   .era-rail.standalone .era-button::before {
     display: block !important;
-    content: '';
+    content: "";
     position: absolute;
     left: 50%;
     top: -.98rem;
@@ -2858,21 +2571,18 @@ body[data-theme="light"] .poet-poem-list span {
   border-color: var(--gold) !important;
   background: color-mix(in srgb, var(--gold) 12%, transparent) !important;
 }
-body[data-theme="light"] .country-result-ready {
-  border-color: var(--light-accent) !important;
-  background: var(--light-accent-soft) !important;
-}
+
 
 /* Globe interaction refinement */
 #globeCanvas {
   touch-action: none;
 }
 .globe-caption::after {
-  content: ' Deliberate tap selects; drag only rotates.';
+  content: " Deliberate tap selects; drag only rotates.";
   color: var(--ink-dark);
 }
 @media (max-width: 760px) {
-  .globe-caption::after { content: ' Tap carefully to select; drag rotates.'; }
+  .globe-caption::after { content: " Tap carefully to select; drag rotates."; }
 }
 
 /* Lazy Atlas pagination */
@@ -3103,4 +2813,536 @@ body[data-theme="light"] .country-result-ready {
   .research-arrow { width: 38px; height: 38px; font-size: 1rem; }
   .research-track { grid-template-columns: 1fr; }
   .research-status { display: grid; }
+}
+
+/* =============================================================
+   Interaction and reading refinements — July 2026
+   ============================================================= */
+
+/* The sticky country code remains intentionally visible, but reads as a small
+   themed index tab rather than an uncoloured rectangle over the cards. */
+.country-initial-group h4 {
+  width: max-content;
+  min-width: 4.2rem;
+  justify-self: start;
+  top: .4rem;
+  z-index: 8;
+  padding: .58rem .9rem !important;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--teal) 34%, var(--surface-strong)), color-mix(in srgb, var(--gold) 18%, var(--surface-strong))) !important;
+  border-color: color-mix(in srgb, var(--teal) 60%, var(--line-strong)) !important;
+  color: var(--ink) !important;
+  box-shadow: 0 10px 26px rgba(0,0,0,.24), 0 0 0 1px color-mix(in srgb, var(--gold) 12%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  text-align: center;
+}
+
+/* The globe itself is free-standing. Only its compact toolbar remains a card. */
+.atlas-section .globe-card {
+  border-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+#globeCanvas {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.globe-caption::after { content: none !important; }
+
+/* Reader facets are now purposeful navigation controls. */
+.reader-tag-cloud .reader-tag {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .38rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--teal) 8%, var(--surface));
+  color: var(--ink);
+  padding: .45rem .66rem;
+  font-size: .78rem;
+  line-height: 1.15;
+  text-align: left;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+.reader-tag-cloud .reader-tag:hover {
+  transform: translateY(-1px);
+  border-color: var(--teal);
+  background: color-mix(in srgb, var(--teal) 16%, var(--surface));
+}
+.reader-tag-cloud .reader-tag em {
+  color: var(--gold);
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 800;
+  font-size: .64rem;
+}
+.reader-tag-cloud .reader-tag span { color: var(--ink); }
+.publication-panel dd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .4rem;
+}
+.reader-filter-link,
+.reader-source-link {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  padding: 0;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--teal) 38%, transparent);
+  text-underline-offset: .2em;
+}
+.reader-filter-link:hover,
+.reader-source-link:hover {
+  color: var(--teal);
+  text-decoration-color: currentColor;
+}
+.reader-source-link {
+  color: var(--gold-2);
+  font-size: .76rem;
+  text-decoration: none;
+}
+.close-btn,
+.tool-btn { touch-action: manipulation; }
+
+/* Keep Previous, A−, A+, and Exit on one dependable line on phones. */
+@media (max-width: 720px) {
+  .reader-header {
+    min-height: 58px;
+    padding: .62rem .7rem;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: .42rem !important;
+  }
+  .reader-tools {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: none !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: .35rem !important;
+  }
+  .reader-tools .tool-btn {
+    flex: 0 1 auto;
+    width: auto !important;
+    min-width: 38px;
+    height: 38px;
+    padding-inline: .62rem !important;
+  }
+  .close-btn {
+    flex: 0 0 auto;
+    width: auto !important;
+    min-width: 58px;
+    height: 38px;
+    padding-inline: .8rem;
+    position: relative;
+    z-index: 5;
+  }
+  .reader-tag-cloud .reader-tag {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}
+
+/* Restrained light manuscript: neutral paper with low-intensity, meaningful
+   sage/slate fills. This deliberately overrides the earlier colourful passes. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================================
+   Vivid light themes — same triadic identity and intensity as dark mode
+   Dark-mode selectors and variables are intentionally untouched.
+   ============================================================= */
+
+
+
+
+
+
+/* Triadic card rotation keeps the selected theme visible throughout the page. */
+
+/* =============================================================
+   Shared visual refinement — subtle in both modes
+   ============================================================= */
+main > section { scroll-margin-top: 6.5rem; }
+.hero-main,
+.poem-card,
+.path-card,
+.research-card,
+.begin-card { isolation: isolate; }
+.hero-main::before {
+  content: '';
+  position: absolute;
+  right: clamp(1rem, 4vw, 3.2rem);
+  bottom: clamp(1rem, 3vw, 2.4rem);
+  width: clamp(92px, 14vw, 180px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  opacity: .22;
+  z-index: 0;
+  background:
+    radial-gradient(circle, var(--teal) 0 1.5px, transparent 2px) 0 0 / 18px 18px,
+    linear-gradient(90deg, transparent 48%, color-mix(in srgb, var(--gold) 48%, transparent) 49% 51%, transparent 52%),
+    linear-gradient(transparent 48%, color-mix(in srgb, var(--accent-third) 38%, transparent) 49% 51%, transparent 52%);
+  border-radius: 50%;
+  mask-image: radial-gradient(circle, #000 20%, transparent 72%);
+}
+.hero-main > * { position: relative; z-index: 1; }
+.section-heading { position: relative; }
+.section-heading::before {
+  content: '';
+  position: absolute;
+  top: -.65rem;
+  left: 0;
+  width: 72px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold), var(--teal), var(--accent-third));
+  opacity: .72;
+}
+.poem-card::after,
+.path-card::before,
+.research-card::before {
+  content: '';
+  position: absolute;
+  right: .72rem;
+  bottom: .72rem;
+  width: 18px;
+  height: 18px;
+  border-right: 1px solid color-mix(in srgb, var(--teal) 48%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--gold) 48%, transparent);
+  pointer-events: none;
+  opacity: .65;
+}
+button, a, input, select { -webkit-tap-highlight-color: transparent; }
+button, .nav-pill, .tab, .menu-item { min-height: 42px; }
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--teal) 64%, transparent) !important;
+  outline-offset: 3px !important;
+}
+
+/* =============================================================
+   Light mode — warm cream manuscript with integrated pastel globe
+   ============================================================= */
+body[data-theme="light"] {
+  --bg: #f2eadc;
+  --bg-2: #e9dfcf;
+  --surface: rgba(255, 251, 243, .84);
+  --surface-strong: #fffaf0;
+  --paper: #fffaf0;
+  --ink: #29251f;
+  --muted: #655e54;
+  --dim: #81786b;
+  --line: rgba(75, 62, 45, .13);
+  --line-strong: color-mix(in srgb, var(--theme-vivid-b) 38%, rgba(75,62,45,.18));
+  --shadow: 0 20px 58px rgba(71, 55, 35, .12);
+  --bg-card: rgba(255, 251, 243, .86);
+  --border: rgba(75, 62, 45, .13);
+  --border-strong: color-mix(in srgb, var(--theme-vivid-b) 40%, rgba(75,62,45,.18));
+  --ink-muted: #655e54;
+  --ink-dark: #81786b;
+
+  background:
+    radial-gradient(circle at 10% 0%, color-mix(in srgb, var(--theme-vivid-a) 10%, transparent), transparent 31rem),
+    radial-gradient(circle at 90% 9%, color-mix(in srgb, var(--theme-vivid-b) 9%, transparent), transparent 33rem),
+    linear-gradient(180deg, #f5eee2 0%, #eee4d5 48%, #f3ecdf 100%) !important;
+  color: var(--ink);
+}
+body[data-theme="light"]::before {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(87,71,51,.075) 1px, transparent 1.25px),
+    linear-gradient(90deg, rgba(87,71,51,.025) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(87,71,51,.02) 1px, transparent 1px) !important;
+  background-size: 24px 24px, 96px 96px, 96px 96px !important;
+  opacity: .44 !important;
+  mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.75) 55%, transparent 100%);
+}
+body[data-theme="light"] .grain {
+  opacity: .025;
+  mix-blend-mode: multiply;
+}
+body[data-theme="light"] .page-frame {
+  border-color: color-mix(in srgb, var(--theme-vivid-a) 32%, rgba(87,71,51,.2)) !important;
+  box-shadow: inset 0 0 42px rgba(101,82,56,.035);
+}
+
+/* Header and navigation */
+body[data-theme="light"] .site-header {
+  background: rgba(247, 240, 228, .88) !important;
+  color: var(--ink) !important;
+  border-bottom-color: color-mix(in srgb, var(--theme-vivid-b) 32%, rgba(75,62,45,.16)) !important;
+  box-shadow: 0 8px 28px rgba(71,55,35,.07);
+}
+body[data-theme="light"] .brand,
+body[data-theme="light"] .brand-copy strong { color: var(--ink) !important; }
+body[data-theme="light"] .brand-copy small { color: var(--muted) !important; }
+body[data-theme="light"] .desktop-nav {
+  background: rgba(255,251,243,.54);
+  border-color: rgba(75,62,45,.11);
+}
+body[data-theme="light"] .nav-pill,
+body[data-theme="light"] .tab,
+body[data-theme="light"] .research-mobile-link { color: #514b43 !important; }
+
+/* Hero: cream paper, subtle theme depth, elegant corner drawing. */
+body[data-theme="light"] .hero-main {
+  background:
+    radial-gradient(circle at 88% 7%, color-mix(in srgb, var(--theme-vivid-b) 14%, transparent), transparent 24rem),
+    radial-gradient(circle at 8% 100%, color-mix(in srgb, var(--theme-vivid-a) 10%, transparent), transparent 26rem),
+    linear-gradient(135deg,
+      rgba(255,251,243,.96),
+      color-mix(in srgb, var(--theme-vivid-b) 7%, #fffaf1) 58%,
+      color-mix(in srgb, var(--theme-vivid-c) 6%, #fffaf1)) !important;
+  border-color: color-mix(in srgb, var(--theme-vivid-b) 30%, rgba(75,62,45,.13)) !important;
+  box-shadow: 0 24px 64px rgba(71,55,35,.11) !important;
+}
+body[data-theme="light"] .hero-main::after {
+  display: block !important;
+  border-color: color-mix(in srgb, var(--theme-vivid-a) 26%, rgba(75,62,45,.12)) !important;
+  box-shadow: inset 0 0 0 18px color-mix(in srgb, var(--theme-vivid-b) 7%, transparent) !important;
+}
+body[data-theme="light"] .hero-main::before {
+  opacity: .18;
+  filter: saturate(.82);
+}
+body[data-theme="light"] .hero-main h1 { color: #27231e !important; text-shadow: none !important; }
+body[data-theme="light"] .hero-lede { color: #5d564d !important; }
+
+/* Warm, restrained surfaces with clear depth and consistent spacing. */
+body[data-theme="light"] .hero-side,
+body[data-theme="light"] .featured-card,
+body[data-theme="light"] .about-card,
+body[data-theme="light"] .collection-notes article,
+body[data-theme="light"] .micro-note,
+body[data-theme="light"] .stats-grid,
+body[data-theme="light"] .control-bar,
+body[data-theme="light"] .poem-card,
+body[data-theme="light"] .empty-state,
+body[data-theme="light"] .mood-group,
+body[data-theme="light"] .manuscript-status article,
+body[data-theme="light"] .path-card,
+body[data-theme="light"] .poet-index-card,
+body[data-theme="light"] .poet-select-card,
+body[data-theme="light"] .poet-detail-card,
+body[data-theme="light"] .era-rail,
+body[data-theme="light"] .era-results-card,
+body[data-theme="light"] .era-poem-card,
+body[data-theme="light"] .atlas-results-panel,
+body[data-theme="light"] .country-result,
+body[data-theme="light"] .research-section,
+body[data-theme="light"] .research-card,
+body[data-theme="light"] .research-tools,
+body[data-theme="light"] .begin-card,
+body[data-theme="light"] .theme-studio,
+body[data-theme="light"] .site-menu {
+  background:
+    linear-gradient(145deg,
+      rgba(255,252,245,.9),
+      color-mix(in srgb, var(--theme-vivid-b) 4%, rgba(255,250,240,.92))) !important;
+  border-color: color-mix(in srgb, var(--theme-vivid-b) 24%, rgba(75,62,45,.13)) !important;
+  color: var(--ink) !important;
+  box-shadow: 0 15px 42px rgba(71,55,35,.085) !important;
+}
+body[data-theme="light"] .poem-card:hover,
+body[data-theme="light"] .path-card:hover,
+body[data-theme="light"] .research-card:hover,
+body[data-theme="light"] .era-poem-card:hover,
+body[data-theme="light"] .country-result:hover,
+body[data-theme="light"] .begin-card:hover {
+  background: color-mix(in srgb, var(--theme-vivid-b) 7%, #fffaf2) !important;
+  border-color: color-mix(in srgb, var(--theme-vivid-b) 42%, rgba(75,62,45,.16)) !important;
+  box-shadow: 0 20px 48px rgba(71,55,35,.12) !important;
+}
+
+/* Typography and metadata */
+body[data-theme="light"] .section-heading h2,
+body[data-theme="light"] .about-card h2,
+body[data-theme="light"] .research-section h2,
+body[data-theme="light"] .era-results-head h3,
+body[data-theme="light"] .poet-detail-card h3,
+body[data-theme="light"] .poem-card h3,
+body[data-theme="light"] .path-card h3,
+body[data-theme="light"] .research-card h3,
+body[data-theme="light"] .research-card h3 a,
+body[data-theme="light"] .country-result strong,
+body[data-theme="light"] .era-poem-card strong { color: #28231e !important; }
+body[data-theme="light"] .section-heading > p,
+body[data-theme="light"] .excerpt,
+body[data-theme="light"] .path-card p,
+body[data-theme="light"] .research-authors,
+body[data-theme="light"] .research-topic,
+body[data-theme="light"] .research-status,
+body[data-theme="light"] .collection-notes p,
+body[data-theme="light"] .about-card p,
+body[data-theme="light"] .manuscript-status p,
+body[data-theme="light"] .country-result small,
+body[data-theme="light"] .country-result em,
+body[data-theme="light"] .era-poem-card p,
+body[data-theme="light"] .era-poem-card em,
+body[data-theme="light"] .list-scope { color: #5f574e !important; }
+body[data-theme="light"] .eyebrow,
+body[data-theme="light"] .poem-mood,
+body[data-theme="light"] .reader-kicker,
+body[data-theme="light"] .reader-tag-cloud em,
+body[data-theme="light"] .research-field,
+body[data-theme="light"] .country-result span,
+body[data-theme="light"] .era-poem-card span,
+body[data-theme="light"] .filter-intro span,
+body[data-theme="light"] .section-search span {
+  color: color-mix(in srgb, var(--theme-vivid-c) 72%, #3c332b) !important;
+}
+
+/* Forms and controls */
+body[data-theme="light"] .search-row,
+body[data-theme="light"] .section-search,
+body[data-theme="light"] .written-filter-dock,
+body[data-theme="light"] .research-tools,
+body[data-theme="light"] .poet-index-tools {
+  background: rgba(255,252,245,.74) !important;
+  border-color: color-mix(in srgb, var(--theme-vivid-b) 28%, rgba(75,62,45,.14)) !important;
+  color: var(--ink) !important;
+}
+body[data-theme="light"] input,
+body[data-theme="light"] select {
+  background: rgba(255,253,248,.9) !important;
+  color: #29251f !important;
+  border-color: rgba(75,62,45,.18) !important;
+}
+body[data-theme="light"] input::placeholder { color: #847a6d !important; }
+body[data-theme="light"] select option { background: #fffaf0; color: #29251f; }
+body[data-theme="light"] .primary-btn,
+body[data-theme="light"] .close-btn,
+body[data-theme="light"] .nav-pill.active,
+body[data-theme="light"] .tab.active,
+body[data-theme="light"] .poet-nav button.active,
+body[data-theme="light"] .search-row button,
+body[data-theme="light"] .research-arrow {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--theme-vivid-b) 78%, #5c665f),
+    color-mix(in srgb, var(--theme-vivid-c) 70%, #5c5758)) !important;
+  border-color: color-mix(in srgb, var(--theme-vivid-b) 72%, #5c665f) !important;
+  color: #fffdf8 !important;
+  box-shadow: 0 9px 24px color-mix(in srgb, var(--theme-vivid-b) 18%, rgba(71,55,35,.16)) !important;
+}
+body[data-theme="light"] .secondary-btn,
+body[data-theme="light"] .tool-btn,
+body[data-theme="light"] .nav-pill,
+body[data-theme="light"] .research-mobile-link {
+  background: rgba(255,252,245,.62) !important;
+  color: #3d4945 !important;
+  border-color: color-mix(in srgb, var(--theme-vivid-b) 30%, rgba(75,62,45,.15)) !important;
+}
+body[data-theme="light"] .secondary-btn:hover,
+body[data-theme="light"] .tool-btn:hover,
+body[data-theme="light"] .nav-pill:hover,
+body[data-theme="light"] .research-mobile-link:hover {
+  background: color-mix(in srgb, var(--theme-vivid-b) 9%, #fffaf2) !important;
+  color: #26312e !important;
+}
+
+/* Reader: warm paper, clear text, soft metadata chips. */
+body[data-theme="light"] .reader-panel {
+  background:
+    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--theme-vivid-b) 8%, transparent), transparent 24rem),
+    #fffaf0 !important;
+  color: #29251f !important;
+  border-left-color: rgba(75,62,45,.16) !important;
+  box-shadow: -18px 0 54px rgba(71,55,35,.12) !important;
+}
+body[data-theme="light"] .reader-header {
+  background: rgba(250,244,233,.94) !important;
+  border-bottom-color: rgba(75,62,45,.14) !important;
+}
+body[data-theme="light"] .reader h1,
+body[data-theme="light"] .reader-filter-link,
+body[data-theme="light"] .reader-tag-cloud .reader-tag span,
+body[data-theme="light"] .publication-panel dd,
+body[data-theme="light"] .poem-content { color: #29251f !important; }
+body[data-theme="light"] .publication-panel div,
+body[data-theme="light"] .reader-meta span,
+body[data-theme="light"] .reader-tag-cloud .reader-tag {
+  background: rgba(250,244,233,.74) !important;
+  border-color: color-mix(in srgb, var(--theme-vivid-b) 24%, rgba(75,62,45,.14)) !important;
+  color: #29251f !important;
+  box-shadow: none !important;
+}
+
+/* Globe: free-standing and softly integrated into the cream manuscript. */
+body[data-theme="light"] .atlas-section .globe-card {
+  background:
+    radial-gradient(circle at 50% 52%, rgba(145,174,170,.11), transparent 43%),
+    transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+body[data-theme="light"] .globe-toolbar {
+  background: rgba(255,252,245,.74) !important;
+  color: #29251f !important;
+  border: 1px solid rgba(75,62,45,.13) !important;
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(71,55,35,.075) !important;
+}
+body[data-theme="light"] .globe-toolbar span,
+body[data-theme="light"] .globe-caption { color: #625a50 !important; }
+body[data-theme="light"] #globeCanvas {
+  filter: saturate(.82) contrast(.97) brightness(1.03);
+}
+body[data-theme="light"] .country-initial-group h4 {
+  background: color-mix(in srgb, var(--theme-vivid-b) 14%, #fffaf0) !important;
+  border-color: color-mix(in srgb, var(--theme-vivid-b) 38%, rgba(75,62,45,.14)) !important;
+  color: #33433f !important;
+  box-shadow: 0 8px 20px rgba(71,55,35,.08) !important;
+}
+
+/* Footer and overlays */
+body[data-theme="light"] .site-footer {
+  border-top-color: color-mix(in srgb, var(--theme-vivid-b) 30%, rgba(75,62,45,.14)) !important;
+  color: #29251f !important;
+}
+body[data-theme="light"] .site-footer strong { color: #29251f !important; }
+body[data-theme="light"] .site-footer a { color: #4d5f5a !important; }
+body[data-theme="light"] .site-footer p { color: #665e54 !important; }
+body[data-theme="light"] .theme-studio,
+body[data-theme="light"] .site-menu {
+  background: rgba(255,250,240,.97) !important;
+  color: #29251f !important;
+  border-color: color-mix(in srgb, var(--theme-vivid-b) 28%, rgba(75,62,45,.14)) !important;
+  box-shadow: 0 20px 54px rgba(71,55,35,.14) !important;
+}
+
+/* Small screens: preserve generous touch targets and breathing room. */
+@media (max-width: 720px) {
+  body[data-theme="light"] .hero-main,
+  body[data-theme="light"] .research-section,
+  body[data-theme="light"] .featured-card,
+  body[data-theme="light"] .about-card { border-radius: 18px !important; }
+  body[data-theme="light"] .poem-card,
+  body[data-theme="light"] .path-card,
+  body[data-theme="light"] .research-card { padding: 1rem !important; }
 }

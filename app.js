@@ -17,6 +17,17 @@
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
   const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
   const clean = value => String(value || '').toLowerCase().trim();
+  const contrastForColors = (...colors) => {
+    const luminances = colors.map(color => {
+      const hex = String(color || '').replace('#', '');
+      if (!/^[0-9a-f]{6}$/i.test(hex)) return 0;
+      const [r, g, b] = [0, 2, 4].map(index => parseInt(hex.slice(index, index + 2), 16) / 255);
+      const linear = value => value <= .03928 ? value / 12.92 : Math.pow((value + .055) / 1.055, 2.4);
+      return .2126 * linear(r) + .7152 * linear(g) + .0722 * linear(b);
+    });
+    const average = luminances.reduce((sum, value) => sum + value, 0) / Math.max(1, luminances.length);
+    return average > .42 ? '#0b0d0c' : '#ffffff';
+  };
 
   const collectionLabels = {
     all: 'All Works',
@@ -69,7 +80,6 @@
     visible: [],
     featuredId: 'WBH-004',
     readerSize: Number(localStorage.getItem('corpus_reader_size') || 1.35),
-    readerWide: localStorage.getItem('corpus_reader_wide') === 'true',
     country: null,
     era: 'all',
     poet: 'all',
@@ -140,20 +150,41 @@
   function previewLines(item, count = 2) {
     return contentOf(item).split(/\n+/).map(line => line.trim()).filter(Boolean).slice(0, count).join('\n');
   }
+  function eraForItem(item) {
+    const meta = borrowedMeta[item && item.id] || {};
+    const raw = clean(meta.era || item.era || '');
+    const explicit = eras.find(era => era.id === raw || clean(era.label) === raw);
+    if (explicit && explicit.id !== 'all') return explicit;
+    const year = eraYear(item);
+    return eras.find(era => era.id !== 'all' && era.test(year)) || null;
+  }
   function itemHaystack(item) {
-    return clean([item.title, poetOf(item), countryOf(item), languageOf(item), dateOf(item), originalCollectionOf(item), publisherOf(item), previewLines(item, 6), contentOf(item)].join(' '));
+    const themes = Array.isArray(item.themes) ? item.themes.join(' ') : '';
+    return clean([
+      item.title, poetOf(item), countryOf(item), languageOf(item), item.mood,
+      item.era, themes, dateOf(item), originalCollectionOf(item), publisherOf(item),
+      previewLines(item, 6), contentOf(item)
+    ].join(' '));
   }
   function tagsForItem(item) {
     const tags = [];
-    const add = (label, value) => { if (value && !tags.some(t => t.label === label && t.value === value)) tags.push({ label, value }); };
-    add('Mood', item.mood);
-    add('Country', countryOf(item));
-    add('Language', languageOf(item));
-    add('Era', (borrowedMeta[item && item.id] || {}).era || item.era);
-    add('Source', isAtlas(item) ? 'Atlas' : item.collection);
+    const add = (label, value, action = 'search', filterValue = value) => {
+      const shown = String(value || '').trim();
+      if (!shown || /^unknown/i.test(shown)) return;
+      if (!tags.some(tag => tag.label === label && tag.value === shown)) {
+        tags.push({ label, value: shown, action, filterValue: String(filterValue || shown) });
+      }
+    };
+    const era = eraForItem(item);
+    add('Poet', poetOf(item), 'poet');
+    add('Country', countryOf(item), 'country');
+    add('Mood', item.mood, 'search');
+    add('Language', languageOf(item), 'search');
+    if (era) add('Publication Era', era.label, 'era', era.id);
+    add('Collection', originalCollectionOf(item), 'search');
     const themes = Array.isArray(item.themes) ? item.themes : [];
-    themes.slice(0, 5).forEach(theme => add('Theme', theme));
-    return tags.filter(t => t.value);
+    themes.slice(0, 6).forEach(theme => add('Theme', theme, 'search'));
+    return tags;
   }
   function contentNote(item) {
     const text = clean(`${item.title} ${item.mood || ''} ${item.excerpt || ''} ${item.content || ''} ${item.fulltext || ''}`);
@@ -552,6 +583,29 @@
     let dpr = window.devicePixelRatio || 1;
     const exactCountries = new Set(worldLiteratureItems().map(p => canonicalCountry(countryOf(p))).filter(Boolean));
 
+    function rgb(hex, fallback = [102, 165, 160]) {
+      const value = String(hex || '').trim().replace('#', '');
+      if (!/^[0-9a-f]{6}$/i.test(value)) return fallback;
+      return [0, 2, 4].map(index => parseInt(value.slice(index, index + 2), 16));
+    }
+    function rgba(hex, alpha, fallback) {
+      const [r, g, b] = rgb(hex, fallback);
+      return `rgba(${r},${g},${b},${alpha})`;
+    }
+    function mix(hex, base, amount = .7) {
+      const source = rgb(hex);
+      const target = rgb(base, [244, 239, 227]);
+      const values = source.map((value, index) => Math.round(value * (1 - amount) + target[index] * amount));
+      return `rgb(${values[0]},${values[1]},${values[2]})`;
+    }
+    function globePalette() {
+      const light = document.body.getAttribute('data-theme') === 'light';
+      const a = document.body.style.getPropertyValue('--theme-vivid-a') || '#c9a96e';
+      const b = document.body.style.getPropertyValue('--theme-vivid-b') || '#66a5a0';
+      const c = document.body.style.getPropertyValue('--theme-vivid-c') || '#8f5c6d';
+      return { light, a, b, c };
+    }
+
     function resize() {
       const rect = canvas.getBoundingClientRect();
       dpr = window.devicePixelRatio || 1;
@@ -575,14 +629,23 @@
     function draw() {
       const w = canvas.width, h = canvas.height, cx = w / 2, cy = h / 2, r = Math.min(w, h) * .39 * state.globe.zoom;
       ctx.clearRect(0, 0, w, h);
+      const palette = globePalette();
       const grd = ctx.createRadialGradient(cx - r * .34, cy - r * .34, r * .08, cx, cy, r);
-      grd.addColorStop(0, 'rgba(49,101,130,.42)');
-      grd.addColorStop(.48, 'rgba(18,47,71,.86)');
-      grd.addColorStop(1, 'rgba(6,15,25,.98)');
+      if (palette.light) {
+        grd.addColorStop(0, mix(palette.a, '#fff8e9', .66));
+        grd.addColorStop(.5, mix(palette.b, '#dce9e5', .56));
+        grd.addColorStop(1, mix(palette.c, '#829da1', .38));
+      } else {
+        grd.addColorStop(0, 'rgba(49,101,130,.42)');
+        grd.addColorStop(.48, 'rgba(18,47,71,.86)');
+        grd.addColorStop(1, 'rgba(6,15,25,.98)');
+      }
       ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fillStyle = grd; ctx.fill();
-      ctx.strokeStyle = 'rgba(94,143,166,.42)'; ctx.lineWidth = Math.max(1, 1.4 * dpr); ctx.stroke();
+      ctx.strokeStyle = palette.light ? rgba(palette.b, .52) : 'rgba(94,143,166,.42)';
+      ctx.lineWidth = Math.max(1, 1.4 * dpr); ctx.stroke();
       ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.clip();
-      ctx.strokeStyle = 'rgba(255,255,255,.085)'; ctx.lineWidth = dpr;
+      ctx.strokeStyle = palette.light ? 'rgba(48,67,66,.12)' : 'rgba(255,255,255,.085)';
+      ctx.lineWidth = dpr;
       for (let lat = -60; lat <= 60; lat += 30) {
         ctx.beginPath(); let first = true;
         for (let lon = -180; lon <= 180; lon += 4) {
@@ -620,9 +683,13 @@
         if (!geo) continue;
         const name = canonicalCountry(feature.properties && feature.properties.name || '');
         const selectedFeature = selectedName && (name === selectedName || clean(name).includes(clean(selectedName)) || clean(selectedName).includes(clean(name)));
-        ctx.strokeStyle = selectedFeature ? 'rgba(108,176,195,.95)' : 'rgba(202,224,232,.42)';
+        ctx.strokeStyle = selectedFeature
+          ? (palette.light ? palette.c : 'rgba(108,176,195,.95)')
+          : (palette.light ? 'rgba(49,70,69,.46)' : 'rgba(202,224,232,.42)');
         ctx.lineWidth = selectedFeature ? 1.25 * dpr : .62 * dpr;
-        ctx.fillStyle = selectedFeature ? 'rgba(82,151,173,.18)' : 'rgba(130,187,176,.025)';
+        ctx.fillStyle = selectedFeature
+          ? (palette.light ? rgba(palette.b, .3) : 'rgba(82,151,173,.18)')
+          : (palette.light ? 'rgba(255,250,238,.035)' : 'rgba(130,187,176,.025)');
         const polys = geo.type === 'Polygon' ? [geo.coordinates] : geo.type === 'MultiPolygon' ? geo.coordinates : [];
         for (const poly of polys) {
           for (const ring of poly) drawRing(ring, selectedFeature);
@@ -638,18 +705,33 @@
         const isSelected = c.code === selected;
         const size = (isSelected ? 6.5 : exact ? 4.1 : 2.5) * dpr;
         ctx.beginPath(); ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
-        ctx.fillStyle = isSelected ? 'rgba(124,199,220,1)' : exact ? 'rgba(130,187,176,.98)' : 'rgba(202,224,232,.62)';
+        ctx.fillStyle = palette.light
+          ? (isSelected ? palette.c : exact ? palette.b : 'rgba(61,82,80,.55)')
+          : (isSelected ? 'rgba(124,199,220,1)' : exact ? 'rgba(130,187,176,.98)' : 'rgba(202,224,232,.62)');
         ctx.fill();
-        if (isSelected) { ctx.strokeStyle = 'rgba(124,199,220,.28)'; ctx.lineWidth = 5 * dpr; ctx.stroke(); }
+        if (isSelected) {
+          ctx.strokeStyle = palette.light ? rgba(palette.c, .3) : 'rgba(124,199,220,.28)';
+          ctx.lineWidth = 5 * dpr;
+          ctx.stroke();
+        }
         state.globe.projected.push({ ...c, x: p.x / dpr, y: p.y / dpr, size: size / dpr });
       }
       if (state.globe.hover) {
         const hpt = state.globe.hover;
         ctx.font = `${12 * dpr}px system-ui, sans-serif`;
         const tw = ctx.measureText(hpt.name).width;
-        ctx.fillStyle = 'rgba(0,0,0,.74)'; ctx.fillRect(hpt.x * dpr - tw/2 - 8*dpr, hpt.y*dpr - 31*dpr, tw + 16*dpr, 23*dpr);
-        ctx.fillStyle = 'rgba(244,239,230,.96)'; ctx.fillText(hpt.name, hpt.x*dpr - tw/2, hpt.y*dpr - 15*dpr);
+        ctx.fillStyle = palette.light ? 'rgba(255,248,235,.94)' : 'rgba(0,0,0,.74)';
+        ctx.fillRect(hpt.x * dpr - tw/2 - 8*dpr, hpt.y*dpr - 31*dpr, tw + 16*dpr, 23*dpr);
+        ctx.fillStyle = palette.light ? 'rgba(39,47,44,.96)' : 'rgba(244,239,230,.96)';
+        ctx.fillText(hpt.name, hpt.x*dpr - tw/2, hpt.y*dpr - 15*dpr);
       }
+    }
+    function insideGlobe(evt) {
+      const rect = canvas.getBoundingClientRect();
+      const x = evt.clientX - rect.left;
+      const y = evt.clientY - rect.top;
+      const radius = Math.min(rect.width, rect.height) * .39 * state.globe.zoom;
+      return Math.hypot(x - rect.width / 2, y - rect.height / 2) <= radius;
     }
     function nearest(evt) {
       const rect = canvas.getBoundingClientRect();
@@ -663,6 +745,7 @@
     }
     function animate() { if (!state.globe.dragging) state.globe.rotation += 0.0012; draw(); requestAnimationFrame(animate); }
     canvas.addEventListener('pointerdown', e => {
+      if (!insideGlobe(e)) return;
       state.globe.dragging = true;
       state.globe.lastX = e.clientX;
       state.globe.lastY = e.clientY;
@@ -681,9 +764,10 @@
         state.globe.tilt += dy * 0.003;
         state.globe.tilt = Math.max(-0.8, Math.min(0.8, state.globe.tilt));
         state.globe.lastX = e.clientX; state.globe.lastY = e.clientY;
-      } else state.globe.hover = nearest(e);
+      } else state.globe.hover = insideGlobe(e) ? nearest(e) : null;
     });
     canvas.addEventListener('pointerup', e => {
+      if (!state.globe.dragging) return;
       const movedFromStart = Math.hypot(e.clientX - state.globe.downX, e.clientY - state.globe.downY);
       const elapsed = performance.now() - state.globe.downAt;
       state.globe.dragging = false;
@@ -695,11 +779,12 @@
     });
     canvas.addEventListener('pointerleave', () => { state.globe.dragging = false; state.globe.hover = null; });
     canvas.addEventListener('wheel', e => {
+      if (!insideGlobe(e)) return;
       e.preventDefault();
       const delta = e.deltaY > 0 ? -0.1 : 0.1;
       setGlobeZoom(state.globe.zoom + delta);
     }, { passive: false });
-    canvas.addEventListener('dblclick', () => setGlobeZoom(state.globe.zoom < 1.45 ? 1.65 : 1));
+    canvas.addEventListener('dblclick', e => { if (insideGlobe(e)) setGlobeZoom(state.globe.zoom < 1.45 ? 1.65 : 1); });
     $('#globeZoomIn')?.addEventListener('click', () => setGlobeZoom(state.globe.zoom + 0.18));
     $('#globeZoomOut')?.addEventListener('click', () => setGlobeZoom(state.globe.zoom - 0.18));
     window.addEventListener('resize', resize);
@@ -744,6 +829,28 @@
     return item.original_text || item.originalText || item.native_text || item.nativeText || item.original || contentOf(item);
   }
 
+  function readerFilterButton(label, value, action, filterValue = value) {
+    return `<button type="button" class="reader-filter-link" data-reader-filter="${escapeHTML(action)}" data-filter-value="${escapeHTML(filterValue)}" aria-label="Browse ${escapeHTML(label)}: ${escapeHTML(value)}">${escapeHTML(value)}</button>`;
+  }
+
+  function setPublicationFacet(selector, label, value, action, filterValue = value, sourceUrl = '') {
+    const root = $(selector);
+    if (!root) return;
+    const shown = String(value || 'Unknown').trim();
+    const canFilter = shown && !/^unknown/i.test(shown);
+    const filter = canFilter ? readerFilterButton(label, shown, action, filterValue) : escapeHTML(shown || 'Unknown');
+    let source = '';
+    if (sourceUrl) {
+      try {
+        const url = new URL(String(sourceUrl), location.href);
+        if (['http:', 'https:'].includes(url.protocol)) {
+          source = `<a class="reader-source-link" href="${escapeHTML(url.href)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`;
+        }
+      } catch (_) { /* no external source URL */ }
+    }
+    root.innerHTML = `${filter}${source}`;
+  }
+
   async function openItem(id, options = {}) {
     let item = findItem(id);
     if (!item) return;
@@ -766,11 +873,14 @@
     $('#readerTitle').textContent = item.title;
     $('#readerMood').textContent = isAtlas(item) ? `${item.country} · ${languageOf(item)}` : item.mood;
     $('#readerMeta').innerHTML = [itemId(item), isAtlas(item) ? 'World Atlas' : (collectionLabels[item.collection] || item.collection), languageOf(item), readingTime(item)].map(piece => `<span>${escapeHTML(piece)}</span>`).join('');
-    if ($('#readerTagCloud')) $('#readerTagCloud').innerHTML = tagsForItem(item).map(tag => `<span><em>${escapeHTML(tag.label)}</em>${escapeHTML(tag.value)}</span>`).join('');
-    $('#pubDate').textContent = dateOf(item);
-    $('#pubAuthor').textContent = authorOf(item);
-    $('#pubCollection').textContent = originalCollectionOf(item);
-    $('#pubPublisher').textContent = publisherOf(item);
+    if ($('#readerTagCloud')) {
+      $('#readerTagCloud').innerHTML = tagsForItem(item).map(tag => `<button type="button" class="reader-tag" data-reader-filter="${escapeHTML(tag.action)}" data-filter-value="${escapeHTML(tag.filterValue)}"><em>${escapeHTML(tag.label)}</em><span>${escapeHTML(tag.value)}</span></button>`).join('');
+    }
+    const publicationEra = eraForItem(item);
+    setPublicationFacet('#pubDate', 'publication era', dateOf(item), publicationEra ? 'era' : 'search', publicationEra ? publicationEra.id : dateOf(item));
+    setPublicationFacet('#pubAuthor', 'poet', authorOf(item), 'poet');
+    setPublicationFacet('#pubCollection', 'collection', originalCollectionOf(item), 'search');
+    setPublicationFacet('#pubPublisher', 'publisher or source', publisherOf(item), 'search', publisherOf(item), item.source_url || item.pdfUrl || '');
     $('#readerContent').textContent = contentOf(item);
     $('#readerOriginalLanguage').textContent = languageOf(item) !== 'English' ? `Translate to ${languageOf(item)}` : 'Original language view';
     const note = contentNote(item);
@@ -845,7 +955,6 @@
   function applyReaderPrefs() {
     document.documentElement.style.setProperty('--reader-size', `${state.readerSize}rem`);
     document.documentElement.style.setProperty('--reader-size-mobile', `${Math.max(1, state.readerSize - .13)}rem`);
-    $('#readerScroll').classList.toggle('wide', state.readerWide);
   }
   function closeMenu() {
     $('.site-header').classList.remove('menu-open');
@@ -865,17 +974,24 @@
     if (id) localStorage.setItem('corpus_palette', id);
     const palette = currentPalette();
     const mode = document.body.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-    const [a, b, c] = palette[mode];
+    // The dark triad is the canonical identity of every theme. Light mode does
+    // not substitute a muted/pastel palette; it changes only the page canvas.
+    const [a, b, c] = palette.dark;
+    const [vividA, vividB, vividC] = palette.dark;
+    const onAccent = contrastForColors(vividB, vividC);
 
-    // Apply to both :root and body. Light mode defines theme variables on body,
-    // so root-only updates get overridden. Body-level updates make every palette
-    // work correctly in light mode without changing dark-mode behaviour.
+    // Both modes receive the same saturated theme identity. Only selectors
+    // scoped to body[data-theme="light"] alter the surrounding canvas.
     const targets = [document.documentElement, document.body];
     targets.forEach(target => {
       target.style.setProperty('--gold', a);
       target.style.setProperty('--gold-2', c);
       target.style.setProperty('--teal', b);
       target.style.setProperty('--accent-third', c);
+      target.style.setProperty('--theme-vivid-a', vividA);
+      target.style.setProperty('--theme-vivid-b', vividB);
+      target.style.setProperty('--theme-vivid-c', vividC);
+      target.style.setProperty('--theme-on-accent', onAccent);
       target.style.setProperty('--line-strong', `${a}55`);
       target.style.setProperty('--border-strong', `${a}55`);
       target.style.setProperty('--border-glow', `${a}33`);
@@ -883,12 +999,12 @@
     });
 
     if (mode === 'light') {
-      document.body.style.setProperty('--light-accent', c);
-      document.body.style.setProperty('--light-accent-strong', c);
-      document.body.style.setProperty('--light-accent-soft', `${c}18`);
-      document.body.style.setProperty('--light-teal-accent', b);
-      document.body.style.setProperty('--light-teal-soft', `${b}18`);
-      document.body.style.setProperty('--light-warm-muted', a);
+      document.body.style.setProperty('--light-accent', vividC);
+      document.body.style.setProperty('--light-accent-strong', vividC);
+      document.body.style.setProperty('--light-accent-soft', `${vividC}2b`);
+      document.body.style.setProperty('--light-teal-accent', vividB);
+      document.body.style.setProperty('--light-teal-soft', `${vividB}2b`);
+      document.body.style.setProperty('--light-warm-muted', vividA);
     }
 
     $$('.theme-choice').forEach(btn => {
@@ -901,7 +1017,7 @@
     if (!grid) return;
     const mode = document.body.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
     grid.innerHTML = themePalettes.map(p => {
-      const colors = p[mode];
+      const colors = mode === 'light' ? p.dark : p[mode];
       return `<button class="theme-choice" type="button" data-theme-id="${escapeHTML(p.id)}" role="option" aria-selected="${currentPalette().id === p.id}"><strong>${escapeHTML(p.name)}</strong><span class="theme-swatches">${colors.map(color => `<i style="background:${color}"></i>`).join('')}</span></button>`;
     }).join('');
     applyPalette();
@@ -924,6 +1040,55 @@
     state.originalMode = !state.originalMode;
     $('#readerContent').textContent = state.originalMode ? originalLanguageText(state.currentItem) : contentOf(state.currentItem);
     $('#readerOriginalLanguage').textContent = state.originalMode ? 'Return to archive text' : (languageOf(state.currentItem) !== 'English' ? `Translate to ${languageOf(state.currentItem)}` : 'Original language view');
+  }
+
+  function navigateReaderFilter(action, value) {
+    const target = String(value || '').trim();
+    if (!target) return;
+    closeReader();
+
+    if (action === 'country') {
+      const canonicalTarget = canonicalCountry(target);
+      const country = countries.find(item => canonicalCountry(item.name) === canonicalTarget || clean(item.name) === clean(target));
+      if (country) {
+        selectCountry(country, false);
+        setTopNavActive('atlas');
+        requestAnimationFrame(() => $('#worldAtlas')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+        setTimeout(scrollToCountryResults, 420);
+        return;
+      }
+    }
+
+    if (action === 'poet') {
+      state.poetIndexSelected = target;
+      if ($('#poetIndexSearch')) $('#poetIndexSearch').value = target;
+      renderPoetIndex();
+      requestAnimationFrame(() => $('#poets')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+      return;
+    }
+
+    if (action === 'era' && eras.some(era => era.id === target && era.id !== 'all')) {
+      state.era = target;
+      state.eraQuery = '';
+      state.eraLimit = 220;
+      if ($('#eraPoemSearch')) $('#eraPoemSearch').value = '';
+      renderEraRail();
+      renderEraResults();
+      renderCountryPanel();
+      setTopNavActive('eras');
+      requestAnimationFrame(() => $('#eras')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+      return;
+    }
+
+    // Mood, language, theme, collection, publisher, and unmatched facets use
+    // the global archive search, which now indexes those metadata fields.
+    state.query = target;
+    state.mood = 'all';
+    if ($('#archiveSearch')) $('#archiveSearch').value = target;
+    renderMoodSelect();
+    renderArchive();
+    renderHeroSearchResults();
+    requestAnimationFrame(() => $('.hero-shell')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
   }
 
   function setTopNavActive(target) {
@@ -986,6 +1151,13 @@
     $('#clearEraSearch')?.addEventListener('click', () => { state.eraQuery = ''; state.eraLimit = 220; if ($('#eraPoemSearch')) $('#eraPoemSearch').value = ''; renderEraResults(); });
     $('#resetAtlas').addEventListener('click', () => { state.country = null; state.era = 'all'; state.poet = 'all'; state.countryQuery = ''; state.countryLimit = 120; state.eraLimit = 220; state.globe.zoom = 1; state.globe.rotation = -0.65; state.globe.tilt = 0.18; if ($('#countryPoemSearch')) $('#countryPoemSearch').value = ''; renderEraRail(); renderEraResults(); renderPoetNav(); renderCountrySelect(); renderCountryPanel(); });
     document.addEventListener('click', e => {
+      const readerFilter = e.target.closest('[data-reader-filter]');
+      if (readerFilter) {
+        e.preventDefault();
+        e.stopPropagation();
+        navigateReaderFilter(readerFilter.dataset.readerFilter, readerFilter.dataset.filterValue);
+        return;
+      }
       const countryMore = e.target.closest('[data-country-more]');
       if (countryMore) { state.countryLimit += 120; renderCountryPanel(); return; }
       const eraMore = e.target.closest('[data-era-more]');
@@ -1016,12 +1188,15 @@
     $('#menuRecent').addEventListener('click', showRecent);
     $$('[data-begin]').forEach(btn => btn.addEventListener('click', () => openItem(btn.dataset.begin)));
     $$('[data-footer-collection]').forEach(link => link.addEventListener('click', () => setCollection(link.dataset.footerCollection)));
-    $$('[data-close-reader]').forEach(el => el.addEventListener('click', () => closeReader()));
+    $$('[data-close-reader]').forEach(el => el.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      closeReader();
+    }));
     $('#readerPrev').addEventListener('click', () => openAdjacent(-1));
     $('#readerNext').addEventListener('click', () => openAdjacent(1));
     $('#readerDecrease').addEventListener('click', () => { state.readerSize = Math.max(.9, Number((state.readerSize - .1).toFixed(2))); localStorage.setItem('corpus_reader_size', String(state.readerSize)); applyReaderPrefs(); });
     $('#readerIncrease').addEventListener('click', () => { state.readerSize = Math.min(2.1, Number((state.readerSize + .1).toFixed(2))); localStorage.setItem('corpus_reader_size', String(state.readerSize)); applyReaderPrefs(); });
-    $('#readerWidth').addEventListener('click', () => { state.readerWide = !state.readerWide; localStorage.setItem('corpus_reader_wide', String(state.readerWide)); applyReaderPrefs(); });
     $('#readerFavorite').addEventListener('click', () => { if (state.currentId) toggleFavorite(state.currentId); });
     $('#readerOriginalLanguage').addEventListener('click', toggleOriginalLanguage);
     $('#readerCopyLink').addEventListener('click', async () => {
