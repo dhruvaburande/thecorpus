@@ -287,8 +287,9 @@
   }
 
   function renderFeatured() {
-    const preferred = database.find(i => i.id === state.featuredId) || database[0];
-    if (!preferred) return;
+    const pool = database.filter(p => p.collection === 'Written by Hand');
+    if (!pool.length) return;
+    const preferred = pool[Math.floor(Math.random() * pool.length)];
     state.featuredId = preferred.id;
     $('#featuredTitle').textContent = preferred.title;
     $('#featuredExcerpt').textContent = `${preferred.mood} · ${readingTime(preferred)} — ${String(preferred.excerpt || '').replace(/\n/g, ' ')}`;
@@ -435,7 +436,7 @@
     renderArchive();
     setTopNavActive('collection');
     closeMenu();
-    $('#archive').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    location.hash = '#archive';
   }
 
   function clearFilters() {
@@ -992,9 +993,12 @@
 
   function closeReader({ clearHash = true } = {}) {
     if (window.speechSynthesis) window.speechSynthesis.cancel();
-    const voiceBtn = $('#readerPlayVoice span');
+    const voiceBtn = $('#readerPlayVoice');
     if (voiceBtn) voiceBtn.textContent = '▶';
+    const voiceBtnMobile = $('#readerPlayVoiceMobile');
+    if (voiceBtnMobile) voiceBtnMobile.textContent = '▶ Recite Poem';
     $('#readerPlayVoice')?.classList.remove('active');
+    $('#readerPlayVoiceMobile')?.classList.remove('active');
 
     $('#reader').classList.remove('open');
     $('#reader').setAttribute('aria-hidden', 'true');
@@ -1283,7 +1287,7 @@
       event.stopPropagation();
       closeReader();
     }));
-    $('#readerPrev').addEventListener('click', () => openAdjacent(-1));
+    $('#readerPrev')?.addEventListener('click', () => openAdjacent(-1));
     $('#readerNext').addEventListener('click', () => openAdjacent(1));
     $('#readerDecrease').addEventListener('click', () => { state.readerSize = Math.max(.9, Number((state.readerSize - .1).toFixed(2))); localStorage.setItem('corpus_reader_size', String(state.readerSize)); applyReaderPrefs(); });
     $('#readerIncrease').addEventListener('click', () => { state.readerSize = Math.min(2.1, Number((state.readerSize + .1).toFixed(2))); localStorage.setItem('corpus_reader_size', String(state.readerSize)); applyReaderPrefs(); });
@@ -1428,7 +1432,7 @@
 
     if (window.speechSynthesis.speaking) {
       window.speechSynthesis.cancel();
-      if (btn) btn.textContent = '▶ Spoken';
+      if (btn) btn.textContent = '▶';
       if (mBtn) mBtn.textContent = '▶ Recite Poem';
       btn?.classList.remove('active');
       mBtn?.classList.remove('active');
@@ -1456,7 +1460,7 @@
       synthUtterance.pitch = 0.98; 
       
       const resetButtons = () => {
-        if (btn) btn.textContent = '▶ Spoken';
+        if (btn) btn.textContent = '▶';
         if (mBtn) mBtn.textContent = '▶ Recite Poem';
         btn?.classList.remove('active');
         mBtn?.classList.remove('active');
@@ -1466,7 +1470,7 @@
       synthUtterance.onerror = resetButtons;
 
       window.speechSynthesis.speak(synthUtterance);
-      if (btn) btn.textContent = '⏹ Stop';
+      if (btn) btn.textContent = '⏹';
       if (mBtn) mBtn.textContent = '⏹ Stop Recitation';
       btn?.classList.add('active');
       mBtn?.classList.add('active');
@@ -1476,16 +1480,21 @@
 
   function applyRouting() {
     let hash = location.hash.replace('#', '') || 'worldAtlas';
-    if (hash === 'archive' || hash === 'top' || hash === 'home') {
-      hash = 'archive';
+    const targetHash = location.hash;
+
+    if (hash === 'top' || hash === 'home') {
+      hash = 'worldAtlas';
     }
 
     const routes = {
-      'worldAtlas': ['.atlas-section'],
+      'worldAtlas': ['.hero-shell', '.atlas-section'],
       'eras': ['.eras-section'],
       'poets': ['.poet-index-section'],
       'research': ['.research-section'],
-      'archive': ['.hero-shell', '.manuscript-status', '.feature-section', '.paths-section'],
+      'archive': [
+        '.manuscript-status', '.feature-section', '.paths-section', 
+        '.controls-section', '.mood-section', '.about-section'
+      ],
       'about': ['.about-section']
     };
 
@@ -1494,7 +1503,7 @@
     const allViews = [
       '.hero-shell', '.manuscript-status', '.feature-section', '.paths-section',
       '.atlas-section', '.eras-section', '.poet-index-section', '.about-section',
-      '.research-section'
+      '.research-section', '.controls-section', '.mood-section'
     ];
     allViews.forEach(sel => {
       $$(sel).forEach(el => el.classList.remove('active-page'));
@@ -1505,7 +1514,21 @@
     });
 
     document.body.classList.add('routing-active');
-    window.scrollTo({ top: 0 });
+    
+    if (activeRoute === 'archive') {
+      renderFeatured();
+    }
+
+    if (targetHash && (targetHash === '#worldAtlas' || targetHash === '#archive' || targetHash === '#about')) {
+      const el = $(targetHash);
+      if (el) {
+        requestAnimationFrame(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+    } else {
+      window.scrollTo({ top: 0 });
+    }
 
     $$('.desktop-nav .nav-pill, .site-menu .menu-item').forEach(pill => {
       pill.classList.remove('active');
@@ -1519,7 +1542,7 @@
     if (activePill) activePill.classList.add('active');
 
     // Trigger globe drawing if entering the World Atlas page
-    if (activeRoute === 'worldAtlas' && window.drawGlobeInstance) {
+    if ((activeRoute === 'worldAtlas') && window.drawGlobeInstance) {
       requestAnimationFrame(window.drawGlobeInstance);
     }
   }
