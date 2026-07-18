@@ -16,7 +16,7 @@
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
   const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
-  const clean = value => String(value || '').toLowerCase().trim();
+  const clean = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
   const contrastForColors = (...colors) => {
     const luminances = colors.map(color => {
       const hex = String(color || '').replace('#', '');
@@ -345,7 +345,8 @@
   function renderReadingPaths() {
     const root = $('#pathsGrid');
     if (!root) return;
-    root.innerHTML = readingPaths.map((path, index) => {
+    
+    let cardsHTML = readingPaths.map((path, index) => {
       const poems = (path.poems || []).map(id => findItem(id)).filter(Boolean);
       const first = poems[0];
       return `<article class="path-card" style="--path-index:${index + 1}">
@@ -355,7 +356,33 @@
         <div class="path-poems compact">${poems.slice(0, 2).map(item => `<button data-open="${escapeHTML(itemId(item))}"><strong>${escapeHTML(item.title)}</strong><span>${escapeHTML(poetOf(item))}</span></button>`).join('')}</div>
         ${first ? `<button class="path-start" data-open="${escapeHTML(itemId(first))}">Begin path · ${poems.length} poem${poems.length === 1 ? '' : 's'}</button>` : ''}
       </article>`;
-    }).join('') || '<p class="empty-mini">No reading paths yet.</p>';
+    });
+
+    const customIDs = getCustomPath();
+    if (customIDs.length > 0) {
+      const customPoems = customIDs.map(id => findItem(id)).filter(Boolean);
+      if (customPoems.length > 0) {
+        const firstCustom = customPoems[0];
+        const index = readingPaths.length;
+        const shareURL = `${location.origin}${location.pathname}?path=${customIDs.join(',')}`;
+        const customCardHTML = `<article class="path-card custom-path-card" style="--path-index:${index + 1}">
+          <div class="path-orb" aria-hidden="true">★</div>
+          <p class="eyebrow">My Curated Route</p>
+          <h3>A personalized reading path across global poetry</h3>
+          <div class="path-poems compact" style="max-height:120px; overflow-y:auto; scrollbar-width:thin;">
+            ${customPoems.map(item => `<button data-open="${escapeHTML(itemId(item))}"><strong>${escapeHTML(item.title)}</strong><span>${escapeHTML(poetOf(item))}</span></button>`).join('')}
+          </div>
+          <div style="display:flex; gap:0.4rem; margin-top:0.85rem; flex-wrap:wrap; width:100%;">
+            <button class="path-start" data-open="${escapeHTML(itemId(firstCustom))}" style="flex:1; margin-top:0;">Begin Path</button>
+            <button class="secondary-btn" style="padding-inline:0.6rem; min-height:36px; font-size:0.75rem;" onclick="event.stopPropagation(); navigator.clipboard.writeText('${shareURL}').then(() => alert('Shareable Path Link Copied!'))">Share</button>
+            <button class="secondary-btn" style="padding-inline:0.45rem; min-height:36px;" onclick="event.stopPropagation(); localStorage.removeItem('corpus_custom_path'); location.reload();">×</button>
+          </div>
+        </article>`;
+        cardsHTML.push(customCardHTML);
+      }
+    }
+
+    root.innerHTML = cardsHTML.join('') || '<p class="empty-mini">No reading paths yet.</p>';
   }
 
   function poetRows() {
@@ -582,6 +609,9 @@
     const ctx = canvas.getContext('2d');
     let dpr = window.devicePixelRatio || 1;
     const exactCountries = new Set(worldLiteratureItems().map(p => canonicalCountry(countryOf(p))).filter(Boolean));
+    let activePointers = [];
+    let startPinchDist = 0;
+    let startZoom = 1;
 
     function rgb(hex, fallback = [102, 165, 160]) {
       const value = String(hex || '').trim().replace('#', '');
@@ -689,7 +719,7 @@
         ctx.lineWidth = selectedFeature ? 1.25 * dpr : .62 * dpr;
         ctx.fillStyle = selectedFeature
           ? (palette.light ? rgba(palette.b, .3) : 'rgba(82,151,173,.18)')
-          : (palette.light ? 'rgba(255,250,238,.035)' : 'rgba(130,187,176,.025)');
+          : (palette.light ? 'rgba(255, 255, 255, 0.42)' : 'rgba(130,187,176,.025)');
         const polys = geo.type === 'Polygon' ? [geo.coordinates] : geo.type === 'MultiPolygon' ? geo.coordinates : [];
         for (const poly of polys) {
           for (const ring of poly) drawRing(ring, selectedFeature);
@@ -745,18 +775,31 @@
     }
     function animate() { if (!state.globe.dragging) state.globe.rotation += 0.0012; draw(); requestAnimationFrame(animate); }
     canvas.addEventListener('pointerdown', e => {
-      if (!insideGlobe(e)) return;
-      state.globe.dragging = true;
-      state.globe.lastX = e.clientX;
-      state.globe.lastY = e.clientY;
-      state.globe.downX = e.clientX;
-      state.globe.downY = e.clientY;
-      state.globe.downAt = performance.now();
-      state.globe.moved = 0;
-      canvas.setPointerCapture(e.pointerId);
+      activePointers.push(e);
+      if (activePointers.length === 1) {
+        if (!insideGlobe(e)) { activePointers = []; return; }
+        state.globe.dragging = true;
+        state.globe.lastX = e.clientX;
+        state.globe.lastY = e.clientY;
+        state.globe.downX = e.clientX;
+        state.globe.downY = e.clientY;
+        state.globe.downAt = performance.now();
+        state.globe.moved = 0;
+        canvas.setPointerCapture(e.pointerId);
+      } else if (activePointers.length === 2) {
+        state.globe.dragging = false;
+        startPinchDist = Math.hypot(
+          activePointers[0].clientX - activePointers[1].clientX,
+          activePointers[0].clientY - activePointers[1].clientY
+        );
+        startZoom = state.globe.zoom;
+      }
     });
     canvas.addEventListener('pointermove', e => {
-      if (state.globe.dragging) {
+      const idx = activePointers.findIndex(p => p.pointerId === e.pointerId);
+      if (idx !== -1) activePointers[idx] = e;
+
+      if (activePointers.length === 1 && state.globe.dragging) {
         const dx = e.clientX - state.globe.lastX;
         const dy = e.clientY - state.globe.lastY;
         state.globe.moved += Math.hypot(dx, dy);
@@ -764,20 +807,52 @@
         state.globe.tilt += dy * 0.003;
         state.globe.tilt = Math.max(-0.8, Math.min(0.8, state.globe.tilt));
         state.globe.lastX = e.clientX; state.globe.lastY = e.clientY;
-      } else state.globe.hover = insideGlobe(e) ? nearest(e) : null;
+      } else if (activePointers.length === 2) {
+        const dist = Math.hypot(
+          activePointers[0].clientX - activePointers[1].clientX,
+          activePointers[0].clientY - activePointers[1].clientY
+        );
+        if (startPinchDist > 0) {
+          const factor = dist / startPinchDist;
+          setGlobeZoom(startZoom * factor);
+        }
+      } else if (!state.globe.dragging) {
+        state.globe.hover = insideGlobe(e) ? nearest(e) : null;
+      }
     });
     canvas.addEventListener('pointerup', e => {
-      if (!state.globe.dragging) return;
-      const movedFromStart = Math.hypot(e.clientX - state.globe.downX, e.clientY - state.globe.downY);
-      const elapsed = performance.now() - state.globe.downAt;
-      state.globe.dragging = false;
-      // Intentional selection only: no selection after rotation/drag, no accidental swipe/touch.
-      const deliberateTap = movedFromStart < 7 && state.globe.moved < 10 && elapsed < 650;
-      if (!deliberateTap) return;
-      const n = nearest(e);
-      if (n) selectCountry(countries.find(c => c.code === n.code));
+      const idx = activePointers.findIndex(p => p.pointerId === e.pointerId);
+      if (idx !== -1) activePointers.splice(idx, 1);
+
+      if (activePointers.length < 2) {
+        startPinchDist = 0;
+      }
+      if (activePointers.length === 0) {
+        if (!state.globe.dragging) return;
+        const movedFromStart = Math.hypot(e.clientX - state.globe.downX, e.clientY - state.globe.downY);
+        const elapsed = performance.now() - state.globe.downAt;
+        state.globe.dragging = false;
+        const deliberateTap = movedFromStart < 7 && state.globe.moved < 10 && elapsed < 650;
+        if (deliberateTap) {
+          const n = nearest(e);
+          if (n) selectCountry(countries.find(c => c.code === n.code));
+        }
+      }
     });
-    canvas.addEventListener('pointerleave', () => { state.globe.dragging = false; state.globe.hover = null; });
+    canvas.addEventListener('pointercancel', e => {
+      const idx = activePointers.findIndex(p => p.pointerId === e.pointerId);
+      if (idx !== -1) activePointers.splice(idx, 1);
+      if (activePointers.length === 0) {
+        state.globe.dragging = false;
+        startPinchDist = 0;
+      }
+    });
+    canvas.addEventListener('pointerleave', () => {
+      activePointers = [];
+      state.globe.dragging = false;
+      state.globe.hover = null;
+      startPinchDist = 0;
+    });
     canvas.addEventListener('wheel', e => {
       if (!insideGlobe(e)) return;
       e.preventDefault();
@@ -892,6 +967,14 @@
         ? 'Original work. Please do not reproduce without permission. Use Copy Link to share the entry instead.'
         : 'Borrowed Ledger / Research entry. Verify author, translation, source, and copyright status before reuse.';
     updateReaderFavorite();
+    
+    // Load Private Marginalia
+    if ($('#marginaliaText')) {
+      $('#marginaliaText').value = localStorage.getItem('marginalia_' + state.currentId) || '';
+    }
+    // Update Custom Path Button
+    updateReaderPathButton();
+
     renderRelated(item);
     applyReaderPrefs();
     setRecent([state.currentId, ...getRecent().filter(x => x !== state.currentId)]);
@@ -906,6 +989,11 @@
   }
 
   function closeReader({ clearHash = true } = {}) {
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    const voiceBtn = $('#readerPlayVoice span');
+    if (voiceBtn) voiceBtn.textContent = '▶';
+    $('#readerPlayVoice')?.classList.remove('active');
+
     $('#reader').classList.remove('open');
     $('#reader').setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
@@ -977,7 +1065,7 @@
     // The dark triad is the canonical identity of every theme. Light mode does
     // not substitute a muted/pastel palette; it changes only the page canvas.
     const [a, b, c] = palette.dark;
-    const [vividA, vividB, vividC] = palette.dark;
+    const [vividA, vividB, vividC] = mode === 'light' ? palette.light : palette.dark;
     const onAccent = contrastForColors(vividB, vividC);
 
     // Both modes receive the same saturated theme identity. Only selectors
@@ -1199,6 +1287,20 @@
     $('#readerIncrease').addEventListener('click', () => { state.readerSize = Math.min(2.1, Number((state.readerSize + .1).toFixed(2))); localStorage.setItem('corpus_reader_size', String(state.readerSize)); applyReaderPrefs(); });
     $('#readerFavorite').addEventListener('click', () => { if (state.currentId) toggleFavorite(state.currentId); });
     $('#readerOriginalLanguage').addEventListener('click', toggleOriginalLanguage);
+    $('#readerPlayVoice')?.addEventListener('click', togglePoemVoice);
+    $('#readerTogglePath')?.addEventListener('click', () => { if (state.currentId) toggleCustomPath(state.currentId); });
+    $('#saveMarginalia')?.addEventListener('click', () => {
+      if (state.currentId) {
+        const text = $('#marginaliaText')?.value || '';
+        if (text.trim()) {
+          localStorage.setItem('marginalia_' + state.currentId, text.trim());
+          showToast('Marginalia saved.');
+        } else {
+          localStorage.removeItem('marginalia_' + state.currentId);
+          showToast('Marginalia cleared.');
+        }
+      }
+    });
     $('#readerCopyLink').addEventListener('click', async () => {
       const url = `${location.origin}${location.pathname}#${state.currentId}`;
       try { await navigator.clipboard.writeText(url); showToast('Link copied.'); } catch { showToast(url); }
@@ -1286,6 +1388,78 @@
     const pct = Math.max(0, Math.min(100, (window.scrollY / max) * 100));
     line.style.height = `${pct}%`;
   }
+  function getCustomPath() {
+    try {
+      return JSON.parse(localStorage.getItem('corpus_custom_path') || '[]');
+    } catch (_) { return []; }
+  }
+  function toggleCustomPath(id) {
+    let path = getCustomPath();
+    const idx = path.indexOf(id);
+    if (idx !== -1) {
+      path.splice(idx, 1);
+      localStorage.setItem('corpus_custom_path', JSON.stringify(path));
+      showToast('Removed from My Custom Path');
+    } else {
+      path.push(id);
+      localStorage.setItem('corpus_custom_path', JSON.stringify(path));
+      showToast('Added to My Custom Path');
+    }
+    renderReadingPaths();
+    updateReaderPathButton();
+  }
+  function updateReaderPathButton() {
+    const btn = $('#readerTogglePath');
+    if (!state.currentId || !btn) return;
+    btn.textContent = getCustomPath().includes(state.currentId) ? 'Remove from My Path' : 'Add to My Path';
+  }
+
+  let synthUtterance = null;
+  function togglePoemVoice() {
+    if (!window.speechSynthesis) {
+      showToast('Speech synthesis is not supported on this browser.');
+      return;
+    }
+    if (window.speechSynthesis.speaking) {
+      window.speechSynthesis.cancel();
+      const btn = $('#readerPlayVoice');
+      if (btn) btn.textContent = '▶ Spoken';
+      btn?.classList.remove('active');
+      showToast('Recitation stopped.');
+    } else {
+      const title = $('#readerTitle')?.textContent || '';
+      const poet = $('#pubAuthor')?.textContent || 'Unknown author';
+      const text = $('#readerContent')?.textContent || '';
+      if (!text.trim()) return;
+
+      const cleanedText = text.replace(/[\n\r]+/g, '\n');
+      const utteranceText = `Reading ${title} by ${poet}. \n\n ${cleanedText}`;
+      
+      synthUtterance = new SpeechSynthesisUtterance(utteranceText);
+      const voices = window.speechSynthesis.getVoices();
+      const preferred = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Google')));
+      if (preferred) synthUtterance.voice = preferred;
+      
+      synthUtterance.rate = 0.86; 
+      synthUtterance.onend = () => {
+        const btn = $('#readerPlayVoice');
+        if (btn) btn.textContent = '▶ Spoken';
+        btn?.classList.remove('active');
+      };
+      synthUtterance.onerror = () => {
+        const btn = $('#readerPlayVoice');
+        if (btn) btn.textContent = '▶ Spoken';
+        btn?.classList.remove('active');
+      };
+
+      window.speechSynthesis.speak(synthUtterance);
+      const btn = $('#readerPlayVoice');
+      if (btn) btn.textContent = '⏹ Stop';
+      btn?.classList.add('active');
+      showToast('Reciting poem...');
+    }
+  }
+
   function initPenScroll() {
     window.addEventListener('scroll', updatePenScroll, { passive: true });
     window.addEventListener('resize', updatePenScroll, { passive: true });
@@ -1297,6 +1471,26 @@
     initContentProtection();
     initViewportPrivacy();
     initPenScroll();
+
+    // Parse shared path from query
+    const params = new URLSearchParams(location.search);
+    const sharedPath = params.get('path');
+    if (sharedPath) {
+      const ids = sharedPath.split(',').filter(Boolean);
+      if (ids.length > 0) {
+        localStorage.setItem('corpus_custom_path', JSON.stringify(ids));
+        // Clear query from URL for clean look
+        history.replaceState('', document.title, location.pathname);
+      }
+    }
+
+    // Register PWA Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(err => console.log('SW registration failed:', err));
+      });
+    }
+
     renderMoodSelect(); renderArchive(); renderFeatured(); renderMoodMap(); renderReadingPaths(); renderPoetIndex();
     renderEraRail(); renderEraResults(); renderPoetNav(); renderCountrySelect(); renderCountryPanel(); initGlobe();
     updateFavoriteCount(); applyReaderPrefs(); bindEvents(); setTopNavActive('atlas');

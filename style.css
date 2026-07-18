@@ -3346,3 +3346,511 @@ body[data-theme="light"] .site-menu {
   body[data-theme="light"] .path-card,
   body[data-theme="light"] .research-card { padding: 1rem !important; }
 }
+
+
+/* ==========================================================================
+   THE CORPUS — COZY GLOW & PERFECT ALIGNMENT ENHANCEMENTS — JULY 2026
+   ========================================================================== */
+
+/* 1. Global Page Scroll Fix (No shift/jump when modal opens/closes) */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* 2. Responsive Web Scrollbar Masks & Discoverability (Laptop & Mouse Users) */
+.desktop-nav,
+.era-rail.standalone #eraList {
+  mask-image: linear-gradient(to right, black 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 88%, transparent 100%);
+}
+@media (pointer: fine) {
+  .desktop-nav,
+  .era-rail.standalone #eraList {
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(201,169,110,.25) transparent !important;
+  }
+  .desktop-nav::-webkit-scrollbar,
+  .era-rail.standalone #eraList::-webkit-scrollbar {
+    display: block !important;
+    height: 4px !important;
+  }
+  .desktop-nav::-webkit-scrollbar-thumb,
+  .era-rail.standalone #eraList::-webkit-scrollbar-thumb {
+    background: rgba(201,169,110,.25) !important;
+    border-radius: 99px;
+  }
+}
+
+/* 3. Header Center Constraint (Fits perfect 1240px line on Laptops) */
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  gap: 1rem;
+}
+.site-header {
+  padding-top: .45rem !important;
+  padding-bottom: .45rem !important;
+  min-height: auto !important;
+  width: 100%;
+}
+.site-header .theme-studio,
+.site-header .site-menu {
+  position: absolute;
+  top: calc(100% + .7rem);
+  right: 0 !important;
+  left: auto !important;
+}
+
+/* 4. Touch-Action Zooming Setup for 3D Globe */
+#globeCanvas {
+  touch-action: none !important;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 5. Scroll Progress Left Pen Scrollbar Alignment & Overlap Prevention */
+@media (max-width: 768px) {
+  /* Completely hidden on phone viewports to maximize writing canvas space and avoid card collision */
+  .pen-scroll-track {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1180px) {
+  /* Push main layout slightly right on tablets/small laptops so it never overlaps with the pen nib track */
+  main, .site-footer {
+    padding-left: 2rem !important;
+  }
+}
+
+/* 6. Responsive Phone Adjustments (Clean Navigation & Compact Header) */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important; /* Replaced by our newly appended menu items inside mobile drawer */
+  }
+  .site-header {
+    min-height: 60px !important;
+    padding-bottom: 0 !important;
+  }
+  .site-header .theme-studio,
+  .site-header .site-menu {
+    top: 100% !important;
+  }
+}
+
+/* 7. Symmetric Mobile Gutters */
+@media (max-width: 720px) {
+  :root {
+    --mobile-gutter: 1rem;
+  }
+  .site-header {
+    padding-inline: var(--mobile-gutter) !important;
+  }
+  main, .site-footer, .atlas-section, .eras-section, .paths-section, .poet-index-section {
+    width: calc(100% - 2 * var(--mobile-gutter)) !important;
+    margin-inline: auto !important;
+  }
+}
+
+/* 8. Alphabetical Sticky Headers Top Offset on Mobile Scroll */
+@media (max-width: 760px) {
+  .country-initial-group h4 {
+    position: sticky !important;
+    top: 68px !important; /* Aligns letters cleanly right underneath sticky header during scroll */
+    z-index: 8 !important;
+  }
+}
+
+/* 9. Chronology Scroll Line Continuous Expansion */
+@media (max-width: 980px) {
+  .era-rail.standalone #eraList::before {
+    width: max-content;
+    min-width: 100%;
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
+
+/* 10. Compact metrics layout on Phone screens (Replaces bloated vertical stack) */
+@media (max-width: 760px) {
+  .manuscript-status {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+  .manuscript-status article {
+    min-height: 110px !important;
+    padding: 0.75rem !important;
+    justify-content: center !important;
+    text-align: center;
+  }
+  .manuscript-status span {
+    font-size: 0.6rem !important;
+  }
+  .manuscript-status strong {
+    font-size: 1.8rem !important;
+    margin: 0.2rem 0 !important;
+  }
+  .manuscript-status p {
+    display: none !important; /* Hides long descriptive paragraphs to optimize mobile real-estate */
+  }
+}
+
+/* 11. Full-width Sidebar Search Box (Hides static text labels below 1120px) */
+@media (max-width: 1120px) {
+  .section-search label span {
+    display: none !important;
+  }
+}
+
+/* 12. Tablet Filter Dock Wrapping */
+@media (max-width: 920px) {
+  .written-filter-dock {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .written-filter-dock .filter-intro {
+    grid-column: 1 / -1;
+  }
+  .written-filter-dock label:nth-of-type(1) {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 560px) {
+  .written-filter-dock {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* 13. Mobile Reader Tools Circular Icon Bubbles */
+@media (max-width: 480px) {
+  .reader-tools .tool-btn span:not(.theme-icon) {
+    display: none !important;
+  }
+  .reader-tools {
+    grid-template-columns: repeat(4, auto) !important;
+    justify-content: end;
+    gap: .55rem;
+  }
+  .reader-tools .tool-btn {
+    width: 42px;
+    height: 42px;
+    padding: 0 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important;
+  }
+}
+
+
+/* ==========================================================================
+   RE-ENGINEERED LUXURY LIGHT MODE OVERRIDES (Alabaster Paper & Deep Ink)
+   ========================================================================== */
+body[data-theme="light"] {
+  /* Soft, cozy Alabaster Paper canvas (cleaner, less dirty than muddy yellow-cream) */
+  --bg: #f9f6f0; 
+  --bg-2: #f2ede4;
+  
+  /* Pure warm card paper surface with subtle luxury depth */
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-strong: #ffffff;
+  --paper: #ffffff;
+  
+  /* Softer "Espresso Charcoal Ink" body text (replaces scratchy harsh black) */
+  --ink: #2c2722; 
+  
+  /* Warm Cocoa tones for secondary/tertiary text elements (accessible & beautiful) */
+  --muted: #534c44;
+  --dim: #6c635a;
+  --ink-muted: #534c44;
+  --ink-dark: #6c635a;
+  
+  /* Very fine, clean parchment borders (no heavy dark lines) */
+  --line: rgba(89, 76, 61, 0.11);
+  --border: rgba(89, 76, 61, 0.11);
+  
+  /* Rich, warm paper background gradient + elegant, faded triadic pastel blooms */
+  background:
+    radial-gradient(circle at 5% 5%, color-mix(in srgb, var(--theme-vivid-a) 4%, transparent), transparent 38rem),
+    radial-gradient(circle at 95% 15%, color-mix(in srgb, var(--theme-vivid-b) 3.5%, transparent), transparent 42rem),
+    linear-gradient(180deg, #faf7f2 0%, #f3ede2 65%, #eae3d4 100%) !important;
+  color: var(--ink);
+}
+
+/* Subdued Dotted Paper Grid (Reduces optical vibration) */
+body[data-theme="light"]::before {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(89, 76, 61, 0.045) 1px, transparent 1.25px),
+    linear-gradient(90deg, rgba(89, 76, 61, 0.015) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(89, 76, 61, 0.012) 1px, transparent 1px) !important;
+  opacity: .28 !important; /* Soft, atmospheric texture, not a visual distraction */
+}
+
+/* Re-designed Flat Tactile Cards (Replaces floating shadow soup) */
+body[data-theme="light"] .hero-main,
+body[data-theme="light"] .hero-side,
+body[data-theme="light"] .featured-card,
+body[data-theme="light"] .about-card,
+body[data-theme="light"] .collection-notes article,
+body[data-theme="light"] .micro-note,
+body[data-theme="light"] .stats-grid,
+body[data-theme="light"] .control-bar,
+body[data-theme="light"] .poem-card,
+body[data-theme="light"] .empty-state,
+body[data-theme="light"] .mood-group,
+body[data-theme="light"] .manuscript-status article,
+body[data-theme="light"] .path-card,
+body[data-theme="light"] .poet-index-card,
+body[data-theme="light"] .poet-select-card,
+body[data-theme="light"] .poet-detail-card,
+body[data-theme="light"] .era-rail,
+body[data-theme="light"] .era-results-card,
+body[data-theme="light"] .era-poem-card,
+body[data-theme="light"] .atlas-results-panel,
+body[data-theme="light"] .country-result,
+body[data-theme="light"] .research-section,
+body[data-theme="light"] .research-card,
+body[data-theme="light"] .research-tools,
+body[data-theme="light"] .begin-card,
+body[data-theme="light"] .theme-studio,
+body[data-theme="light"] .site-menu {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border: 1px solid rgba(89, 76, 61, 0.14) !important;
+  /* Soft flat-card offset instead of massive SaaS shadow */
+  box-shadow: 0 4px 16px rgba(89, 76, 61, 0.035) !important;
+}
+
+/* Soft hover transition */
+body[data-theme="light"] .poem-card:hover,
+body[data-theme="light"] .path-card:hover,
+body[data-theme="light"] .research-card:hover,
+body[data-theme="light"] .era-poem-card:hover,
+body[data-theme="light"] .country-result:hover,
+body[data-theme="light"] .begin-card:hover {
+  background: #ffffff !important;
+  border-color: color-mix(in srgb, var(--theme-vivid-b) 35%, rgba(89, 76, 61, 0.22)) !important;
+  box-shadow: 0 6px 20px rgba(89, 76, 61, 0.06) !important;
+  transform: translateY(-1px);
+}
+
+/* Dark Calligraphy Engraved Pen Scroll Nib */
+body[data-theme="light"] .pen-scroll-nib {
+  color: #534c44 !important; /* Replaces faint sandy color with a bold, gorgeous steel/ink pen nib */
+  opacity: 0.85;
+}
+body[data-theme="light"] .pen-scroll-nib path {
+  stroke-width: 1.6; /* Slightly bolder for crisp visibility on paper */
+}
+
+/* Clear Triadic Accents (Eliminate muddy gradients) */
+body[data-theme="light"] .primary-btn,
+body[data-theme="light"] .close-btn,
+body[data-theme="light"] .nav-pill.active,
+body[data-theme="light"] .tab.active,
+body[data-theme="light"] .poet-nav button.active,
+body[data-theme="light"] .search-row button,
+body[data-theme="light"] .research-arrow {
+  /* Crisp, high-contrast, beautiful pure ink gradient */
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--theme-vivid-b) 85%, #2a332d),
+    color-mix(in srgb, var(--theme-vivid-c) 80%, #302b2c)) !important;
+  border-color: color-mix(in srgb, var(--theme-vivid-b) 80%, #2a332d) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(89, 76, 61, 0.08) !important;
+}
+
+/* Clean, crisp secondary buttons */
+body[data-theme="light"] .secondary-btn,
+body[data-theme="light"] .tool-btn,
+body[data-theme="light"] .nav-pill,
+body[data-theme="light"] .research-mobile-link {
+  background: rgba(255, 255, 255, 0.82) !important;
+  color: #443c34 !important;
+  border: 1px solid rgba(89, 76, 61, 0.14) !important;
+}
+body[data-theme="light"] .secondary-btn:hover,
+body[data-theme="light"] .tool-btn:hover,
+body[data-theme="light"] .nav-pill:hover,
+body[data-theme="light"] .research-mobile-link:hover {
+  background: #ffffff !important;
+  color: #1a1611 !important;
+  border-color: rgba(89, 76, 61, 0.28) !important;
+}
+
+/* Cozier, Inset Forms & Wells */
+body[data-theme="light"] .search-row,
+body[data-theme="light"] .section-search,
+body[data-theme="light"] .written-filter-dock,
+body[data-theme="light"] .research-tools,
+body[data-theme="light"] .poet-index-tools {
+  background: #fbf9f4 !important;
+  border-color: rgba(89, 76, 61, 0.15) !important;
+}
+body[data-theme="light"] input,
+body[data-theme="light"] select {
+  background: #ffffff !important;
+  color: #2c2722 !important;
+  border: 1px solid rgba(89, 76, 61, 0.16) !important;
+  box-shadow: inset 0 2px 5px rgba(89, 76, 61, 0.04) !important;
+}
+
+
+/* ==========================================================================
+   THE CORPUS — ADDITIONAL RESEARCH NAV BAR & LUXURY LIGHT MODE ENHANCEMENTS
+   ========================================================================== */
+
+/* 1. Research Navigation Bar Disappearing / Overflow Fixes */
+@media (max-width: 1050px) {
+  .desktop-nav {
+    justify-content: center !important; /* Aligns and shifts the entire nav bar center-left */
+    gap: 0.3rem !important; /* Minimizes gap spacing to keep all elements visible */
+    padding-inline: 0.5rem !important;
+    width: calc(100% - 1rem) !important;
+    margin-inline: auto !important;
+  }
+  .desktop-nav .nav-pill {
+    padding: 0.45rem 0.65rem !important; /* Shrunk padding to fit "Research" pill on-screen */
+    font-size: 0.75rem !important;
+  }
+}
+
+/* 2. Mobile Tabs / Research Mobile Link Phone Resolution Adjustment */
+@media (max-width: 600px) {
+  .mobile-tabs {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* Splits the view 50/50 so "Research" is fully locked visible */
+    gap: 0.5rem !important;
+    overflow-x: visible !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .mobile-tabs .tab,
+  .mobile-tabs .research-mobile-link {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0.6rem !important;
+    min-height: 42px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* 3. Luxury Light Mode Personality, Depth, and Triadic Colors Overhaul */
+body[data-theme="light"] ::selection {
+  background: color-mix(in srgb, var(--theme-vivid-b) 22%, transparent) !important;
+  color: var(--ink) !important;
+}
+
+/* Add a beautiful dynamic 3px Top Triadic Border and Soft Dual-Tone Ivory backgrounds to all cards */
+body[data-theme="light"] .hero-main,
+body[data-theme="light"] .hero-side,
+body[data-theme="light"] .featured-card,
+body[data-theme="light"] .about-card,
+body[data-theme="light"] .poem-card,
+body[data-theme="light"] .path-card,
+body[data-theme="light"] .research-card,
+body[data-theme="light"] .poet-index-card,
+body[data-theme="light"] .poet-select-card,
+body[data-theme="light"] .poet-detail-card,
+body[data-theme="light"] .era-rail,
+body[data-theme="light"] .era-results-card,
+body[data-theme="light"] .era-poem-card,
+body[data-theme="light"] .atlas-results-panel,
+body[data-theme="light"] .country-result,
+body[data-theme="light"] .begin-card {
+  background: linear-gradient(135deg, #fffdf8 0%, #faf6ee 100%) !important;
+  border: 1px solid rgba(89, 76, 61, 0.12) !important;
+  border-top: 3.5px solid var(--theme-vivid-b) !important; /* Adds brilliant, dynamic color brand borders that change when you toggle theme styles! */
+  position: relative;
+  box-shadow: 0 6px 20px rgba(89, 76, 61, 0.03) !important;
+}
+
+/* Make hovered cards elevate with a secondary accent border */
+body[data-theme="light"] .poem-card:hover,
+body[data-theme="light"] .path-card:hover,
+body[data-theme="light"] .research-card:hover,
+body[data-theme="light"] .era-poem-card:hover,
+body[data-theme="light"] .country-result:hover,
+body[data-theme="light"] .begin-card:hover {
+  background: #ffffff !important;
+  border-top-color: var(--theme-vivid-c) !important; /* Animates color shift on hover! */
+  box-shadow: 0 10px 24px rgba(89, 76, 61, 0.06) !important;
+}
+
+/* Dynamic Page Frame Border framing for a Physical Book appearance */
+body[data-theme="light"] .page-frame {
+  border-color: color-mix(in srgb, var(--theme-vivid-a) 42%, rgba(89, 76, 61, 0.22)) !important;
+  box-shadow: inset 0 0 42px rgba(101, 82, 56, 0.045) !important;
+}
+
+/* Beautiful category tag outlines in Light Mode */
+body[data-theme="light"] .reader-tag-cloud .reader-tag {
+  background: rgba(255, 252, 245, 0.85) !important;
+  border: 1px solid color-mix(in srgb, var(--theme-vivid-b) 28%, rgba(89, 76, 61, 0.15)) !important;
+}
+body[data-theme="light"] .reader-tag-cloud .reader-tag:hover {
+  background: #ffffff !important;
+  border-color: var(--theme-vivid-b) !important;
+}
+
+/* 4. Private Marginalia Styling Block */
+.marginalia-section {
+  border: 1px dashed var(--border-strong, var(--line));
+  border-radius: var(--radius-sm);
+  padding: 1.2rem;
+  margin: 1.5rem 0 1.8rem;
+  background: rgba(128, 128, 128, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.marginalia-section h3 {
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
+  font-size: 1.4rem;
+  margin: 0;
+  color: var(--gold);
+}
+.marginalia-section textarea {
+  width: 100%;
+  min-height: 90px;
+  background: rgba(128, 128, 128, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--ink);
+  padding: 0.7rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  resize: vertical;
+  box-sizing: border-box;
+}
+.marginalia-section textarea:focus {
+  outline: none;
+  border-color: var(--theme-vivid-b);
+}
+.marginalia-section .secondary-btn {
+  align-self: flex-start;
+  min-height: 36px;
+  font-size: 0.8rem;
+  padding-inline: 1rem;
+}
+
+/* Marginalia Light Mode Overrides */
+body[data-theme="light"] .marginalia-section {
+  background: #fffdf8 !important;
+  border: 1px dashed rgba(89, 76, 61, 0.28) !important;
+  box-shadow: 0 4px 12px rgba(89, 76, 61, 0.02) !important;
+}
+body[data-theme="light"] .marginalia-section h3 {
+  color: #61574a !important;
+}
+body[data-theme="light"] .marginalia-section textarea {
+  background: #ffffff !important;
+  border-color: rgba(89, 76, 61, 0.16) !important;
+  color: #2c2722 !important;
+  box-shadow: inset 0 2px 5px rgba(89, 76, 61, 0.04) !important;
+}

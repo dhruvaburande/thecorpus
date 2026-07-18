@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=20260718-10" />
+  <link rel="manifest" href="manifest.json" />
 </head>
 <body data-theme="dark">
   <a class="skip-link" href="#archive">Skip to archive</a>
@@ -35,6 +36,7 @@
   </div>
 
   <header class="site-header" id="top">
+    <div class="site-header-inner">
     <button class="brand" id="logoThemeButton" type="button" aria-label="Open theme studio" aria-expanded="false" aria-controls="themeStudio">
       <span class="brand-mark"><img src="logo.jpg" alt="" /></span>
       <span class="brand-copy">
@@ -79,6 +81,9 @@
       </div>
 <section class="menu-section" aria-labelledby="menuReading">
         <h2 id="menuReading">Reading</h2>
+        <a class="menu-item nav-anchor" href="#worldAtlas"><strong>World Atlas</strong><span>Curated 3D poetry globe</span></a>
+        <a class="menu-item nav-anchor" href="#eras"><strong>Chronology of Poetry</strong><span>Explore poems by historical era</span></a>
+        <a class="menu-item nav-anchor" href="#poets"><strong>Poet Index</strong><span>Search by author index</span></a>
         <button class="menu-item" id="menuSurprise"><strong>Surprise Me</strong><span>Open a random piece</span></button>
         <button class="menu-item" id="menuFavorites"><strong>Favorites</strong><span><span id="favoriteCount">0</span> saved on this device</span></button>
         <button class="menu-item" id="menuRecent"><strong>Recently Opened</strong><span>Return to your last readings</span></button>
@@ -91,6 +96,7 @@
         <a class="menu-item" href="comments.html"><strong>Guestbook</strong><span>Leave a response</span></a>
         <a class="menu-item" href="mailto:dburande0124@gmail.com"><strong>Contact</strong><span>dburande0124@gmail.com</span></a>
       </section>
+    </div>
     </div>
   </header>
 
@@ -408,6 +414,7 @@
           <button class="tool-btn" id="readerPrev" title="Previous piece">←</button>
           <button class="tool-btn" id="readerDecrease" title="Decrease text size">A−</button>
           <button class="tool-btn" id="readerIncrease" title="Increase text size">A+</button>
+          <button class="tool-btn" id="readerPlayVoice" title="Listen to spoken recitation">▶ Spoken</button>
         </div>
         <button class="close-btn" data-close-reader>Exit</button>
       </header>
@@ -424,8 +431,17 @@
         </dl>
         <div class="content-note" id="contentNote" hidden></div>
         <pre class="poem-content" id="readerContent"></pre>
+        
+        <!-- Private Marginalia Section -->
+        <div class="marginalia-section">
+          <h3>Private Marginalia</h3>
+          <textarea id="marginaliaText" placeholder="Write your private reflections or annotations on this poem here..." autocomplete="off"></textarea>
+          <button class="secondary-btn" id="saveMarginalia">Save Marginalia</button>
+        </div>
+
         <div class="reader-actions">
           <button class="primary-btn" id="readerFavorite">Save Favorite</button>
+          <button class="secondary-btn" id="readerTogglePath">Add to My Path</button>
           <button class="secondary-btn" id="readerOriginalLanguage">Translate to Original Language</button>
           <button class="secondary-btn" id="readerCopyLink">Copy Link</button>
           <button class="secondary-btn" id="readerNext">Next →</button>
