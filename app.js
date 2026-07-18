@@ -662,9 +662,10 @@
       const palette = globePalette();
       const grd = ctx.createRadialGradient(cx - r * .34, cy - r * .34, r * .08, cx, cy, r);
       if (palette.light) {
-        grd.addColorStop(0, mix(palette.a, '#fff8e9', .66));
-        grd.addColorStop(.5, mix(palette.b, '#dce9e5', .56));
-        grd.addColorStop(1, mix(palette.c, '#829da1', .38));
+        grd.addColorStop(0, '#fdfaf5'); // Core paper glow
+        grd.addColorStop(.35, mix(palette.b, '#cbdbe6', .45)); // Soft watercolor azure
+        grd.addColorStop(.75, mix(palette.b, '#92b3c2', .55)); // Deep ocean wash
+        grd.addColorStop(1, mix(palette.c, '#5c7b8c', .6)); // Rich edge shading
       } else {
         grd.addColorStop(0, 'rgba(49,101,130,.42)');
         grd.addColorStop(.48, 'rgba(18,47,71,.86)');
@@ -863,6 +864,7 @@
     $('#globeZoomIn')?.addEventListener('click', () => setGlobeZoom(state.globe.zoom + 0.18));
     $('#globeZoomOut')?.addEventListener('click', () => setGlobeZoom(state.globe.zoom - 0.18));
     window.addEventListener('resize', resize);
+    window.drawGlobeInstance = draw;
     resize(); animate();
   }
 
@@ -1288,6 +1290,7 @@
     $('#readerFavorite').addEventListener('click', () => { if (state.currentId) toggleFavorite(state.currentId); });
     $('#readerOriginalLanguage').addEventListener('click', toggleOriginalLanguage);
     $('#readerPlayVoice')?.addEventListener('click', togglePoemVoice);
+    $('#readerPlayVoiceMobile')?.addEventListener('click', togglePoemVoice);
     $('#readerTogglePath')?.addEventListener('click', () => { if (state.currentId) toggleCustomPath(state.currentId); });
     $('#saveMarginalia')?.addEventListener('click', () => {
       if (state.currentId) {
@@ -1420,11 +1423,15 @@
       showToast('Speech synthesis is not supported on this browser.');
       return;
     }
+    const btn = $('#readerPlayVoice');
+    const mBtn = $('#readerPlayVoiceMobile');
+
     if (window.speechSynthesis.speaking) {
       window.speechSynthesis.cancel();
-      const btn = $('#readerPlayVoice');
       if (btn) btn.textContent = '▶ Spoken';
+      if (mBtn) mBtn.textContent = '▶ Recite Poem';
       btn?.classList.remove('active');
+      mBtn?.classList.remove('active');
       showToast('Recitation stopped.');
     } else {
       const title = $('#readerTitle')?.textContent || '';
@@ -1437,26 +1444,83 @@
       
       synthUtterance = new SpeechSynthesisUtterance(utteranceText);
       const voices = window.speechSynthesis.getVoices();
-      const preferred = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Google')));
-      if (preferred) synthUtterance.voice = preferred;
       
-      synthUtterance.rate = 0.86; 
-      synthUtterance.onend = () => {
-        const btn = $('#readerPlayVoice');
+      const preferred = voices.find(v => v.lang.startsWith('en') && 
+        (v.name.includes('Natural') || v.name.includes('Premium') || v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Daniel') || v.name.includes('Karen') || v.name.includes('Siri'))
+      );
+      if (preferred) {
+        synthUtterance.voice = preferred;
+      }
+      
+      synthUtterance.rate = 0.81; 
+      synthUtterance.pitch = 0.98; 
+      
+      const resetButtons = () => {
         if (btn) btn.textContent = '▶ Spoken';
+        if (mBtn) mBtn.textContent = '▶ Recite Poem';
         btn?.classList.remove('active');
-      };
-      synthUtterance.onerror = () => {
-        const btn = $('#readerPlayVoice');
-        if (btn) btn.textContent = '▶ Spoken';
-        btn?.classList.remove('active');
+        mBtn?.classList.remove('active');
       };
 
+      synthUtterance.onend = resetButtons;
+      synthUtterance.onerror = resetButtons;
+
       window.speechSynthesis.speak(synthUtterance);
-      const btn = $('#readerPlayVoice');
       if (btn) btn.textContent = '⏹ Stop';
+      if (mBtn) mBtn.textContent = '⏹ Stop Recitation';
       btn?.classList.add('active');
+      mBtn?.classList.add('active');
       showToast('Reciting poem...');
+    }
+  }
+
+  function applyRouting() {
+    let hash = location.hash.replace('#', '') || 'worldAtlas';
+    if (hash === 'archive' || hash === 'top' || hash === 'home') {
+      hash = 'archive';
+    }
+
+    const routes = {
+      'worldAtlas': ['.atlas-section'],
+      'eras': ['.eras-section'],
+      'poets': ['.poet-index-section'],
+      'research': ['.research-section'],
+      'archive': ['.hero-shell', '.manuscript-status', '.feature-section', '.paths-section'],
+      'about': ['.about-section']
+    };
+
+    const activeRoute = routes[hash] ? hash : 'worldAtlas';
+
+    const allViews = [
+      '.hero-shell', '.manuscript-status', '.feature-section', '.paths-section',
+      '.atlas-section', '.eras-section', '.poet-index-section', '.about-section',
+      '.research-section'
+    ];
+    allViews.forEach(sel => {
+      $$(sel).forEach(el => el.classList.remove('active-page'));
+    });
+
+    routes[activeRoute].forEach(sel => {
+      $$(sel).forEach(el => el.classList.add('active-page'));
+    });
+
+    document.body.classList.add('routing-active');
+    window.scrollTo({ top: 0 });
+
+    $$('.desktop-nav .nav-pill, .site-menu .menu-item').forEach(pill => {
+      pill.classList.remove('active');
+    });
+
+    let activePillSelector = `.desktop-nav a[href="#${activeRoute}"]`;
+    if (activeRoute === 'archive') {
+      activePillSelector = `.desktop-nav button[data-collection]`;
+    }
+    const activePill = $(activePillSelector);
+    if (activePill) activePill.classList.add('active');
+
+    // Trigger globe drawing if entering the World Atlas page
+    if (activeRoute === 'worldAtlas' && window.drawGlobeInstance) {
+      requestAnimationFrame(window.drawGlobeInstance);
     }
   }
 
@@ -1492,8 +1556,23 @@
     }
 
     renderMoodSelect(); renderArchive(); renderFeatured(); renderMoodMap(); renderReadingPaths(); renderPoetIndex();
-    renderEraRail(); renderEraResults(); renderPoetNav(); renderCountrySelect(); renderCountryPanel(); initGlobe();
-    updateFavoriteCount(); applyReaderPrefs(); bindEvents(); setTopNavActive('atlas');
+    renderEraRail(); renderEraResults(); renderPoetNav(); renderCountrySelect(); renderCountryPanel();
+    
+    // Lazy-initialize Globe on mobile to make startup lightning-fast
+    const isLikelyMobileOrSmall = window.matchMedia('(pointer: coarse)').matches || navigator.maxTouchPoints > 0;
+    const currentHash = location.hash.replace('#', '') || 'worldAtlas';
+    if (isLikelyMobileOrSmall && currentHash !== 'worldAtlas') {
+      setTimeout(initGlobe, 1200); // Deferred load
+    } else {
+      initGlobe();
+    }
+
+    updateFavoriteCount(); applyReaderPrefs(); bindEvents(); 
+    
+    // Apply multi-page routing initially
+    applyRouting();
+    window.addEventListener('hashchange', applyRouting);
+
     const hashId = location.hash.replace('#', '');
     if (hashId && allReadable.some(i => itemId(i) === hashId)) setTimeout(() => openItem(hashId, { forceModal: true }), 50);
   }
