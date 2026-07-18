@@ -1146,7 +1146,7 @@
       const country = countries.find(item => canonicalCountry(item.name) === canonicalTarget || clean(item.name) === clean(target));
       if (country) {
         selectCountry(country, false);
-        setTopNavActive('atlas');
+        location.hash = '#worldAtlas'; // Redirects first!
         requestAnimationFrame(() => $('#worldAtlas')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
         setTimeout(scrollToCountryResults, 420);
         return;
@@ -1157,6 +1157,7 @@
       state.poetIndexSelected = target;
       if ($('#poetIndexSearch')) $('#poetIndexSearch').value = target;
       renderPoetIndex();
+      location.hash = '#poets'; // Redirects first!
       requestAnimationFrame(() => $('#poets')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
       return;
     }
@@ -1169,7 +1170,7 @@
       renderEraRail();
       renderEraResults();
       renderCountryPanel();
-      setTopNavActive('eras');
+      location.hash = '#eras'; // Redirects first!
       requestAnimationFrame(() => $('#eras')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
       return;
     }
@@ -1182,6 +1183,7 @@
     renderMoodSelect();
     renderArchive();
     renderHeroSearchResults();
+    location.hash = '#worldAtlas'; // Redirects first to show search bar!
     requestAnimationFrame(() => $('.hero-shell')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
   }
 
@@ -1315,6 +1317,13 @@
     window.addEventListener('popstate', () => {
       const id = location.hash.replace('#', '');
       if (id && allReadable.some(i => itemId(i) === id)) openItem(id, { forceModal: true }); else closeReader({ clearHash: false });
+    });
+    // Automatically slide mobile menu closed when clicking any navigation link
+    $$('.site-menu a[href^="#"], .desktop-nav a[href^="#"], .mobile-tabs a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', () => {
+        closeMenu();
+        closeThemeStudio();
+      });
     });
   }
 

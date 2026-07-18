@@ -3935,6 +3935,11 @@ body.routing-active main > .feature-section.active-page,
 body.routing-active main > .paths-section.active-page {
   display: block !important;
 }
+body.routing-active main > .manuscript-status.active-page,
+body.routing-active main > .feature-section.active-page,
+body.routing-active main > .hero-shell.active-page {
+  display: grid !important;
+}
 
 /* 4. Desktop Navigation Bar Shifted Slightly Left (Perfect centering & visibility) */
 @media (min-width: 1051px) {
