@@ -1,0 +1,27 @@
+{
+  "built_at": "2026-07-18T09:36:43.373732+00:00",
+  "counts": {
+    "removed_synthetic": 1815,
+    "accepted_existing": 945,
+    "duplicates_existing": 5,
+    "accepted_new": 2057,
+    "duplicates_new": 655
+  },
+  "final_poems": 3002,
+  "final_countries": 21,
+  "chunks": 9,
+  "atlas_index_bytes": 2211161,
+  "full_chunk_bytes": 12505041,
+  "country_corrections": {
+    "George Gordon": "United Kingdom",
+    "Hilda Doolittle": "United States of America",
+    "Urdu Poets India": "India",
+    "United States": "United States of America",
+    "USA": "United States of America",
+    "U.S.A.": "United States of America",
+    "UK": "United Kingdom"
+  },
+  "removed_synthetic_report": "reports/removed-synthetic.json",
+  "duplicates_report": "reports/skipped-duplicates.json",
+  "invalid_examples": []
+}
