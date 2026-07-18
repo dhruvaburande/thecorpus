@@ -714,7 +714,9 @@
 
     let pending = atlasChunkCache.get(item.data_file);
     if (!pending) {
-      pending = fetch(item.data_file, { cache: 'force-cache' }).then(async response => {
+      // Revalidate generated chunks after a deployment. Reusing a stale chunk
+      // with a newer atlas-data.js index makes the requested poem appear absent.
+      pending = fetch(item.data_file, { cache: 'no-cache' }).then(async response => {
         if (!response.ok) throw new Error(`Atlas request failed (${response.status})`);
         const rows = await response.json();
         if (!Array.isArray(rows)) throw new Error('Atlas chunk is not an array');
