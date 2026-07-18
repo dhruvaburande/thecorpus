@@ -60,6 +60,7 @@
       <a class="nav-pill nav-anchor" href="#eras">Eras</a>
       <a class="nav-pill nav-anchor" href="#poets">Poets</a>
       <button class="nav-pill" data-collection="Written by Hand">Written by Hand</button>
+      <a class="nav-pill nav-anchor" href="#research">Research</a>
     </nav>
 
     <div class="header-actions">
@@ -81,6 +82,7 @@
         <button class="menu-item" id="menuSurprise"><strong>Surprise Me</strong><span>Open a random piece</span></button>
         <button class="menu-item" id="menuFavorites"><strong>Favorites</strong><span><span id="favoriteCount">0</span> saved on this device</span></button>
         <button class="menu-item" id="menuRecent"><strong>Recently Opened</strong><span>Return to your last readings</span></button>
+        <a class="menu-item" href="#research"><strong>Research</strong><span>Open-access literature and philosophy scholarship</span></a>
       </section>
 
       <section class="menu-section" aria-labelledby="menuConnect">
@@ -107,8 +109,9 @@
         </div>
         <div class="hero-search-results" id="heroSearchResults" aria-live="polite"></div>
 
-        <div class="mobile-tabs" aria-label="Written by Hand shortcut">
+        <div class="mobile-tabs" aria-label="Archive shortcuts">
           <button class="tab active" data-collection="Written by Hand">Written by Hand</button>
+          <a class="research-mobile-link" href="#research">Research</a>
         </div>
       </div>
 
@@ -331,6 +334,46 @@
         <article><h3>Eras</h3><p>The same wider reading field arranged chronologically, so readers can enter by period instead of place.</p></article>
       </div>
     </section>
+
+    <section class="research-section" id="research" aria-labelledby="researchTitle">
+      <div class="section-heading research-heading">
+        <div>
+          <p class="eyebrow">Open Scholarship</p>
+          <h2 id="researchTitle">Research in Literature and Philosophy</h2>
+        </div>
+        <p>A lightweight global index of influential open-access scholarship in literature and philosophy. The Corpus stores metadata and direct PDF links only—not the papers themselves.</p>
+      </div>
+
+      <div class="research-tools" role="search" aria-label="Search research library">
+        <label class="research-search-label" for="researchSearch">
+          <span>Search the library</span>
+          <input id="researchSearch" type="search" placeholder="Search by title, author, country, subject, or topic…" autocomplete="off" />
+        </label>
+        <label for="researchCountry">
+          <span>Country</span>
+          <select id="researchCountry"><option value="all">All countries</option></select>
+        </label>
+        <label for="researchDiscipline">
+          <span>Field</span>
+          <select id="researchDiscipline"><option value="all">All fields</option></select>
+        </label>
+        <button class="secondary-btn" id="clearResearch" type="button">Clear</button>
+      </div>
+
+      <div class="research-status">
+        <p id="researchCount" aria-live="polite">Loading research index…</p>
+        <p>Links open the source repository’s PDF in a new tab. Availability and licensing remain subject to the source record.</p>
+      </div>
+
+      <div class="research-carousel" aria-label="Research results">
+        <button class="research-arrow research-arrow-left" id="researchPrev" type="button" aria-label="Show the previous nine research titles" title="Previous nine results">←</button>
+        <div class="research-viewport" id="researchViewport">
+          <div class="research-track" id="researchGrid"></div>
+        </div>
+        <button class="research-arrow research-arrow-right" id="researchNext" type="button" aria-label="Show the next nine research titles" title="Next nine results">→</button>
+      </div>
+      <p class="research-page-status" id="researchPageStatus" aria-live="polite"></p>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -343,6 +386,7 @@
       <a href="#worldAtlas">Atlas</a>
       <a href="#eras">Eras</a>
       <a href="#archive" data-footer-collection="Written by Hand">Written by Hand</a>
+      <a href="#research">Research</a>
     </div>
     <div>
       <strong>Info</strong>
@@ -404,6 +448,8 @@
   <script src="world-geo.js"></script>
   <script src="borrowed-meta.js"></script>
   <script src="reading-paths.js"></script>
+  <script src="research-data.js?v=20260718-4"></script>
+  <script src="research.js?v=20260718-4"></script>
   <script src="app.js?v=20260718-2"></script>
 </body>
 </html>
