@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="The Corpus — a living archive of original poems, borrowed echoes, and research fragments by Dhruva Burande." />
+  <title>Dhruva Burande — The Corpus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+  <a class="skip-link" href="#archive">Skip to archive</a>
+  <div class="page-frame" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="pen-scroll-track" id="penScrollTrack" aria-hidden="true">
+    <svg class="pen-scroll-nib" viewBox="0 0 42 122" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 8c0-2.2 1.8-4 4-4h2c2.2 0 4 1.8 4 4v48c0 2.2-1.8 4-4 4h-2c-2.2 0-4-1.8-4-4V8Z"/>
+      <path d="M17 16h8M17 51h8M14 60h14l-2.4 12h-9.2L14 60Z"/>
+      <path d="M16.5 72h9L21 103 16.5 72Z"/>
+      <path d="M21 76v21"/>
+      <circle cx="21" cy="88" r="2"/>
+      <path d="M19 103h4l-2 9-2-9Z"/>
+    </svg>
+    <div class="pen-ink-shell"><div class="pen-ink-line" id="penInkLine"></div></div>
+  </div>
+
+  <div class="privacy-overlay" id="privacyOverlay" aria-live="assertive" aria-hidden="true">
+    <div class="privacy-card">
+      <strong>Protected Reading Mode</strong>
+      <p>The Corpus is hidden while the window is too narrow or being used side-by-side. Return to a full reading window to continue.</p>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <button class="brand" id="logoThemeButton" type="button" aria-label="Open theme studio" aria-expanded="false" aria-controls="themeStudio">
+      <span class="brand-mark"><img src="logo.jpg" alt="" /></span>
+      <span class="brand-copy">
+        <strong>The Corpus</strong>
+        <small>Theme Studio</small>
+      </span>
+    </button>
+
+    <div class="theme-studio" id="themeStudio" aria-hidden="true">
+      <div class="theme-studio-head">
+        <div>
+          <p>Theme Studio</p>
+          <span>Choose a triadic colour manuscript.</span>
+        </div>
+        <button type="button" id="closeThemeStudio" aria-label="Close theme studio">×</button>
+      </div>
+      <div class="theme-grid" id="themeGrid" role="listbox" aria-label="Theme palettes"></div>
+      <p class="theme-hint">Each theme uses three balanced colours and adapts between light and dark mode.</p>
+    </div>
+
+    <nav class="desktop-nav" aria-label="Primary">
+      <a class="nav-pill nav-anchor" href="#worldAtlas">Atlas</a>
+      <a class="nav-pill nav-anchor" href="#eras">Eras</a>
+      <a class="nav-pill nav-anchor" href="#poets">Poets</a>
+      <button class="nav-pill" data-collection="Written by Hand">Written by Hand</button>
+      <a class="nav-pill nav-anchor" href="#research">Research</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle visual theme" title="Toggle theme">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+      </button>
+      <button class="menu-button" id="menuButton" aria-label="Open site menu" aria-expanded="false" aria-controls="siteMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="site-menu" id="siteMenu" aria-hidden="true">
+      <div class="menu-head">
+        <p>Menu</p>
+        <span>Read, save, and connect.</span>
+      </div>
+<section class="menu-section" aria-labelledby="menuReading">
+        <h2 id="menuReading">Reading</h2>
+        <button class="menu-item" id="menuSurprise"><strong>Surprise Me</strong><span>Open a random piece</span></button>
+        <button class="menu-item" id="menuFavorites"><strong>Favorites</strong><span><span id="favoriteCount">0</span> saved on this device</span></button>
+        <button class="menu-item" id="menuRecent"><strong>Recently Opened</strong><span>Return to your last readings</span></button>
+        <a class="menu-item" href="#research"><strong>Research</strong><span>Open-access literature and philosophy scholarship</span></a>
+      </section>
+
+      <section class="menu-section" aria-labelledby="menuConnect">
+        <h2 id="menuConnect">Connect</h2>
+        <a class="menu-item" href="#about"><strong>About The Corpus</strong><span>Purpose, collections, and notes</span></a>
+        <a class="menu-item" href="comments.html"><strong>Guestbook</strong><span>Leave a response</span></a>
+        <a class="menu-item" href="mailto:dburande0124@gmail.com"><strong>Contact</strong><span>dburande0124@gmail.com</span></a>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-shell" aria-labelledby="heroTitle">
+      <div class="hero-main reveal-card">
+        <p class="eyebrow">A living literary archive</p>
+        <h1 id="heroTitle">The Corpus</h1>
+        <p class="hero-lede">A body of original poems, borrowed voices, research fragments, and private weather — gathered into one evolving archive.</p>
+
+        <div class="search-row" role="search">
+          <label class="sr-only" for="archiveSearch">Search the archive</label>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+          <input id="archiveSearch" type="search" placeholder="Search poems, poets, countries, moods, eras, or lines…" autocomplete="off" />
+          <button id="clearSearch" type="button">Clear</button>
+        </div>
+        <div class="hero-search-results" id="heroSearchResults" aria-live="polite"></div>
+
+        <div class="mobile-tabs" aria-label="Archive shortcuts">
+          <button class="tab active" data-collection="Written by Hand">Written by Hand</button>
+          <a class="research-mobile-link" href="#research">Research</a>
+        </div>
+      </div>
+
+      <aside class="hero-side" aria-label="Archive overview">
+        <div class="stats-grid" id="statsGrid">
+          <div><strong id="statTotal">00</strong><span>Total Works</span></div>
+          <div><strong id="statOriginal">00</strong><span>Original</span></div>
+          <div><strong id="statBorrowed">00</strong><span>Borrowed</span></div>
+          <div><strong id="statShowing">00</strong><span>Showing</span></div>
+        </div>
+        <div class="micro-note">
+          <strong>Note</strong>
+          <p>Borrowed Ledger entries should be treated as literary references and reviewed for source, attribution, and copyright status before public expansion.</p>
+        </div>
+      </aside>
+    </section>
+
+<section class="atlas-section" id="worldAtlas" aria-labelledby="atlasTitle">
+      <div class="section-heading atlas-heading">
+        <div>
+          <p class="eyebrow">World Atlas</p>
+          <h2 id="atlasTitle">Atlas</h2>
+        </div>
+        <p>The site now opens on the globe. Country boundaries are drawn directly on the sphere; click a nation or use the selector to reveal its curated poetry field.</p>
+      </div>
+
+      <div class="poet-nav" id="poetNav" aria-label="Poet navigation"></div>
+
+      <div class="atlas-layout">
+<div class="globe-card">
+          <div class="globe-toolbar">
+            <label>
+              <span>Jump to country</span>
+              <select id="countrySelect"></select>
+            </label>
+            <div class="globe-actions">
+              <button class="secondary-btn" id="globeZoomOut" type="button" aria-label="Zoom globe out">−</button>
+              <button class="secondary-btn" id="globeZoomIn" type="button" aria-label="Zoom globe in">+</button>
+              <button class="secondary-btn" id="resetAtlas" type="button">Reset</button>
+            </div>
+          </div>
+          <canvas id="globeCanvas" width="860" height="860" aria-label="Interactive 3D globe with country boundaries"></canvas>
+          <p class="globe-caption">Drag to rotate. Click a nation to curate the collection.</p>
+        </div>
+
+        <aside class="atlas-results-panel" aria-live="polite">
+          <p class="eyebrow">Selected Nation</p>
+          <h3 id="countryTitle">World Field</h3>
+          <p id="countryDescription">Choose a nation on the globe or from the dropdown.</p>
+          <div class="country-metrics">
+            <div><strong id="countryCount">000</strong><span>Curated poems</span></div>
+            <div><strong id="countryDepth">Standard</strong><span>Depth</span></div>
+          </div>
+          <div class="section-search atlas-list-search">
+            <label for="countryPoemSearch">
+              <span>Search this country</span>
+              <input id="countryPoemSearch" type="search" placeholder="Search title, poet, year, language, first lines…" autocomplete="off" />
+            </label>
+            <button class="secondary-btn" id="clearCountrySearch" type="button">Clear</button>
+          </div>
+          <p class="list-scope" id="countryScope">Select a country to begin.</p>
+          <div class="country-results" id="countryResults"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="manuscript-status" aria-label="Manuscript status">
+      <article>
+        <span>Total Manuscripts</span>
+        <strong id="statManuscripts">000</strong>
+        <p>Corpus entries plus the world poetry atlas currently loaded.</p>
+      </article>
+      <article>
+        <span>Active Segments</span>
+        <strong id="statActiveSegments">000</strong>
+        <p>Updates with archive filters, selected country, era, and poet.</p>
+      </article>
+      <article>
+        <span>Atlas Depth</span>
+        <strong id="statAtlasDepth">000</strong>
+        <p>Curated global poems available through the 3D globe.</p>
+      </article>
+    </section>
+
+    <section class="feature-section" aria-labelledby="featuredTitle">
+      <article class="featured-card" id="featuredCard">
+        <div>
+          <p class="eyebrow">Featured Work</p>
+          <h2 id="featuredTitle">Begin with the archive</h2>
+          <p id="featuredExcerpt">Select a piece to enter the reader.</p>
+        </div>
+        <div class="featured-actions">
+          <button class="primary-btn" id="readFeatured">Read Featured</button>
+          <button class="secondary-btn" id="randomFeatured">Surprise Me</button>
+        </div>
+      </article>
+
+      <div class="begin-grid" aria-label="Begin here pathways">
+        <button class="begin-card" data-begin="WBH-004"><span>Vulnerable</span><strong>Bruised</strong></button>
+        <button class="begin-card" data-begin="WBH-006"><span>Mythic</span><strong>God Who Bleeds</strong></button>
+        <button class="begin-card" data-begin="WBH-001"><span>Visceral</span><strong>A Cup of Coffee Perhaps</strong></button>
+        <button class="begin-card" data-begin="BL-016"><span>Minimal</span><strong>The Red Wheelbarrow</strong></button>
+      </div>
+    </section>
+
+    <section class="paths-section" id="readingPaths" aria-labelledby="pathsTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Reading Paths</p>
+          <h2 id="pathsTitle">Begin with a route</h2>
+        </div>
+        <p>Curated pathways for readers who do not know where to start.</p>
+      </div>
+      <div class="paths-grid" id="pathsGrid"></div>
+    </section>
+
+    <section class="poet-index-section" id="poets" aria-labelledby="poetsTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Poet Index</p>
+          <h2 id="poetsTitle">Find by poet</h2>
+        </div>
+        <p>A compact index generated from Written by Hand, Atlas, and Eras.</p>
+      </div>
+      <div class="poet-index-tools">
+        <input id="poetIndexSearch" type="search" placeholder="Search poet, country, or collection…" autocomplete="off" />
+        <span id="poetIndexCount">0 poets</span>
+      </div>
+      <div class="poet-index-grid" id="poetIndexGrid"></div>
+    </section>
+
+    <section class="eras-section" id="eras" aria-labelledby="erasTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Eras</p>
+          <h2 id="erasTitle">Chronology of poetry</h2>
+        </div>
+        <p>A separate chronological progression from ancient oral traditions to contemporary poems.</p>
+      </div>
+      <div class="eras-layout">
+        <aside class="era-rail standalone" aria-label="Chronological poetry eras">
+          <div class="era-rail-title">
+            <span>Timeline</span>
+            <strong>Poetry Eras</strong>
+          </div>
+          <div id="eraList"></div>
+        </aside>
+        <div class="era-results-card">
+          <div class="era-results-head">
+            <p class="eyebrow">Selected Era</p>
+            <h3 id="eraTitle">All Eras</h3>
+            <p id="eraDescription">Choose an era to browse poems across the world atlas.</p>
+          </div>
+          <div class="section-search era-list-search">
+            <label for="eraPoemSearch">
+              <span>Search this era</span>
+              <input id="eraPoemSearch" type="search" placeholder="Search title, poet, country, year, first lines…" autocomplete="off" />
+            </label>
+            <button class="secondary-btn" id="clearEraSearch" type="button">Clear</button>
+          </div>
+          <p class="list-scope" id="eraScope">Showing the selected timeline.</p>
+          <div class="era-results" id="eraResults"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls-section" id="archive" aria-labelledby="archiveTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Archive</p>
+          <h2 id="archiveTitle">Written by Hand</h2>
+        </div>
+        <p id="resultSummary">Showing original works written for The Corpus.</p>
+      </div>
+
+      <div class="control-bar written-filter-dock">
+        <div class="filter-intro">
+          <span>Find an original</span>
+          <p>Browse Written by Hand by mood and reading length. Use the main search above for title, line, or concept.</p>
+        </div>
+        <label>
+          <span>Mood</span>
+          <select id="moodSelect"><option value="all">All moods</option></select>
+        </label>
+        <label>
+          <span>Sort</span>
+          <select id="sortSelect">
+            <option value="archive">Archive order</option>
+            <option value="title">Title A–Z</option>
+            <option value="collection">Collection</option>
+            <option value="mood">Mood</option>
+            <option value="reading">Shortest first</option>
+          </select>
+        </label>
+        <button class="secondary-btn" id="clearFilters">Clear Filters</button>
+      </div>
+
+      <div class="archive-grid" id="archiveGrid" aria-live="polite"></div>
+    </section>
+<section class="mood-section" aria-labelledby="moodTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Mood Architecture</p>
+          <h2 id="moodTitle">Read by emotional weather</h2>
+        </div>
+        <p>Clusters are generated from the archive’s mood labels.</p>
+      </div>
+      <div class="mood-map" id="moodMap"></div>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="aboutTitle">
+      <div class="about-card">
+        <p class="eyebrow">About</p>
+        <h2 id="aboutTitle">What is The Corpus?</h2>
+        <p>The Corpus is a curated body of writing: original poems, borrowed literary echoes, and research notes arranged by mood, collection, and recurring obsessions — body, memory, myth, violence, tenderness, faith, absence, and thought.</p>
+      </div>
+      <div class="collection-notes">
+        <article><h3>Written by Hand</h3><p>Original works by Dhruva Burande — private mythologies, visceral fragments, elegies, indictments, and devotional ruptures.</p></article>
+        <article><h3>Atlas</h3><p>World-literature and former Borrowed Ledger poems organized by country and poet.</p></article>
+        <article><h3>Eras</h3><p>The same wider reading field arranged chronologically, so readers can enter by period instead of place.</p></article>
+      </div>
+    </section>
+
+    <section class="research-section" id="research" aria-labelledby="researchTitle">
+      <div class="section-heading research-heading">
+        <div>
+          <p class="eyebrow">Open Scholarship</p>
+          <h2 id="researchTitle">Research in Literature and Philosophy</h2>
+        </div>
+        <p>A lightweight global index of influential open-access scholarship in literature and philosophy. The Corpus stores metadata and direct PDF links only—not the papers themselves.</p>
+      </div>
+
+      <div class="research-tools" role="search" aria-label="Search research library">
+        <label class="research-search-label" for="researchSearch">
+          <span>Search the library</span>
+          <input id="researchSearch" type="search" placeholder="Search by title, author, country, subject, or topic…" autocomplete="off" />
+        </label>
+        <label for="researchCountry">
+          <span>Country</span>
+          <select id="researchCountry"><option value="all">All countries</option></select>
+        </label>
+        <label for="researchDiscipline">
+          <span>Field</span>
+          <select id="researchDiscipline"><option value="all">All fields</option></select>
+        </label>
+        <button class="secondary-btn" id="clearResearch" type="button">Clear</button>
+      </div>
+
+      <div class="research-status">
+        <p id="researchCount" aria-live="polite">Loading research index…</p>
+        <p>Links open the source repository’s PDF in a new tab. Availability and licensing remain subject to the source record.</p>
+      </div>
+
+      <div class="research-carousel" aria-label="Research results">
+        <button class="research-arrow research-arrow-left" id="researchPrev" type="button" aria-label="Show the previous nine research titles" title="Previous nine results">←</button>
+        <div class="research-viewport" id="researchViewport">
+          <div class="research-track" id="researchGrid"></div>
+        </div>
+        <button class="research-arrow research-arrow-right" id="researchNext" type="button" aria-label="Show the next nine research titles" title="Next nine results">→</button>
+      </div>
+      <p class="research-page-status" id="researchPageStatus" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>The Corpus</strong>
+      <p>A living archive of written and borrowed texts.</p>
+    </div>
+    <div>
+      <strong>Navigate</strong>
+      <a href="#worldAtlas">Atlas</a>
+      <a href="#eras">Eras</a>
+      <a href="#archive" data-footer-collection="Written by Hand">Written by Hand</a>
+      <a href="#research">Research</a>
+    </div>
+    <div>
+      <strong>Info</strong>
+      <a href="#about">About</a>
+      <a href="comments.html">Guestbook</a>
+      <a href="mailto:dburande0124@gmail.com">Contact</a>
+    </div>
+    <div class="legal-note">
+      <strong>Copyright & Attribution</strong>
+      <p>Original works marked Written by Hand belong to the author. World-literature and borrowed entries require source, attribution, translation, and copyright verification before reuse or expansion.</p>
+    </div>
+  </footer>
+
+  <div class="reader" id="reader" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="readerTitle">
+    <div class="reader-backdrop" data-close-reader></div>
+    <article class="reader-panel" tabindex="-1">
+      <header class="reader-header">
+        <div class="reader-tools" aria-label="Reading controls">
+          <button class="tool-btn" id="readerPrev" title="Previous piece">←</button>
+          <button class="tool-btn" id="readerDecrease" title="Decrease text size">A−</button>
+          <button class="tool-btn" id="readerIncrease" title="Increase text size">A+</button>
+          <button class="tool-btn" id="readerWidth" title="Toggle reading width">Width</button>
+        </div>
+        <button class="close-btn" data-close-reader>Exit</button>
+      </header>
+      <div class="reader-scroll" id="readerScroll">
+        <p class="reader-kicker" id="readerMood">Mood</p>
+        <h1 id="readerTitle">Title</h1>
+        <div class="reader-meta" id="readerMeta"></div>
+        <div class="reader-tag-cloud" id="readerTagCloud" aria-label="Poem categories"></div>
+        <dl class="publication-panel" id="publicationPanel">
+          <div><dt>Publication Date</dt><dd id="pubDate">Unknown</dd></div>
+          <div><dt>Author</dt><dd id="pubAuthor">Unknown</dd></div>
+          <div><dt>Original Collection</dt><dd id="pubCollection">Unknown</dd></div>
+          <div><dt>Publisher / Source</dt><dd id="pubPublisher">Unknown</dd></div>
+        </dl>
+        <div class="content-note" id="contentNote" hidden></div>
+        <pre class="poem-content" id="readerContent"></pre>
+        <div class="reader-actions">
+          <button class="primary-btn" id="readerFavorite">Save Favorite</button>
+          <button class="secondary-btn" id="readerOriginalLanguage">Translate to Original Language</button>
+          <button class="secondary-btn" id="readerCopyLink">Copy Link</button>
+          <button class="secondary-btn" id="readerNext">Next →</button>
+        </div>
+        <section class="related" aria-labelledby="relatedTitle">
+          <h2 id="relatedTitle">Related readings</h2>
+          <div id="relatedList"></div>
+        </section>
+        <p class="reader-copyright" id="readerCopyright"></p>
+      </div>
+    </article>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="poems.js"></script>
+  <script src="atlas-data.js?v=20260718-2"></script>
+  <script src="countries.js"></script>
+  <script src="world-geo.js"></script>
+  <script src="borrowed-meta.js"></script>
+  <script src="reading-paths.js"></script>
+  <script src="research-data.js?v=20260718-4"></script>
+  <script src="research.js?v=20260718-4"></script>
+  <script src="app.js?v=20260718-2"></script>
+</body>
+</html>

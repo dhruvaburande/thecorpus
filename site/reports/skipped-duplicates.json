@@ -1,0 +1,5282 @@
+[
+  {
+    "origin": "existing",
+    "id": "UK-0403-2BDA7F93",
+    "title": "An Hymn In Honour Of Beauty",
+    "poet": "Edmund Spenser",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "existing",
+    "id": "UK-0398-DD269244",
+    "title": "An Hymn Of Heavenly Beauty",
+    "poet": "Edmund Spenser",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "existing",
+    "id": "UK-0486-B8BCA215",
+    "title": "Moonlight, summer moonlight",
+    "poet": "Emily Brontë",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "existing",
+    "id": "UK-0525-4F4FF778",
+    "title": "The Buried Life",
+    "poet": "Matthew Arnold",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "existing",
+    "id": "UK-0592-64F69941",
+    "title": "V. The Soldier",
+    "poet": "Rupert Brooke",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-13BB8EE47AD3",
+    "title": "Fill the Goblet Again. a Song",
+    "poet": "Lord Byron",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-AF46CC2B8AD0",
+    "title": "Translation of the Romaic Song,",
+    "poet": "Lord Byron",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-324FDAB74CF2",
+    "title": "Newstead Abbey",
+    "poet": "Lord Byron",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-36D268A57A6B",
+    "title": "Epistle to a Friend,",
+    "poet": "Lord Byron",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2CBD6E68710E",
+    "title": "One Struggle More, and I Am Free",
+    "poet": "Lord Byron",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-CCA3A9034AEA",
+    "title": "Euthanasia",
+    "poet": "Lord Byron",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F2DD2114B2DC",
+    "title": "The Chain I Gave. From the Turkish",
+    "poet": "Lord Byron",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-AC4BCD6C79C4",
+    "title": "From the Portuguese. \"Tu MI Chamas\". Another Version",
+    "poet": "Lord Byron",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-DF7A0D244A6A",
+    "title": "The Bride of Abydos. a Turkish Tale",
+    "poet": "Lord Byron",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-5507A81BABCA",
+    "title": "Saul",
+    "poet": "Lord Byron",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-CE44F2966A40",
+    "title": "By the Rivers of Babylon We Sat Down and Wept",
+    "poet": "Lord Byron",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-83BFD3C55E42",
+    "title": "Address Intended to Be Recited at the Caledonian Meeting",
+    "poet": "Lord Byron",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-B65614AF8B52",
+    "title": "The Ghost of Miltiades",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-BDAA2A0BD11E",
+    "title": "Oh! Think Not My Spirits Are Always As Light",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-2D137906E991",
+    "title": "This Life Is All Chequer'd With Pleasures and Woes",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-2E62AE114EF8",
+    "title": "Tis the Last Rose of Summer",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-C9AF31142BEE",
+    "title": "It Is Not the Tear At This Moment Shed",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-8D87113BC2BA",
+    "title": "War Song",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-170AF477D2BE",
+    "title": "While Gazing on the Moon's Light",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-6A6698407C28",
+    "title": "As a Beam O'er the Face of the Waters May Glow",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-3BD3977C65CA",
+    "title": "Ode to the Goddess Ceres",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-C611C9153637",
+    "title": "On Music",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-A5C9DA3E01A0",
+    "title": "The Song of O'Ruark, Prince of Breffni",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-B44A6689502B",
+    "title": "They May Rail at this Life",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-D4A456A83D56",
+    "title": "Love's Young Dream",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-775DA914B451",
+    "title": "All In a Family Way",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-330ECFC795F5",
+    "title": "Sing -- Sing -- Music Was Given",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-C2639E4DF860",
+    "title": "What the Bee Is To the Floweret",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-D247B59DD345",
+    "title": "Has Sorrow Thy Young Days Shaded",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-00912D428FF7",
+    "title": "Song of the Battle Eve",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-43FA9ADF4DF9",
+    "title": "In the Morning of Life",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-C176F0933A34",
+    "title": "The Young May Moon",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-92F7FA8E6351",
+    "title": "The Meeting of the Waters",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-F62F6CDDD3D9",
+    "title": "Oh! Breathe Not His Name",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-90840025C035",
+    "title": "I Saw From the Beach",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-CEE43EC1F656",
+    "title": "Though the Last Glimpse of Erin With Sorrow I See",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-39072A8BECA8",
+    "title": "The Song of Fionnuala",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-91520F02182C",
+    "title": "The Time I've Lost In Wooing",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-275C0C291C0E",
+    "title": "The Night Dance",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-3E8208AC0329",
+    "title": "I'd Mourn the Hopes",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-D4288FA7FB28",
+    "title": "Translation From the Gull Language",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-35B0A48DBD1A",
+    "title": "While History's Muse",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "IE-7118EF5EEBE7",
+    "title": "Farewell! -- But Whenever You Welcome the Hour",
+    "poet": "Thomas Moore",
+    "country": "Ireland",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-0955A5DFD492",
+    "title": "The Canterbury Tales. Chaucer's Tale of Meliboeus.",
+    "poet": "Geoffrey Chaucer",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A85BEF9D0CD4",
+    "title": "The Canterbury Tales. The Shipman's Tale.",
+    "poet": "Geoffrey Chaucer",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-615DD05CBBBF",
+    "title": "The Canterbury Tales. The Cook's Tale.",
+    "poet": "Geoffrey Chaucer",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-BFC101A0B840",
+    "title": "The Canterbury Tales. Chaucer's Tale of Sir Thopas.",
+    "poet": "Geoffrey Chaucer",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-1773BFA3782A",
+    "title": "The Canterbury Tales. The Parson's Tale.",
+    "poet": "Geoffrey Chaucer",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-CD66885652CE",
+    "title": "The Canterbury Tales. The Reeve's Tale.",
+    "poet": "Geoffrey Chaucer",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-513F70537B16",
+    "title": "The Canterbury Tales. The Clerk's Tale.",
+    "poet": "Geoffrey Chaucer",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A5390DCF4785",
+    "title": "The Canterbury Tales. The Miller's Tale.",
+    "poet": "Geoffrey Chaucer",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-35873F928D9B",
+    "title": "The Canterbury Tales. The Squire's Tale.",
+    "poet": "Geoffrey Chaucer",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-FAAF8688F4E4",
+    "title": "The Canterbury Tales. The Prologue.",
+    "poet": "Geoffrey Chaucer",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-338C64EF5EBD",
+    "title": "The Canterbury Tales. The Man of Law's Tale.",
+    "poet": "Geoffrey Chaucer",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C4D9E918B981",
+    "title": "I Wandered Lonely As A Cloud",
+    "poet": "William Wordsworth",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-E9DB0817AD0B",
+    "title": "Lines Written In Early Spring",
+    "poet": "William Wordsworth",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-DD3B84C0C2BD",
+    "title": "Samson Agonistes",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F38504F5DC32",
+    "title": "On His Deceased Wife",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-92E19353F33F",
+    "title": "Paradise Lost: Book 05",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-66F55F75D97B",
+    "title": "Paradise Lost: Book 02",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-24164BB8E8DE",
+    "title": "Paradise Lost: Book 12",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2BCE0A2B8EA3",
+    "title": "At A Solemn Musick",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-816919073B76",
+    "title": "Paradise Lost: Book 01",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F2FC930A80BF",
+    "title": "Paradise Lost: Book 04",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-D7F9C9981349",
+    "title": "Paradise Lost: Book 11",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-ADB8E75397A3",
+    "title": "On the Religious Memory of Mrs. Catherine Thomson, my Christian Friend, Deceased Dec. 16, 1646",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-24D345F70964",
+    "title": "The Passion",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-06593158BB28",
+    "title": "Paradise Lost: Book 09",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-59051975676D",
+    "title": "Paradise Lost: Book 10",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-D07A3B609AAE",
+    "title": "Sonnet 13",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-7B4B797945C2",
+    "title": "Paradise Lost: Book 07",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-0FF4647B6D88",
+    "title": "How Soon Hath Time",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-4A4E681E7703",
+    "title": "Comus",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-42D472AD4B4A",
+    "title": "Song On May Morning",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2F700EA2C57A",
+    "title": "Paradise Lost: Book 03",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-9D1DBB694917",
+    "title": "Paradise Regained: The First Book",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-5AD9F6C9EF00",
+    "title": "Paradise Regained: The Fourth Book",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-5F0E151507BA",
+    "title": "Paradise Regained: The Third Book",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-ACFDB5BC0D20",
+    "title": "Paradise Lost: Book 06",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-87D759A138AE",
+    "title": "Paradise Lost: Book 08",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2027200F309E",
+    "title": "Paradise Regained: The Second Book",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-081EC49F13EA",
+    "title": "On Time",
+    "poet": "John Milton",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-48DAA7640FF5",
+    "title": "London",
+    "poet": "William Blake",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F9117B6FED51",
+    "title": "The Human Abstract",
+    "poet": "William Blake",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-DDBFE945F7FB",
+    "title": "A POISON TREE",
+    "poet": "William Blake",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-74C28FC4971C",
+    "title": "Thel's Motto",
+    "poet": "William Blake",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-10E2FF1D50A4",
+    "title": "The Blossom",
+    "poet": "William Blake",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-356872EAD7B6",
+    "title": "The Little Boy Lost",
+    "poet": "William Blake",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-0B8A196FFCB6",
+    "title": "The Little Boy Found",
+    "poet": "William Blake",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-7D3C265B5242",
+    "title": "Spring",
+    "poet": "William Blake",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-55464A419440",
+    "title": "Nurse's Song",
+    "poet": "William Blake",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-13350A08FE29",
+    "title": "The Little Girl Found",
+    "poet": "William Blake",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-ED074F085BF6",
+    "title": "The Chimney Sweeper",
+    "poet": "William Blake",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8DEB2B53F46D",
+    "title": "The Fly",
+    "poet": "William Blake",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-539B40360122",
+    "title": "The Mask of Anarchy. Written on the Occasion of the Massacre at Manchester",
+    "poet": "Percy Bysshe Shelley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A7FA70BC5A13",
+    "title": "Scenes From the Magico Prodigioso",
+    "poet": "Percy Bysshe Shelley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-62F4460B6EC6",
+    "title": "Scenes From the Faust of Goethe",
+    "poet": "Percy Bysshe Shelley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-894CF499EDC3",
+    "title": "Rosalind and Helen. a Modern Eclogue",
+    "poet": "Percy Bysshe Shelley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-0FDE0C99482D",
+    "title": "The Sensitive Plant",
+    "poet": "Percy Bysshe Shelley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-DC18009267F5",
+    "title": "Fragment: 'When Soft Winds and Sunny Skies'",
+    "poet": "Percy Bysshe Shelley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-3FB5B7955ED0",
+    "title": "The Spectral Horseman",
+    "poet": "Percy Bysshe Shelley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-7363A0A08328",
+    "title": "Song From the Wandering Jew",
+    "poet": "Percy Bysshe Shelley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B43B9F8E19A8",
+    "title": "With a Guitar, to Jane",
+    "poet": "Percy Bysshe Shelley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-3A1AB632318F",
+    "title": "Fragment: To the Moon",
+    "poet": "Percy Bysshe Shelley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-DB5A61D5D682",
+    "title": "Fragment: Omens",
+    "poet": "Percy Bysshe Shelley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2597D5A270DA",
+    "title": "To My Brothers",
+    "poet": "John Keats",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-90C33B38E002",
+    "title": "A Thing of Beauty (Endymion)",
+    "poet": "John Keats",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-7ACDB4CD7A08",
+    "title": "To Homer",
+    "poet": "John Keats",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-0D15A5C8AEBF",
+    "title": "Give Me Women, Wine, and Snuff",
+    "poet": "John Keats",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-EE6774D9569E",
+    "title": "To Autumn",
+    "poet": "John Keats",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-82E6E83501E1",
+    "title": "Song of the Indian Maid, from 'Endymion'",
+    "poet": "John Keats",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F4A0884B137F",
+    "title": "Written On A Summer Evening",
+    "poet": "John Keats",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-36841F27EA3C",
+    "title": "To My Brother George",
+    "poet": "John Keats",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A1560C52BA3B",
+    "title": "To Hope",
+    "poet": "John Keats",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-D1654B3A8BCE",
+    "title": "Bards of Passion and of Mirth, written on the Blank Page before Beaumont and Fletcher's Tragi-Comedy 'The Fair Maid of the Inn'",
+    "poet": "John Keats",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-648D85384169",
+    "title": "On First Looking Into Chapman's Homer",
+    "poet": "John Keats",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-BD4C91890B48",
+    "title": "Endymion: Book IV",
+    "poet": "John Keats",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C3E8B81A13DC",
+    "title": "Hervé Riel",
+    "poet": "Robert Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C07B4E47D003",
+    "title": "Home-Thoughts, From the Sea",
+    "poet": "Robert Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-363DF9EDBA55",
+    "title": "Summum Bonum",
+    "poet": "Robert Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2344201E35B0",
+    "title": "\"De Gustibus--\"",
+    "poet": "Robert Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2AB08EB38B6E",
+    "title": "An Epistle: Containing the Strange Medical Experience of Karshish, the Arab Physician",
+    "poet": "Robert Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A6F6F8597AF3",
+    "title": "The Glove",
+    "poet": "Robert Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-D191978DD0CD",
+    "title": "The Englishman in Italy",
+    "poet": "Robert Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-DA411004C48C",
+    "title": "The Last Ride Together",
+    "poet": "Robert Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6CB43F8B9187",
+    "title": "Protus",
+    "poet": "Robert Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-EEF849B568D5",
+    "title": "The Pied Piper of Hamelin: A Child's Story",
+    "poet": "Robert Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-32CBBF2699FA",
+    "title": "A Wall",
+    "poet": "Robert Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B6986E98B5C3",
+    "title": "Why I am a Liberal",
+    "poet": "Robert Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-D4D26040FED3",
+    "title": "Human Life’s Mystery",
+    "poet": "Elizabeth Barrett Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6972EDC806E0",
+    "title": "Mother and Poet",
+    "poet": "Elizabeth Barrett Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-70EA42BDD93E",
+    "title": "Pain In Pleasure",
+    "poet": "Elizabeth Barrett Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F27827B850E9",
+    "title": "On A Portrait Of Wordsworth",
+    "poet": "Elizabeth Barrett Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-FBC0942C3EE2",
+    "title": "Lord Walter's Wife",
+    "poet": "Elizabeth Barrett Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-E7DCB33A46DE",
+    "title": "Sonnet 33 - Yes, call me by my pet-name! let me hear",
+    "poet": "Elizabeth Barrett Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-30267A20A2BA",
+    "title": "Sonnet 16 - And yet, because thou overcomest so",
+    "poet": "Elizabeth Barrett Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-54DCF37A00A2",
+    "title": "The Cry Of The Children",
+    "poet": "Elizabeth Barrett Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-3A96BEADDEF0",
+    "title": "Sonnet 21 - Say over again, and yet once over again",
+    "poet": "Elizabeth Barrett Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-FE76CEDBBE57",
+    "title": "The Autumn",
+    "poet": "Elizabeth Barrett Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-101D2606E27F",
+    "title": "Sonnet 09 - Can it be right to give what I can give?",
+    "poet": "Elizabeth Barrett Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A16EB51FA49C",
+    "title": "Sonnet 07 - The face of all the world is changed, I think",
+    "poet": "Elizabeth Barrett Browning",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-E7015AFA4BC7",
+    "title": "Holy Sonnet IV: Oh My Black Soul! Now Art Thou Summoned",
+    "poet": "John Donne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C1B6AEB5E68D",
+    "title": "Holy Sonnet XVI: Father, Part Of His Double Interest",
+    "poet": "John Donne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C70C7779E532",
+    "title": "Elegy IX: The Autumnal",
+    "poet": "John Donne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-4E1B98BE74E6",
+    "title": "Holy Sonnet XIX: Oh, To Vex Me, Contraries Meet In One",
+    "poet": "John Donne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-7A4A5BE15539",
+    "title": "The Dream",
+    "poet": "John Donne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-1306E74DF1B6",
+    "title": "Celestial Music",
+    "poet": "John Donne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A08A21FF92C9",
+    "title": "Holy Sonnet XII: Why Are We By All Creatures Waited On?",
+    "poet": "John Donne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-3533513E29D2",
+    "title": "Woman's Constancy",
+    "poet": "John Donne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2DE16D617674",
+    "title": "Holy Sonnet V: I Am A Little World Made Cunningly",
+    "poet": "John Donne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-BE2A5B34B13A",
+    "title": "Holy Sonnet I: Tho Has Made Me",
+    "poet": "John Donne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-38983ACAA5CA",
+    "title": "Holy Sonnet X: Death Be Not Proud",
+    "poet": "John Donne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-4000552CDA51",
+    "title": "Holy Sonnet VIII: If Faithful Souls Be Alike Glorified",
+    "poet": "John Donne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-9BCB859E9789",
+    "title": "Spring",
+    "poet": "Gerard Manley Hopkins",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-BEF920AFF86D",
+    "title": "The Sea Took Pity",
+    "poet": "Gerard Manley Hopkins",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A9A712611325",
+    "title": "Thee, God, I Come from",
+    "poet": "Gerard Manley Hopkins",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-E73F9D7C85C3",
+    "title": "Brothers",
+    "poet": "Gerard Manley Hopkins",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-E54C26C4D856",
+    "title": "Moonrise",
+    "poet": "Gerard Manley Hopkins",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-99CE6250DF05",
+    "title": "To What Serves Mortal Beauty?",
+    "poet": "Gerard Manley Hopkins",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-25583AD31493",
+    "title": "Heaven--Haven: A Nun Takes The Veil",
+    "poet": "Gerard Manley Hopkins",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8DB757A1B262",
+    "title": "To a Young Child",
+    "poet": "Gerard Manley Hopkins",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-684937256057",
+    "title": "The Child Is Father To The Man",
+    "poet": "Gerard Manley Hopkins",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-75390E31BECC",
+    "title": "What Being in Rank-Old Nature",
+    "poet": "Gerard Manley Hopkins",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-98F20C44BD8F",
+    "title": "The Sea And The Skylark",
+    "poet": "Gerard Manley Hopkins",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-931975C558F8",
+    "title": "Easter Communion",
+    "poet": "Gerard Manley Hopkins",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F28656DEEFB1",
+    "title": "Before The Paling Of The Stars",
+    "poet": "Christina Rossetti",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-19CE4CCCA719",
+    "title": "Winter: My Secret",
+    "poet": "Christina Rossetti",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-983182892B0D",
+    "title": "From Sunset to Star Rise",
+    "poet": "Christina Rossetti",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-88A23FC45F1F",
+    "title": "Is it Well with the Child?",
+    "poet": "Christina Rossetti",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A31BBCFB57CB",
+    "title": "A Birthday",
+    "poet": "Christina Rossetti",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A54034DC781C",
+    "title": "Later life",
+    "poet": "Christina Rossetti",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-43A321C4C868",
+    "title": "From “Later Life”",
+    "poet": "Christina Rossetti",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-901815BA994E",
+    "title": "Monna Innominata: A Sonnet of Sonnets",
+    "poet": "Christina Rossetti",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-129240B570EB",
+    "title": "A Better Ressurection",
+    "poet": "Christina Rossetti",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6276B67E0AC5",
+    "title": "No, Thank You John",
+    "poet": "Christina Rossetti",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-73E2690FA0DC",
+    "title": "Spring Quiet",
+    "poet": "Christina Rossetti",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8837333CD4EA",
+    "title": "The Thread of Life",
+    "poet": "Christina Rossetti",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C40E1949B10C",
+    "title": "292. Song—Farewell to the Highlands",
+    "poet": "Robert Burns",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-4F16B891C870",
+    "title": "177. Elegy on the Death of Sir James Hunter Blair",
+    "poet": "Robert Burns",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-40165165BF35",
+    "title": "306. Election Ballad at close of Contest for representing the Dumfries Burghs, 1790",
+    "poet": "Robert Burns",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-0C57E5A27CA2",
+    "title": "Tam O'Shanter",
+    "poet": "Robert Burns",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B088B23B3F6A",
+    "title": "92. Suppressed Stanzas of “The Vision”",
+    "poet": "Robert Burns",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-20AAA6A2BF6C",
+    "title": "293. The Whistle: A Ballad",
+    "poet": "Robert Burns",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-1673BF4344E2",
+    "title": "278. On the late Captain Grose’s Peregrinations",
+    "poet": "Robert Burns",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-67715E35FDEE",
+    "title": "128. The Farewell",
+    "poet": "Robert Burns",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-513E32AA6482",
+    "title": "494. Song—Farewell thou stream that winding flows",
+    "poet": "Robert Burns",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F0C6606970AC",
+    "title": "437. Song—Thine am I, my faithful Fair",
+    "poet": "Robert Burns",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-CD8DC4F32156",
+    "title": "519. Ballad on Mr. Heron’s Election—No. 2",
+    "poet": "Robert Burns",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-525741A0E9CA",
+    "title": "403. The Soldier’s Return: A Ballad",
+    "poet": "Robert Burns",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-7025C6E463A9",
+    "title": "It Is Not Growing Like A Tree",
+    "poet": "Ben Jonson",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-94DC71222374",
+    "title": "Song To Celia - II",
+    "poet": "Ben Jonson",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-932EB6DFB572",
+    "title": "A Part of an Ode",
+    "poet": "Ben Jonson",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-764A01DCBE99",
+    "title": "A Pindaric Ode",
+    "poet": "Ben Jonson",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-52C85CFDF69A",
+    "title": "Song from The Silent Woman",
+    "poet": "Ben Jonson",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8DCE632C6583",
+    "title": "A Hymn to God the Father",
+    "poet": "Ben Jonson",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-FFFA35D03A6F",
+    "title": "Song To Celia - I",
+    "poet": "Ben Jonson",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-538BDA354A10",
+    "title": "To The Memory Of My Beloved, The Author, Mr William Shakespeare, And What He Hath Left Us",
+    "poet": "Ben Jonson",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F30EE4BAD89A",
+    "title": "An Epitaph On A Child Of Queen Elizabeth's Chapel",
+    "poet": "Ben Jonson",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-43034C6FEC85",
+    "title": "A Farewell to the World",
+    "poet": "Ben Jonson",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-82796849CD10",
+    "title": "Song To Diana",
+    "poet": "Ben Jonson",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-7DE16D80B302",
+    "title": "To Heaven",
+    "poet": "Ben Jonson",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2CD6EE8C4A00",
+    "title": "An Hymn Of Heavenly Beauty",
+    "poet": "Edmund Spenser",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8C5A9FE3D0EC",
+    "title": "A Hymn In Honour Of Beauty",
+    "poet": "Edmund Spenser",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8E6036852207",
+    "title": "Sonnet 75",
+    "poet": "Edmund Spenser",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-D4E7BE691271",
+    "title": "Epithalamion",
+    "poet": "Edmund Spenser",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-DDD7170F5C12",
+    "title": "Sonnet 54",
+    "poet": "Edmund Spenser",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-64F3EFD49BBA",
+    "title": "Amoretti LXXV: One Day I Wrote Her Name",
+    "poet": "Edmund Spenser",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A65679129136",
+    "title": "Sonnet 30 (Fire And Ice)",
+    "poet": "Edmund Spenser",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-38D9DA1533B6",
+    "title": "Ruins of Rome, by Bellay",
+    "poet": "Edmund Spenser",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-767B4780F271",
+    "title": "Easter",
+    "poet": "Edmund Spenser",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-5BCC2D41A5A8",
+    "title": "The First Anniversary Of The Government Under O.C.",
+    "poet": "Andrew Marvell",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-99457AFC5264",
+    "title": "The Character Of Holland",
+    "poet": "Andrew Marvell",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-71803ECF5299",
+    "title": "Tom May's Death",
+    "poet": "Andrew Marvell",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B32846DFDC0A",
+    "title": "The Picture Of Little T.C. In A Prospect Of Flowers",
+    "poet": "Andrew Marvell",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-CA1395A454B6",
+    "title": "Music's Empire",
+    "poet": "Andrew Marvell",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-3D80956817A9",
+    "title": "The Death of Cromwell",
+    "poet": "Andrew Marvell",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-437748DE43D4",
+    "title": "Upon The Hill And Grove At Bill-borow",
+    "poet": "Andrew Marvell",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2415B338C024",
+    "title": "First Anniversary",
+    "poet": "Andrew Marvell",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-5BFE9B1DEE4D",
+    "title": "Upon Appleton House, to My Lord Fairfax",
+    "poet": "Andrew Marvell",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8B0D72C12777",
+    "title": "LOSS FROM THE LEAST",
+    "poet": "Robert Herrick",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-020E21E82E40",
+    "title": "A Christmas Carol, Sung to the King in the Presence at White-Hall",
+    "poet": "Robert Herrick",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6AE8AF66B7F9",
+    "title": "WHY FLOWERS CHANGE COLOUR",
+    "poet": "Robert Herrick",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-655DEE777A80",
+    "title": "TO PRIMROSES FILLED WITH MORNING DEW",
+    "poet": "Robert Herrick",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-41BDE8DF670B",
+    "title": "Another Grace For A Child",
+    "poet": "Robert Herrick",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-E64866FD440C",
+    "title": "COMFORT TO A YOUTH THAT HAD LOST HIS LOVE",
+    "poet": "Robert Herrick",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-3040C8352BE0",
+    "title": "HOW SPRINGS CAME FIRST",
+    "poet": "Robert Herrick",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-4CA6D5493D25",
+    "title": "SOFT MUSIC",
+    "poet": "Robert Herrick",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-EEA162BF3699",
+    "title": "FAREWELL FROST, OR WELCOME SPRING",
+    "poet": "Robert Herrick",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6415D841D2CF",
+    "title": "TO THE WATER-NYMPHS DRINKING AT THEFOUNTAIN",
+    "poet": "Robert Herrick",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-72862C976245",
+    "title": "GRACE FOR A CHILD",
+    "poet": "Robert Herrick",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B97D6826A3AF",
+    "title": "TO MUSIC: A SONG",
+    "poet": "Robert Herrick",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A3364E5A38EE",
+    "title": "Epitaph. Intended for Sir Isaac Newton, in Westminster Abbey.",
+    "poet": "Alexander Pope",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-20C832215769",
+    "title": "The Garden.",
+    "poet": "Alexander Pope",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6929C9406D8C",
+    "title": "The Alley.",
+    "poet": "Alexander Pope",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-3FF239AFB04A",
+    "title": "Part of the Ninth Ode of the Fourth Book.",
+    "poet": "Alexander Pope",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A3C5C4265C3F",
+    "title": "Autumn.",
+    "poet": "Alexander Pope",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-D59401885226",
+    "title": "The Rape of the Lock:",
+    "poet": "Alexander Pope",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-52C78A9F6E61",
+    "title": "Epitaph. on General Henry Withers, in Westminster Abbey, 1729.",
+    "poet": "Alexander Pope",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-55165F926E38",
+    "title": "Epitaph. on Two Lovers Struck Dead by Lightning.",
+    "poet": "Alexander Pope",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-1756897C1A0B",
+    "title": "Book IV. Ode I. to Venus.",
+    "poet": "Alexander Pope",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-CFD27049AEF4",
+    "title": "Winter.",
+    "poet": "Alexander Pope",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6D0302C06F06",
+    "title": "Messiah.",
+    "poet": "Alexander Pope",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B108E9E02BF1",
+    "title": "Ode on St Cecilia's Day,",
+    "poet": "Alexander Pope",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-7998FD626F26",
+    "title": "Ode On The Spring",
+    "poet": "Thomas Gray",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-1D8C786EDD7A",
+    "title": "The Fatal Sisters",
+    "poet": "Thomas Gray",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8EA565DB4F66",
+    "title": "The Progress of Poesy",
+    "poet": "Thomas Gray",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-929429F4DE47",
+    "title": "To The Memory Of Mr Oldham",
+    "poet": "John Dryden",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-7A7006D092CD",
+    "title": "Heroic Stanzas",
+    "poet": "John Dryden",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B324AA203E6F",
+    "title": "To The Pious Memory Of The Accomplished Young Lady Mrs. Anne Killigrew",
+    "poet": "John Dryden",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-9D4E0B19A21A",
+    "title": "Happy The Man",
+    "poet": "John Dryden",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-96F561C8550C",
+    "title": "Farewell, Ungrateful Traitor!",
+    "poet": "John Dryden",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-76BA9EC51797",
+    "title": "Song From Marriage-A-La-Mode",
+    "poet": "John Dryden",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-7C0C74D3C5C8",
+    "title": "Why Should A Foolish Marriage Vow",
+    "poet": "John Dryden",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8AA83F109737",
+    "title": "Song To A Fair Young Lady Going Out Of Town In The Spring",
+    "poet": "John Dryden",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-D27E70F2AC03",
+    "title": "The Medal",
+    "poet": "John Dryden",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-27046673EBB9",
+    "title": "Religio Laici",
+    "poet": "John Dryden",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-56A5839C501C",
+    "title": "Alexander's Feast; Or, The Power Of Music",
+    "poet": "John Dryden",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-24EB71021352",
+    "title": "Absalom And Achitophel",
+    "poet": "John Dryden",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F20400F2600B",
+    "title": "H. Baptism",
+    "poet": "George Herbert",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-BFF04DE454FA",
+    "title": "Prayer",
+    "poet": "George Herbert",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-96518ECAF364",
+    "title": "Easter Wings",
+    "poet": "George Herbert",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C45D64EE7813",
+    "title": "Sin's Round",
+    "poet": "George Herbert",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-4A6E43FDE8C8",
+    "title": "Life",
+    "poet": "George Herbert",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C0D504A89C3F",
+    "title": "The Forerunners",
+    "poet": "George Herbert",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-941D349A9938",
+    "title": "The Flower",
+    "poet": "George Herbert",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-38F749DCE72C",
+    "title": "Sonnet (I)",
+    "poet": "George Herbert",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-3EE821EE479F",
+    "title": "H. Baptism II",
+    "poet": "George Herbert",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-75F0917B2420",
+    "title": "Easter",
+    "poet": "George Herbert",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-E8BB96364E98",
+    "title": "Peace",
+    "poet": "George Herbert",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-DEC8ED2DA9CF",
+    "title": "Nature",
+    "poet": "George Herbert",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-E9AF6DE84302",
+    "title": "A Farewell to False Love",
+    "poet": "Sir Walter Raleigh",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-100040B58F7B",
+    "title": "Song of Myself",
+    "poet": "Sir Walter Raleigh",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-AA5D281B2F94",
+    "title": "Farewell to the Court",
+    "poet": "Sir Walter Raleigh",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-BDD18DD6AB95",
+    "title": "Nature that Washed Her Hands in Milk",
+    "poet": "Sir Walter Raleigh",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B3E688C43918",
+    "title": "To a Lady with an Unruly and Ill-mannered Dog Who Bit several Persons of Importance",
+    "poet": "Sir Walter Raleigh",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8A646B626600",
+    "title": "Life",
+    "poet": "Sir Walter Raleigh",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-0E32273B819E",
+    "title": "The Passionate Shepherd To His Love",
+    "poet": "Christopher Marlowe",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-9CA9E671A3DD",
+    "title": "Sonnet VII: When Nature",
+    "poet": "Sir Philip Sidney",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B851C62537B6",
+    "title": "Sonnet XVII: His Mother Dear Cupid",
+    "poet": "Sir Philip Sidney",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2915E72318EE",
+    "title": "Sonnet XLI: Having This Day My Horse",
+    "poet": "Sir Philip Sidney",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-5ED4FDB249D0",
+    "title": "Sonnet XXX: Whether the Turkish New Moon",
+    "poet": "Sir Philip Sidney",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F77CA1144450",
+    "title": "Come Sleep, O Sleep! The Certain Knot Of Peace",
+    "poet": "Sir Philip Sidney",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-E86864F1DFDB",
+    "title": "Sonnet XVI: In Nature Apt",
+    "poet": "Sir Philip Sidney",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-18639FAC1BC3",
+    "title": "Sonnet III: With how sad steps",
+    "poet": "Sir Philip Sidney",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-28B815B8F001",
+    "title": "Song from Arcadia",
+    "poet": "Sir Philip Sidney",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C6E44F039C96",
+    "title": "Sonnet XXXI: With How Sad Steps, O Moon",
+    "poet": "Sir Philip Sidney",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-DB2BAE7D96E9",
+    "title": "To The Sad Moon",
+    "poet": "Sir Philip Sidney",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-109C9BE0B937",
+    "title": "Song",
+    "poet": "John Clare",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-3EE94EFA4E79",
+    "title": "Summer Evening",
+    "poet": "John Clare",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6CE667F1C9A1",
+    "title": "From \"The Parish: A Satire\"",
+    "poet": "John Clare",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C93BE00487A8",
+    "title": "Ploughman Singing",
+    "poet": "John Clare",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-EEFC922741D8",
+    "title": "Grasshoppers",
+    "poet": "John Clare",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-24546A3C7B65",
+    "title": "Idle Fame",
+    "poet": "John Clare",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-EB06AFDE1994",
+    "title": "What is Life?",
+    "poet": "John Clare",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-527D1F1985CE",
+    "title": "The Gipsy's Camp",
+    "poet": "John Clare",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-AF757C0B1E9B",
+    "title": "Impromptu",
+    "poet": "John Clare",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-25440FAC5440",
+    "title": "In Hilly-Wood",
+    "poet": "John Clare",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-9A8D3D396A83",
+    "title": "To Anna Three Years Old",
+    "poet": "John Clare",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-EC4A780CB489",
+    "title": "Early Nightingale",
+    "poet": "John Clare",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-226863EF379E",
+    "title": "Etude Realiste",
+    "poet": "Algernon Charles Swinburne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8557035189D1",
+    "title": "Tiresias",
+    "poet": "Algernon Charles Swinburne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-AF3D4B0F3A16",
+    "title": "The Eve Of Revolution",
+    "poet": "Algernon Charles Swinburne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B3EFB2D9B2DD",
+    "title": "Sorrow",
+    "poet": "Algernon Charles Swinburne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-BEDBB2E990CD",
+    "title": "Autumn And Winter",
+    "poet": "Algernon Charles Swinburne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C4A36F5D90C4",
+    "title": "On the Death of Robert Browning",
+    "poet": "Algernon Charles Swinburne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-244EB36AA0DA",
+    "title": "A Ballad of Burdens",
+    "poet": "Algernon Charles Swinburne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-60301C73A2C4",
+    "title": "In Memory of Walter Savage Landor",
+    "poet": "Algernon Charles Swinburne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-ECCA40590775",
+    "title": "Mentana : First Anniversary",
+    "poet": "Algernon Charles Swinburne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B6BCF567F292",
+    "title": "Four Songs Of Four Seasons",
+    "poet": "Algernon Charles Swinburne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-54720F593B42",
+    "title": "Concord",
+    "poet": "Algernon Charles Swinburne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6B217DB72728",
+    "title": "Babyhood",
+    "poet": "Algernon Charles Swinburne",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-30A41F6816AE",
+    "title": "Sohrab and Rustum",
+    "poet": "Matthew Arnold",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-0E2E1931FD9D",
+    "title": "Hayeswater",
+    "poet": "Matthew Arnold",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-53C27147EC28",
+    "title": "Thyrsis, a Monody",
+    "poet": "Matthew Arnold",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-83EB6C021749",
+    "title": "Obermann Once More",
+    "poet": "Matthew Arnold",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-25FBEC651A9E",
+    "title": "The Strayed Reveller",
+    "poet": "Matthew Arnold",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-937D7D9CCB7A",
+    "title": "The Buried Life",
+    "poet": "Matthew Arnold",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-1BBC70F21DAF",
+    "title": "The Scholar Gypsy",
+    "poet": "Matthew Arnold",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B522287DC814",
+    "title": "Strayed Reveller, The",
+    "poet": "Matthew Arnold",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A50A6A690F3E",
+    "title": "Mycerinus",
+    "poet": "Matthew Arnold",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-68C7A326EDFB",
+    "title": "1914 V: The Soldier",
+    "poet": "Rupert Brooke",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6F55A565F74F",
+    "title": "I. Peace",
+    "poet": "Rupert Brooke",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B79B5768C7F4",
+    "title": "There's Wisdom In Women",
+    "poet": "Rupert Brooke",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-946777A28F12",
+    "title": "The Night Journey",
+    "poet": "Rupert Brooke",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-71B14AF20903",
+    "title": "Sonnet: Oh! Death will find me, long before I tire",
+    "poet": "Rupert Brooke",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8E1A0CC975A2",
+    "title": "Sonnet: I said I splendidly loved you; it's not true",
+    "poet": "Rupert Brooke",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-55E096A93652",
+    "title": "Sonnet",
+    "poet": "Rupert Brooke",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B6C3027AEAD8",
+    "title": "Sleeping Out: Full Moon",
+    "poet": "Rupert Brooke",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6A529711A830",
+    "title": "Heaven",
+    "poet": "Rupert Brooke",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-69E5955626F8",
+    "title": "The Little Dog's Day",
+    "poet": "Rupert Brooke",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C0DC110DDAAF",
+    "title": "The Rain and the Wind",
+    "poet": "William Ernest Henley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6F8C4456C801",
+    "title": "Double Ballade on the Nothingness of Things",
+    "poet": "William Ernest Henley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-59C751822A7F",
+    "title": "Between the Dusk of a Summer Night",
+    "poet": "William Ernest Henley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-CAE13C1D9CE9",
+    "title": "Ballade of Dead Actors",
+    "poet": "William Ernest Henley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-85ABEEC010FF",
+    "title": "O Gather Me the Rose",
+    "poet": "William Ernest Henley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A3F561C704AA",
+    "title": "Madam Life's a Piece in Bloom",
+    "poet": "William Ernest Henley",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-474A256E9545",
+    "title": "The Defence of Guenevere",
+    "poet": "William Morris",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-42E8E907B1DD",
+    "title": "Song VI: Cherish Life that Abideth",
+    "poet": "William Morris",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-965A68649C50",
+    "title": "Song II: Have No Thought for Tomorrow",
+    "poet": "William Morris",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B25F7522E512",
+    "title": "Summer",
+    "poet": "William Morris",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-E97635642560",
+    "title": "Atalanta's Race",
+    "poet": "William Morris",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-DB4BAA8321EE",
+    "title": "Sir Galahad, a Christmas Mystery",
+    "poet": "William Morris",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-4E23536AACD4",
+    "title": "King Arthur's Tomb",
+    "poet": "William Morris",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C06AAC85B474",
+    "title": "Summer Dawn",
+    "poet": "William Morris",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-96F9AFAB28D7",
+    "title": "The Story of Sigurd the Volsung (excerpt)",
+    "poet": "William Morris",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-BE8D04C088BF",
+    "title": "Autumn",
+    "poet": "William Morris",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-BB76D9A93729",
+    "title": "Spring",
+    "poet": "William Morris",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-9FD97A214587",
+    "title": "The Haystack in the Floods",
+    "poet": "William Morris",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-71011F1082BE",
+    "title": "The Emigrants: Book I",
+    "poet": "Charlotte Smith",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-D806E357FDCA",
+    "title": "Sonnet XLIV: Press'd by the Moon",
+    "poet": "Charlotte Smith",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-5B19F4E73172",
+    "title": "Sonnet XLIII: The Unhappy Exile",
+    "poet": "Charlotte Smith",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A52F3FFF565B",
+    "title": "The Emigrants: Book II",
+    "poet": "Charlotte Smith",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-FCF0095D7093",
+    "title": "Written near a Port on a Dark Evening",
+    "poet": "Charlotte Smith",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-B2CA3E4F5BF2",
+    "title": "When He Should Laugh",
+    "poet": "Edward Thomas",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-CE1F58D5DF64",
+    "title": "But These Things Also",
+    "poet": "Edward Thomas",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-841201C8B9D5",
+    "title": "The Cherry Trees",
+    "poet": "Edward Thomas",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-D5BA795643B5",
+    "title": "It Was upon",
+    "poet": "Edward Thomas",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6F34918640E1",
+    "title": "The Sheiling",
+    "poet": "Edward Thomas",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-9906882B3F36",
+    "title": "A Dream",
+    "poet": "Edward Thomas",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C054D51D6EB6",
+    "title": "To-Night",
+    "poet": "Edward Thomas",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-5D42E44D5583",
+    "title": "Digging",
+    "poet": "Edward Thomas",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F638F1C2024F",
+    "title": "The Wasp Trap",
+    "poet": "Edward Thomas",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-0ED512AF6F3C",
+    "title": "The Child in the Orchard",
+    "poet": "Edward Thomas",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C1FF8CD5608C",
+    "title": "Ambition",
+    "poet": "Edward Thomas",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-8E9163C58F19",
+    "title": "Beauty",
+    "poet": "Edward Thomas",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-0170E68BDE6C",
+    "title": "Farewell Love and All Thy Laws Forever",
+    "poet": "Thomas Wyatt",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-1E164DB9C08C",
+    "title": "Unstable Dream",
+    "poet": "Thomas Wyatt",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-1DEF938424DC",
+    "title": "I Find No Peace",
+    "poet": "Thomas Wyatt",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-EC8F77C5C538",
+    "title": "The Rose",
+    "poet": "Richard Lovelace",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-28390BD3BC5C",
+    "title": "The Triumph Of Woman",
+    "poet": "Robert Southey",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-AE42D869F7B6",
+    "title": "Rudiger - A Ballad",
+    "poet": "Robert Southey",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-A0B1C8D5D352",
+    "title": "Ode Written On The First Of December",
+    "poet": "Robert Southey",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-12BEAF1BA666",
+    "title": "Hymn To The Penates",
+    "poet": "Robert Southey",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-56934BF3ABD2",
+    "title": "The Pauper's Funeral",
+    "poet": "Robert Southey",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2B55C7C0E5DE",
+    "title": "Ode Written On The First Of January",
+    "poet": "Robert Southey",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-014905A40FC0",
+    "title": "The Old Woman of Berkeley",
+    "poet": "Robert Southey",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-0DD105D76C6A",
+    "title": "Mary - A Ballad",
+    "poet": "Robert Southey",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-C9576B992472",
+    "title": "Winter",
+    "poet": "Robert Southey",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-6EFAC44C8BBA",
+    "title": "To My Own Minature Picture Taken At Two Years Of Age",
+    "poet": "Robert Southey",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-3EDA012AEED6",
+    "title": "Donica - A Ballad",
+    "poet": "Robert Southey",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-CA4EB00E8174",
+    "title": "The Soldier's Wife",
+    "poet": "Robert Southey",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-7B2FF57A11E6",
+    "title": "Content, To My Dearest Lucasia",
+    "poet": "Katherine Philips",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-4E998AFDE617",
+    "title": "To my dear Sister, Mrs. C. P. on her Nuptial",
+    "poet": "Katherine Philips",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-FBBD2C9CA858",
+    "title": "A Retir'd Friendship",
+    "poet": "Katherine Philips",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-EFC93FC811AE",
+    "title": "6th April 1651 L'Amitie: To Mrs. M. Awbrey",
+    "poet": "Katherine Philips",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-1B3E5956E1D5",
+    "title": "To One Persuading A Lady To Marriage",
+    "poet": "Katherine Philips",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-27EEA4691D4A",
+    "title": "Epitaph on her Son H. P.",
+    "poet": "Katherine Philips",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-2E0B497DCFB8",
+    "title": "Friendships Mystery, To My Dearest Lucasia",
+    "poet": "Katherine Philips",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-232F82693FB5",
+    "title": "In memory of that excellent person Mrs. Mary Lloyd of Bodidrist in Denbigh-shire",
+    "poet": "Katherine Philips",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-BC748EC5C363",
+    "title": "In Memory of F.P.",
+    "poet": "Katherine Philips",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-FD59422D46E6",
+    "title": "A Ballad upon a Wedding",
+    "poet": "Sir John Suckling",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "GB-F61AF8CE08AE",
+    "title": "Sonnet",
+    "poet": "Sir John Suckling",
+    "country": "United Kingdom",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-B4D37201D8FF",
+    "title": "Primeval my Love for the Woman I Love.",
+    "poet": "Walt Whitman",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C9AC7182A31D",
+    "title": "A Boston Ballad, 1854.",
+    "poet": "Walt Whitman",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-1A67FFC52592",
+    "title": "Whispers of Heavenly Death.",
+    "poet": "Walt Whitman",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-60AC6072C78C",
+    "title": "Starting from Paumanok.",
+    "poet": "Walt Whitman",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-50C740E75C06",
+    "title": "Passage to India.",
+    "poet": "Walt Whitman",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-5F58D27AC384",
+    "title": "Spain 1873–’74.",
+    "poet": "Walt Whitman",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-22C6DFB977DC",
+    "title": "What General has a Good Army.",
+    "poet": "Walt Whitman",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-381D3CDF3F1C",
+    "title": "O Sun of Real Peace.",
+    "poet": "Walt Whitman",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-AB1B4D7E4E20",
+    "title": "Sleepers, The.",
+    "poet": "Walt Whitman",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-58EBC0943893",
+    "title": "This Moment, Yearning and Thoughtful.",
+    "poet": "Walt Whitman",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-4E7CA16CAC35",
+    "title": "Walt Whitman.",
+    "poet": "Walt Whitman",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C5906BA643C9",
+    "title": "On the Beach at Night, Alone.",
+    "poet": "Walt Whitman",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-29E564D46737",
+    "title": "To Helen",
+    "poet": "Edgar Allan Poe",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-59263E56B7DB",
+    "title": "For Annie",
+    "poet": "Edgar Allan Poe",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-FFA61AB80954",
+    "title": "Eldorado",
+    "poet": "Edgar Allan Poe",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-AF79DAEF0DED",
+    "title": "To Marie Louise (Shew)",
+    "poet": "Edgar Allan Poe",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-23A301CA2A20",
+    "title": "The City In The Sea",
+    "poet": "Edgar Allan Poe",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-8D1048BA4165",
+    "title": "Bridal Ballad",
+    "poet": "Edgar Allan Poe",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-E9CC54A34E0B",
+    "title": "To One In Paradise",
+    "poet": "Edgar Allan Poe",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-8F247B88AFFB",
+    "title": "The Valley Of Unrest",
+    "poet": "Edgar Allan Poe",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-6B29778F760D",
+    "title": "To----",
+    "poet": "Edgar Allan Poe",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-F5A1AE5078E1",
+    "title": "Spirits Of The Dead",
+    "poet": "Edgar Allan Poe",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-548EB977AA4F",
+    "title": "The Happiest Day",
+    "poet": "Edgar Allan Poe",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0F61C5BE4505",
+    "title": "The Raven",
+    "poet": "Edgar Allan Poe",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-4C0099C60025",
+    "title": "Not at Home to Callers",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-051AC3821FCD",
+    "title": "Defrauded I a Butterfly --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-D85C292426E3",
+    "title": "The words the happy say",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-023C961BF7EC",
+    "title": "Summer begins to have the look",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-96030A9F86CD",
+    "title": "The Life we have is very great.",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-D1C5790F0491",
+    "title": "Could Hope inspect her Basis",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-A05C5F033063",
+    "title": "Success is counted sweetest",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-48D4D1591522",
+    "title": "I Years had been from Home",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-80F3BB7B5137",
+    "title": "Musicians wrestle everywhere",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-EC3CFD1465D3",
+    "title": "Where Thou art -- that -- is Home --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-592CE7D973BA",
+    "title": "The name -- of it -- is \"Autumn\" --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-515285ABC26D",
+    "title": "A Wind that rose",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-44BD1EB4005B",
+    "title": "No Romance sold unto",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-ACFFA461C689",
+    "title": "How know it from a Summer's Day?",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-E2F62110C4AD",
+    "title": "Remorse -- is Memory -- awake --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C28390A12F22",
+    "title": "There is a flower that Bees prefer",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-72ECE53B0703",
+    "title": "Twice had Summer her fair Verdure",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-EF6AED9099A7",
+    "title": "One Year ago -- jots what?",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-5D63E59099FD",
+    "title": "We thirst at first -- 'tis Nature's Act --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-ED1F04CF557E",
+    "title": "She's happy, with a new Content --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-37B9F4ED8705",
+    "title": "The One who could repeat the Summer day",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-84DDB23F3FCC",
+    "title": "I many times thought Peace had come",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-35DCC6F87E9D",
+    "title": "So much of Heaven has gone from Earth",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C99FFD9E4AED",
+    "title": "The Fact that Earth is Heaven --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-8F5DB93D24A6",
+    "title": "So much Summer",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-71FE0FCF8A48",
+    "title": "Her sovereign People",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-95782734C3E6",
+    "title": "Of Life to own --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-3A6D377AB971",
+    "title": "When Memory is full",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-F404778F1861",
+    "title": "A Wife -- at daybreak I shall be",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-BD19C07752FF",
+    "title": "The stem of a departed Flower",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-491D075CA6D4",
+    "title": "Whatever it is -- she has tried it --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-DA53E1A04DDC",
+    "title": "Oh Future! thou secreted peace",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-1D6649C0B859",
+    "title": "Said Death to Passion",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-F153697E3BE7",
+    "title": "I think that the Root of the Wind is Water --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-9DC354C601FB",
+    "title": "Pain -- has an Element of Blank --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C995012EE64A",
+    "title": "It can't be \"Summer\"!",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-824ACD8DDF4C",
+    "title": "\"Hope\" is the thing with feathers",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-43D9D0405CEA",
+    "title": "The Butterfly upon the Sky,",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-ACD953486D0A",
+    "title": "Summer for thee, grant I may be",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-402726BC5616",
+    "title": "Pain -- expands the Time --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-4AF27045EC1C",
+    "title": "Who were \"the Father and the Son\"",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-9E2DE90F61F1",
+    "title": "Growth of Man -- like Growth of Nature --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C611566FA4FC",
+    "title": "Death is a Dialogue between",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-1A6F398C0F0F",
+    "title": "A Door just opened on a street --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-DDF1B1F66E0B",
+    "title": "Summer -- we all have seen --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-DA3378E4BDE9",
+    "title": "The good Will of a Flower",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-FA0BE92E9FDD",
+    "title": "Each Life Converges to some Centre --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-18541BABDFA9",
+    "title": "To her derided Home",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-DBC60867B583",
+    "title": "One Day is there of the Series",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-D1BAEC86D034",
+    "title": "The Veins of other Flowers",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-2A4F86CFED83",
+    "title": "I know of people in the Grave",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-FF2898CAFED1",
+    "title": "We should not mind so small a flower",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-986FA69E21FB",
+    "title": "I prayed, at first, a little Girl,",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-B3946C38A962",
+    "title": "I never felt at Home -- Below",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-51DBE49EE5DA",
+    "title": "How much the present moment means",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-26CCCC529415",
+    "title": "Now I knew I lost her --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-DA4DD0B7D4BC",
+    "title": "Snow beneath whose chilly softness",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-DDE3C277AF90",
+    "title": "Floss won't save you from an Abyss",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-3673079AA43E",
+    "title": "\"Arcturus\" is his other name",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-1A15EE133CD5",
+    "title": "Witchcraft was hung, in History,",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-19D260FB3321",
+    "title": "Their Height in Heaven comforts not --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0C8D14530D7C",
+    "title": "\"Faith\" is a fine invention",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-8DA3ABFEF1A3",
+    "title": "Through the Dark Sod -- as Education",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0DBAFCB9F7B9",
+    "title": "Some, too fragile for winter winds",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-5D3F9B557AF8",
+    "title": "Pain has but one Acquaintance",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C3B80F148E3B",
+    "title": "How Human Nature dotes",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-2A721168B661",
+    "title": "The Mountain sat upon the Plain",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-AF721153A45D",
+    "title": "Just so -- Jesus -- raps",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C3F8F10BB247",
+    "title": "Rearrange a \"Wife's\" affection!",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0FA00F254DDC",
+    "title": "Water makes many Beds",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-E85E3454DC9D",
+    "title": "In this short Life",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-50FA694CAEAD",
+    "title": "Bereavement in their death to feel",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-E4E2CC117E0D",
+    "title": "Birthday of but a single pang",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-4568AEC55CA9",
+    "title": "How the Waters closed above Him",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-855AC84C8E8A",
+    "title": "Tho' I get home how late -- how late",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-E4363267BEEA",
+    "title": "Which is best? Heaven --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-9DCF2CE5B658",
+    "title": "Lad of Athens, faithful be",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-1F6E15566027",
+    "title": "If pain for peace prepares",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-A972080A5E4A",
+    "title": "Her spirit rose to such a height",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-4FDC495D2CD6",
+    "title": "Further in Summer than the Birds",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-F30081A78FF9",
+    "title": "Estranged from Beauty -- none can be --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0BE4BBFA4DF3",
+    "title": "Heaven is so far of the Mind",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-F8BEC0E4A559",
+    "title": "\"Lethe\" in my flower,",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-44DC8054C201",
+    "title": "How happy is the little Stone",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-55A4BA04C1CB",
+    "title": "What shall I do when the Summer troubles --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-E4DF83860741",
+    "title": "I know a place where Summer strives",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-F028344E3F37",
+    "title": "A Tooth upon Our Peace",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-06287CF469F7",
+    "title": "Like Rain it sounded till it curved",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-3D27EEA91795",
+    "title": "I rose -- because He sank --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-3867CD5A8CB2",
+    "title": "Angels, in the early morning",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-5457D21DB81F",
+    "title": "Joy to have merited the Pain --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-10AD231CCAB3",
+    "title": "I suppose the time will come",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-332A29FE8DCC",
+    "title": "The Flower must not blame the Bee",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-DCF4E1080FC2",
+    "title": "When I hoped, I recollect",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-BAC9D1AB2C6B",
+    "title": "We talked as Girls do --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-1EBE35B78C00",
+    "title": "\"Faithful to the end\" Amended",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-AF03CF0D20C4",
+    "title": "I'm sorry for the Dead -- Today --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-BF3382FC49F6",
+    "title": "If I'm lost -- now",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-F86E51207F9F",
+    "title": "The fairest Home I ever knew",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-50A669918066",
+    "title": "A Flower will not trouble her, it has so small a Foot,",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-5164BFD772F1",
+    "title": "'Twould ease -- a Butterfly --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-F04626DE920B",
+    "title": "The Moon upon her fluent Route",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-8CBCCFD79DEC",
+    "title": "Three times -- we parted -- Breath -- and I --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-26D302CDF8E3",
+    "title": "Winter under cultivation",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-1D8722FF7D82",
+    "title": "Nature rarer uses Yellow",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-1EB4BE21C018",
+    "title": "For Death -- or rather",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C35E898359A4",
+    "title": "In snow thou comest --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-B0E0AFB50523",
+    "title": "When I hoped I feared --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-D9080FEAB3AE",
+    "title": "\"Nature\" is what we see --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-1E031B515344",
+    "title": "Beauty -- be not caused -- It Is --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-8FED0C0647DD",
+    "title": "A Pang is more conspicuous in Spring",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-65725173307D",
+    "title": "Forever honored by the Tree",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-BF0B5F73D00C",
+    "title": "My Season's furthest Flower --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-AF40D10F5536",
+    "title": "Before you thought of Spring",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-B18856F9EB11",
+    "title": "You know that Portrait in the Moon --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-AEA209F2B41F",
+    "title": "Is Heaven a Physician?",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-365413783D95",
+    "title": "Perhaps you'd like to buy a flower,",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0EA50ABF9053",
+    "title": "My Garden -- like the Beach",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-FCB0168F2F44",
+    "title": "I'll tell you how the Sun rose",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-4AFE452026DD",
+    "title": "The waters chased him as he fled,",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-A2B4F14F38C2",
+    "title": "Jesus! thy Crucifix",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-65C01F1E6E23",
+    "title": "Our journey had advanced --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-ECED7D4233C7",
+    "title": "When I was small, a Woman died --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-CB0F8203EA98",
+    "title": "These are the Signs to Nature's Inns --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-6C7F6ED5FF9B",
+    "title": "I never lost as much but twice",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-FB7D0FF57F4D",
+    "title": "The Service without Hope --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0F1A4C5FFD1B",
+    "title": "The last of Summer is Delight --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-BA5DFA4F466E",
+    "title": "I got so I could take his name",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-D9129BF7AADB",
+    "title": "A chilly Peace infests the Grass",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-91159ADD54FF",
+    "title": "Go not too near a House of Rose --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-95C2A75AC89F",
+    "title": "Nature and God -- I neither knew",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-586C78FFB292",
+    "title": "Spring is the Period",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-2C7EF981B75D",
+    "title": "The Rose did caper on her cheek",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-943689374A48",
+    "title": "There came a Day at Summer's full",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-2679F7A7682A",
+    "title": "A little Dog that wags his tail",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-028732E8639E",
+    "title": "Nature -- the Gentlest Mother is,",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-53C19C72BBD9",
+    "title": "Brother of Ingots -- Ah Peru --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-BE13DF346DE8",
+    "title": "It would have starved a Gnat --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-214842AA9464",
+    "title": "Faith -- is the Pierless Bridge",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-316BFEEFB6C9",
+    "title": "Robbed by Death -- but that was easy --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0E3EE54F945B",
+    "title": "He told a homely tale",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-CD2B7AB58A4C",
+    "title": "How happy I was if I could forget",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-8F3CCD96604B",
+    "title": "To mend each tattered Faith",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-AE0771778397",
+    "title": "The Sun is gay or stark",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-1D10A898AAFD",
+    "title": "Bloom -- is Result -- to meet a Flower",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-409804D12519",
+    "title": "Winter is good -- his Hoar Delights",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-908D2D8733CE",
+    "title": "I have a Bird in spring",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-1D07A5DF86D9",
+    "title": "The Bird her punctual music brings",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-3061EB4067A5",
+    "title": "A soft Sea washed around the House",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-BB9780A962D8",
+    "title": "I had no time to Hate",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-4C90B0C65BE3",
+    "title": "The Winters are so short",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-001DB389F451",
+    "title": "If I should cease to bring a Rose",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-E2D945EBC08B",
+    "title": "Given in Marriage unto Thee",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-B30A79CCFC79",
+    "title": "Teach Him -- When He makes the names",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-ADC6D26184B7",
+    "title": "The Leaves like Women interchange",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0E24CA96D5B2",
+    "title": "Four Trees -- upon a solitary Acre --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-348B2C07E559",
+    "title": "Not One by Heaven defrauded stay --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-04CE344CB2F6",
+    "title": "All but Death, can be Adjusted --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-3E00DD4A9206",
+    "title": "Lest this be Heaven indeed",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-8F092F68E876",
+    "title": "Hope is a subtle Glutton --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C1C0506C5276",
+    "title": "Had I presumed to hope --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-DA0A8A573E35",
+    "title": "When Roses cease to bloom, Sir,",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-8A8B9CB0AF9D",
+    "title": "Prayer is the little implement",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C2E35774796E",
+    "title": "Why -- do they shut Me out of Heaven?",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-4B6C1A27C210",
+    "title": "A Pit -- but Heaven over it --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-E5B85AAC6AEC",
+    "title": "They say that \"Time assuages\" --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-F4A312D3BA8D",
+    "title": "Nature -- sometimes sears a Sapling",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-37D84BF97909",
+    "title": "As if the Sea should part",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-BF95A53673FA",
+    "title": "Like Flowers, that heard the news of Dews,",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-4BCEC3C37B6E",
+    "title": "Bless God, he went as soldiers,",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-58EDD03C4CDB",
+    "title": "Did Our Best Moment last",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-7943AFE319C5",
+    "title": "Time does go on --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-CBED0D3E8ADD",
+    "title": "Except to Heaven, she is nought.",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-3A16D2821280",
+    "title": "Ourselves were wed one summer -- dear --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-BDA64E9F6964",
+    "title": "Glass was the Street -- in tinsel Peril",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-62D0F9EC3769",
+    "title": "The Trees like Tassels -- hit -- and swung --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-66883472AE4F",
+    "title": "The Moon is distant from the Sea",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-02A05F27D5A3",
+    "title": "Beauty crowds me till I die",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-5213B7BADBBF",
+    "title": "As Sleigh Bells seem in summer",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-5C40DA99BA93",
+    "title": "The Soul has Bandaged moments --",
+    "poet": "Emily Dickinson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-051B94DDBF42",
+    "title": "Loss And Gain",
+    "poet": "Ralph Waldo Emerson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-62B1BA77F24A",
+    "title": "Celestial Love",
+    "poet": "Ralph Waldo Emerson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0690944BF1B8",
+    "title": "Mithridates",
+    "poet": "Ralph Waldo Emerson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-E4C07CE698FB",
+    "title": "Ode To Beauty",
+    "poet": "Ralph Waldo Emerson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-B905B81EF9FE",
+    "title": "To Eva",
+    "poet": "Ralph Waldo Emerson",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-CEC345F0D732",
+    "title": "The Song of Hiawatha: X",
+    "poet": "Henry Wadsworth Longfellow",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-BC6304DE1B89",
+    "title": "Woods in Winter",
+    "poet": "Henry Wadsworth Longfellow",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-A98097955295",
+    "title": "Hiawatha's Childhood",
+    "poet": "Henry Wadsworth Longfellow",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-8E74287C6C46",
+    "title": "Footsteps of Angels",
+    "poet": "Henry Wadsworth Longfellow",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-47D5C31E7D40",
+    "title": "The Reaper and the Flowers",
+    "poet": "Henry Wadsworth Longfellow",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-2DD1691A850F",
+    "title": "RAIN IN SUMMER",
+    "poet": "Henry Wadsworth Longfellow",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-9057F2248D92",
+    "title": "THE ARSENAL AT SPRINGFIELD",
+    "poet": "Henry Wadsworth Longfellow",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-045459A99CF2",
+    "title": "Christmas Bells",
+    "poet": "Henry Wadsworth Longfellow",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-D0F8072946FE",
+    "title": "The Goblet of Life",
+    "poet": "Henry Wadsworth Longfellow",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-729ED5A9AC2E",
+    "title": "Loss And Gain",
+    "poet": "Henry Wadsworth Longfellow",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-042853F46737",
+    "title": "The Light of Stars",
+    "poet": "Henry Wadsworth Longfellow",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-9951C085F8AB",
+    "title": "Goliath Of Gath",
+    "poet": "Phillis Wheatley",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-62D4229A3F20",
+    "title": "On the Death of the Rev. Dr. Sewell",
+    "poet": "Phillis Wheatley",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-9CC3A01A973B",
+    "title": "Niobe in Distress",
+    "poet": "Phillis Wheatley",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-EA9D9D53B8FC",
+    "title": "To a Gentleman and Lady on the Death of the Lady's Brother and Sister",
+    "poet": "Phillis Wheatley",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-6D77968A40EC",
+    "title": "An Hymn To Humanity (To S.P.G. Esp)",
+    "poet": "Phillis Wheatley",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-ACB18B99429D",
+    "title": "To The Honourable T. H. Esq; On the Death Of His Daughter",
+    "poet": "Phillis Wheatley",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-522DF4291E7D",
+    "title": "To a Lady and Her Children",
+    "poet": "Phillis Wheatley",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C13B6E0B7432",
+    "title": "On The Death Of J. C. An Infant",
+    "poet": "Phillis Wheatley",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-CB8DC8C52F51",
+    "title": "To A Lady On The Death Of The Three Relations",
+    "poet": "Phillis Wheatley",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-20A5EA5372C2",
+    "title": "To A Lady On The Death Of Her Husband",
+    "poet": "Phillis Wheatley",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-EBC6F2A4775B",
+    "title": "My Little March Girl",
+    "poet": "Paul Laurence Dunbar",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-84A9A385912C",
+    "title": "Encouraged",
+    "poet": "Paul Laurence Dunbar",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-60644EB3E946",
+    "title": "Sympathy",
+    "poet": "Paul Laurence Dunbar",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-6A4510AD2244",
+    "title": "Encouragement",
+    "poet": "Paul Laurence Dunbar",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-02B247BDB29F",
+    "title": "Little Brown Baby",
+    "poet": "Paul Laurence Dunbar",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-D4D8D4F14BD0",
+    "title": "Summer in the South",
+    "poet": "Paul Laurence Dunbar",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-35AB2BD3F50C",
+    "title": "Merry Autumn",
+    "poet": "Paul Laurence Dunbar",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-F924FD602EF8",
+    "title": "Common Things",
+    "poet": "Paul Laurence Dunbar",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-29B9BD7B5ABE",
+    "title": "Life's Tragedy",
+    "poet": "Paul Laurence Dunbar",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0931BEA151BD",
+    "title": "The Pipes At Lucknow",
+    "poet": "John Greenleaf Whittier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-7AF2EFE8FB8C",
+    "title": "A Word for the Hour",
+    "poet": "John Greenleaf Whittier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-AD2620987B79",
+    "title": "The Pumpkin",
+    "poet": "John Greenleaf Whittier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-F2E5F87FABDC",
+    "title": "The Changeling ( From The Tent on the Beach )",
+    "poet": "John Greenleaf Whittier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-33683C5C70CE",
+    "title": "The Farewell",
+    "poet": "John Greenleaf Whittier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-A42363E906B0",
+    "title": "Kallundborg Church ( From The Tent on the Beach)",
+    "poet": "John Greenleaf Whittier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-750D89B7DA91",
+    "title": "My Triumph",
+    "poet": "John Greenleaf Whittier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-C4F978B3F9AE",
+    "title": "Flowers in Winter",
+    "poet": "John Greenleaf Whittier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-1D1BEE12CB15",
+    "title": "Snowbound, a Winter Idyl",
+    "poet": "John Greenleaf Whittier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-B83E4698684E",
+    "title": "Burning Drift-Wood",
+    "poet": "John Greenleaf Whittier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-12E8DE695AE1",
+    "title": "The Worship of Nature",
+    "poet": "John Greenleaf Whittier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-780E7B701A49",
+    "title": "The Barefoot Boy",
+    "poet": "John Greenleaf Whittier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0209A9F4FD69",
+    "title": "A Ballad Of The Trees And The Master",
+    "poet": "Sidney Lanier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-2FE4BB28FFA5",
+    "title": "The Revenge Of Hamish",
+    "poet": "Sidney Lanier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-557AF7751B19",
+    "title": "Street Cries",
+    "poet": "Sidney Lanier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-527CBA5E90EA",
+    "title": "Spring Greeting",
+    "poet": "Sidney Lanier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-0AD88A94D0FC",
+    "title": "The Tournament",
+    "poet": "Sidney Lanier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-E08AA37D867E",
+    "title": "Souls And Rain-Drops",
+    "poet": "Sidney Lanier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-506AF0EA1AC7",
+    "title": "June Dreams, In January",
+    "poet": "Sidney Lanier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-96EC3130F139",
+    "title": "Rose-Morals",
+    "poet": "Sidney Lanier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-85A527628649",
+    "title": "The Hard Times In Elfland",
+    "poet": "Sidney Lanier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-90DA7AF7FA6F",
+    "title": "My Springs",
+    "poet": "Sidney Lanier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-810E0B3C964F",
+    "title": "The Power Of Prayer",
+    "poet": "Sidney Lanier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  },
+  {
+    "origin": "new",
+    "id": "US-17C4183FCE76",
+    "title": "From The Flats.",
+    "poet": "Sidney Lanier",
+    "country": "United States of America",
+    "reason": "exact normalized text"
+  }
+]

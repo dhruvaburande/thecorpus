@@ -1,0 +1,82 @@
+{
+  "built_at": "2026-07-18T09:36:43.373732+00:00",
+  "total_poems": 3002,
+  "countries": {
+    "Australia": 2,
+    "Austria": 1,
+    "Brazil": 6,
+    "Canada": 2,
+    "Chile": 2,
+    "China": 30,
+    "Cuba": 19,
+    "France": 26,
+    "Germany": 50,
+    "Greece": 22,
+    "India": 27,
+    "Iran": 10,
+    "Ireland": 57,
+    "Italy": 2,
+    "Japan": 10,
+    "Mexico": 47,
+    "Norway": 2,
+    "Romania": 155,
+    "Spain": 9,
+    "United Kingdom": 1887,
+    "United States of America": 636
+  },
+  "sources": {
+    "poetrydb": 1481,
+    "wikisource": 576,
+    "new-poems.json": 511,
+    "PoetryDB": 434
+  },
+  "chunks": [
+    {
+      "file": "data/atlas/chunks/atlas-0001.json",
+      "records": 252,
+      "bytes": 1498740
+    },
+    {
+      "file": "data/atlas/chunks/atlas-0002.json",
+      "records": 297,
+      "bytes": 1490338
+    },
+    {
+      "file": "data/atlas/chunks/atlas-0003.json",
+      "records": 312,
+      "bytes": 1493346
+    },
+    {
+      "file": "data/atlas/chunks/atlas-0004.json",
+      "records": 314,
+      "bytes": 1477031
+    },
+    {
+      "file": "data/atlas/chunks/atlas-0005.json",
+      "records": 232,
+      "bytes": 1462193
+    },
+    {
+      "file": "data/atlas/chunks/atlas-0006.json",
+      "records": 320,
+      "bytes": 1487770
+    },
+    {
+      "file": "data/atlas/chunks/atlas-0007.json",
+      "records": 454,
+      "bytes": 1474959
+    },
+    {
+      "file": "data/atlas/chunks/atlas-0008.json",
+      "records": 705,
+      "bytes": 1492087
+    },
+    {
+      "file": "data/atlas/chunks/atlas-0009.json",
+      "records": 116,
+      "bytes": 628577
+    }
+  ],
+  "index_file": "atlas-data.js",
+  "loading": "metadata at startup; full poem chunks on demand"
+}
