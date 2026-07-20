@@ -959,8 +959,18 @@
     setPublicationFacet('#pubAuthor', 'poet', authorOf(item), 'poet');
     setPublicationFacet('#pubCollection', 'collection', originalCollectionOf(item), 'search');
     setPublicationFacet('#pubPublisher', 'publisher or source', publisherOf(item), 'search', publisherOf(item), item.source_url || item.pdfUrl || '');
-    $('#readerContent').textContent = contentOf(item);
-    $('#readerOriginalLanguage').textContent = languageOf(item) !== 'English' ? `Translate to ${languageOf(item)}` : 'Original language view';
+    // Default non-English poems with an original text to display original text first!
+    const hasOriginal = originalLanguageText(item) && originalLanguageText(item).trim() !== contentOf(item).trim();
+    state.originalMode = (languageOf(item) !== 'English' && hasOriginal);
+
+    $('#readerContent').textContent = state.originalMode ? originalLanguageText(item) : contentOf(item);
+    
+    const lang = languageOf(item);
+    if (lang !== 'English') {
+      $('#readerOriginalLanguage').textContent = state.originalMode ? 'Translate to English' : `Show Original (${lang})`;
+    } else {
+      $('#readerOriginalLanguage').textContent = 'Original language view';
+    }
     const note = contentNote(item);
     $('#contentNote').hidden = !note;
     $('#contentNote').textContent = note;
@@ -1136,21 +1146,21 @@
     if (!root || !item) return;
     
     if (state.originalMode) {
-      root.textContent = `Original ${languageOf(item)} text (No translation)`;
+      root.textContent = ''; // Clear credit when viewing the original native text
       return;
     }
 
     const translators = {
-      "BL-001": "Translated by Alastair Reid",
-      "BL-002": "Translated by AI / Writing Assistant (often contested)",
-      "BL-003": "Translated by Langston Hughes",
-      "BL-004": "Translated by Christianne Balk",
-      "BL-005": "Translated by Donald D. Walsh",
-      "BL-006": "Translated by Donald D. Walsh",
-      "BL-007": "Translated by Richard Schaaf",
-      "BL-008": "Translated by Clayton Eshleman",
-      "BL-009": "Translated by Eliot Weinberger",
-      "BL-010": "Translated by Muriel Rukeyser"
+      "BL-001": "Translated by Alastair Reid (Official Translation)",
+      "BL-002": "Translated by AI / Writing Assistant (contested)",
+      "BL-003": "Translated by Langston Hughes (Official Translation)",
+      "BL-004": "Translated by Christianne Balk (Official Translation)",
+      "BL-005": "Translated by Donald D. Walsh (Official Translation)",
+      "BL-006": "Translated by Donald D. Walsh (Official Translation)",
+      "BL-007": "Translated by Richard Schaaf (Official Translation)",
+      "BL-008": "Translated by Clayton Eshleman (Official Translation)",
+      "BL-009": "Translated by Eliot Weinberger (Official Translation)",
+      "BL-010": "Translated by Muriel Rukeyser (Official Translation)"
     };
 
     const id = itemId(item);
@@ -1168,8 +1178,16 @@
   function toggleOriginalLanguage() {
     if (!state.currentItem) return;
     state.originalMode = !state.originalMode;
+    
     $('#readerContent').textContent = state.originalMode ? originalLanguageText(state.currentItem) : contentOf(state.currentItem);
-    $('#readerOriginalLanguage').textContent = state.originalMode ? 'Return to archive text' : (languageOf(state.currentItem) !== 'English' ? `Translate to ${languageOf(state.currentItem)}` : 'Original language view');
+    
+    const lang = languageOf(state.currentItem);
+    if (lang !== 'English') {
+      $('#readerOriginalLanguage').textContent = state.originalMode ? 'Translate to English' : `Show Original (${lang})`;
+    } else {
+      $('#readerOriginalLanguage').textContent = 'Original language view';
+    }
+    
     updateReaderTranslator(state.currentItem);
   }
 
