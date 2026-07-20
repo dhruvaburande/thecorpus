@@ -24,16 +24,332 @@ const POEMS_ARCHIVE = [
   { id: "WBH-019", title: "You're Enough", collection: "Written by Hand", mood: "Introspective / Vulnerable", language: "English", excerpt: "You always feel delinquent\nBecause of the person you “aren’t”", content: `YOU’RE ENOUGH\n\nYou always feel delinquent\nBecause of the person you “aren’t”\nFor the world has already inscribed a definition\nWherein…\nYou don’t fit so well\nIt’s like trying to be a piece of paradise in a place like hell\nIt’s like caring for the dead and make sure he’s well\nIt’s like facing the blaze after an eternity of chase\nIt’s the state of daze where the state of reciprocity is never balanced.\n\nNo…\nIt’s not that I’m embracing my negative self\nIt’s just that….\nI know that you know how to reach the peak of that hidden shelf\nAnd you’re aware what resides there….\nA light piercing itself out of the realm of darkness\nSomething that makes sure to let you know what you’re facing\nSomething that allows you to see through the wrongs\nSomething…\nThat never declines to accept your real self.\n\nYou wanna reach there…the peak…\nYou can ...\nBut you won’t…\nMaybe you aren’t compatible to make it out\nMaybe coz you don’t know what is it all about\nMaybe it’s something you won’t live without\nMaybe…just maybe…\nYou’ll end up with a rout.\n\nYou try to reach out your hands to the god\nBut fear to shake your own in the very first place\nWhat are the odds?\nYou don’t know yourself.\n\nJust think of it…\nEvery day you sail through sheer jagged thoughts\nAnd cool running dreams\nThe merciless curse of emotions\nOverflows in your exhilarating dreams\nThat witnesses the chaotic times\nOf the dark and ancient old\nWhere the mystifying warrior’s heart of yours\nWas once branded honorable and bold\nBut now,\nOn your shoulders, sits despair\nCrawling through your spine\nTo the maroon of your heart\nWhere the tears sit and whine\nAnd numb you to the mark.\n\nI know this becomes annoying overtime\nAnd makes you think sometimes…\n“Am I self-publicizing things at times?”\nMaybe…I’m not sure\nWhat I’m sure about is\nThere’s an exhaustive introspection\nIn the light behind your eyes\nYet, you stay silent\nIn the wake of another sleepless night.\n\nI’m here from the start\nThough the noisy mind of mine haven’t yet stopped\nBut that’s the interesting part…\nCan you think of something so vast?\nThat lives ahead of past\nSomething so well that crafted\nThat manages the time draft\nAnd lets you live in the presence\nBut leaves you with such an absence\nOf yourself\nThat you can’t even control your actions\n\nAnd eventually you find yourself in a passage\nOf nothingness\nJust something so blind that can see\nBetween the spaces of light\nWhich awakens in the night\nAnd won’t even allow you to erase the sight\nThat you might\nEnd up adore it so much\nThat being so dark\nIt yet feels so bright\n\nYou’re tired now…\nOf all the false promises you make\nHopes of people that you take\nAnd piece by piece\nSo subtly that you break\nWhere the Satan would be confused too\nThat what flake of yours should he take\nAnd keep it in his pocket\nSo well hidden...\nThat you won’t be able to retake it\nAt any stake\nBut it’s not just your mistake.\n\nAt times, you feel sometimes\nThat this was supposed to be\nOf the people by the people and\nFor the people\nBut there seem no people\nInterested in any of the people\nThat are continuously dissected by the people\nWhich reside around our people.\nThe more the people\nIgnore the people\nThat buy the people\nAnd with no remorse divide the people.\n\nBut still,\nI like people\nBecause even when the situation’s dire\nIts only ever people who are able to inspire\nAnd on paper, it’s hard to see how we all cope\nBut in the bottom of the pandora’s box, there’s still hope.\n\nYou know we strive to feel\nand fill\nThe emptiness of the voids in our chest\nWhen we think that we ain’t that blessed\nBut I don’t understand why we behave so rough\nwith ourselves\nAnd never tell the mirror stuck in the shelf\nThat I’m enough.\nWe never say\nThat perfection resides in that reflection\nAnd no matter what happens…\nI’m not gonna cross my own way.\n\nAnd then with time\nWith chime\nYou end up saying\n“I know I exaggerate sometimes\nI’m a storyteller\nOr just a liar\nThere are truths that I hide\nSo well and so wise\nThat I end up telling lies\nSlowly and eventually, I disguise\nAnd enter the eternal loop of disdain to be precise\nAnd live in hoax so large in size\nThat I fail to remember later\nThat at the end of the day all it is\nIs just a lie.”\n\nMy little rose, don’t think about that cave\nThat took your petals away\nAs how much longing must fall like snow\nBefore that one spring day\nSo, lets dress these words in golden chiffon\nLet’s place a mask on their lucid faces\nLet the broth of hell bubble up their throat\nLet the night mother sacrifice her birth\nLet every drop of dew fall upon your leaves\nAnd let, every bone in you, that shivers, believe\nThat you are enough.` },
   
   // Borrowed Ledger Entries
-  { id: "BL-001", title: "Browning Decides to be a Poet", collection: "Borrowed Ledger", mood: "Reflective", language: "English", excerpt: "In these red labyrinths of London\nI find that I have chosen...", content: `Browning Decides to be a Poet — Jorge Luis Borges\n\nIn these red labyrinths of London\nI find that I have chosen\nthe strangest of all callings,\nsave that, in its way, any calling is strange.\n\nLike the alchemist\nwho sought the philosopher's stone\nin quicksilver,\nI shall make everyday words—\nthe gambler's marked cards, the common coin—\ngive off the magic that was theirs\nwhen Thor was both the god and the din,\nthe thunderclap and the prayer.\n\nIn today's dialect\nI shall say, in my fashion, eternal things:\nI shall try to be worthy\nof the great echo of Byron.\n\nThis dust that I am will be invulnerable.\nIf a woman shares my love\nmy verse will touch the tenth sphere of the concentric heavens;\nif a woman turns my love aside\nI will make of my sadness a music,\na full river to resound through time.\n\nI shall live by forgetting myself.\nI shall be the face I glimpse and forget,\nI shall be Judas who takes on\nthe divine mission of being a betrayer,\nI shall be Caliban in his bog,\nI shall be a mercenary who dies\nwithout fear and without faith,\nI shall be Polycrates, who looks in awe\nupon the seal returned by fate.\n\nI will be the friend who hates me.\nThe persian will give me the nightingale, and Rome the sword.\nMasks, agonies, resurrections\nwill weave and unweave my life,\n- and in time I shall be Robert Browning.` },
-  { id: "BL-002", title: "Instants", collection: "Borrowed Ledger", mood: "Reflective", language: "English", excerpt: "If I could live again my life,\nIn the next - I'll try, - to make more mistakes,", content: `Instants — Jorge Luis Borges\n\nIf I could live again my life,\nIn the next - I'll try, - to make more mistakes,\nI won't try to be so perfect,\nI'll be more relaxed,\nI'll be more full - than I am now,\nIn fact, I'll take fewer things seriously,\nI'll be less hygienic,\nI'll take more risks,\nI'll take more trips,\nI'll watch more sunsets,\nI'll climb more mountains,\nI'll swim more rivers,\nI'll go to more places - I've never been,\nI'll eat more ice creams and less (lime) beans,\nI'll have more real problems - and less imaginary ones.\n\nI was one of those people who live\nprudent and prolific lives -\neach minute of his life,\nOf course that I had moments of joy - but,\nif I could go back I'll try to have only good moments,\nIf you don't know - that's what life is made of,\nDon't lose the now!\n\nI was one of those who never goes anywhere\nwithout a thermometer,\nwithout a hot-water bottle,\nand without an umbrella and without a parachute,\nIf I could live again - I will travel light,\nIf I could live again - I'll try to work bare feet\nat the beginning of spring till\nthe end of autumn,\nI'll ride more carts,\nI'll watch more sunrises and play with more children,\nIf I have the life to live - but now I am 85,\nand I know that I am dying ...` },
-  { id: "BL-003", title: "Death Sonnet I", collection: "Borrowed Ledger", mood: "Mournful", language: "English", excerpt: "From the icy niche where men placed you\nI lower your body to the sunny, poor earth.", content: `Death Sonnet I — Gabriela Mistral\n\nFrom the icy niche where men placed you\nI lower your body to the sunny, poor earth.\nThey didn't know I too must sleep in it\nand dream on the same pillow.\n\nI place you in the sunny ground, with a\nmother's sweet care for her napping child,\nand the earth will be a soft cradle\nwhen it receives your hurt childlike body.\n\nI scatter bits of earth and rose dust,\nand in the moon's airy and blue powder\nwhat is left of you is a prisoner.\n\nI leave singing my lovely revenge.\nNo hand will reach into the obscure depth\nto argue with me over your handful of bones.` },
-  { id: "BL-004", title: "Poems of the Mothers", collection: "Borrowed Ledger", mood: "Gentle", language: "English", excerpt: "I was kissed, and I am othered: another,\nbecause of the pulse that echoes the pulse in my veins;", content: `Poems of the Mothers — Gabriela Mistral\n\nI was kissed, and I am othered: another,\nbecause of the pulse that echoes the pulse in my veins;\nanother, because of the breath I feel within my breath.\nMy belly, now, is as noble as my heart ...\n\nAnd now I feel in my own breathing an exhalation of flowers:\nall because of the one who rests inside me gently,\nas the dew on the grass!` },
-  { id: "BL-005", title: "Your Laughter", collection: "Borrowed Ledger", mood: "Joyful", language: "English", excerpt: "Take bread away from me, if you wish,\ntake air away, but\ndo not take from me your laughter.", content: `Your Laughter — Pablo Neruda\n\nTake bread away from me, if you wish,\ntake air away, but\ndo not take from me your laughter.\n\nDo not take away the rose,\nthe lance flower that you pluck,\nthe water that suddenly\nbursts forth in joy,\nthe sudden wave\nof silver born in you.\n\nMy struggle is harsh and I come back\nwith eyes tired\nat times from having seen\nthe unchanging earth,\nbut when your laughter enters\nit rises to the sky seeking me\nand it opens for me all\nthe doors of life.\n\nMy love, in the darkest\nhour your laughter\nopens, and if suddenly\nyou see my blood staining\nthe stones of the street,\nlaugh, because your laughter\nwill be for my hands\nlike a fresh sword.\n\nNext to the sea in the autumn,\nyour laughter must raise\nits foamy cascade,\nand in the spring, love,\nI want your laughter like\nthe flower I was waiting for,\nthe blue flower, the rose\nof my echoing country.\n\nLaugh at the night,\nat the day, at the moon,\nlaugh at the twisted\nstreets of the island,\nlaugh at this clumsy\nboy who loves you,\nbut when I open\nmy eyes and close them,\nwhen my steps go,\nwhen my steps return,\ndeny me bread, air,\nlight, spring,\nbut never your laughter\nfor I would die.` },
-  { id: "BL-006", title: "If You Forget Me", collection: "Borrowed Ledger", mood: "Melancholic", language: "English", excerpt: "I want you to know one thing.\nYou know how this is:", content: `If You Forget Me — Pablo Neruda\n\nI want you to know one thing.\nYou know how this is:\nif I look\nat the crystal moon, at the red branch\nof the slow autumn at my window,\nif I touch\nnear the fire\nthe impalpable ash\nor the wrinkled body of the log,\neverything carries me to you,\nas if everything that exists,\naromas, light, metals,\nwere little boats\nthat sail\ntoward those isles of yours that wait for me.\n\nWell, now,\nif little by little you stop loving me\nI shall stop loving you little by little.\n\nIf suddenly\nyou forget me\ndo not look for me,\nfor I shall already have forgotten you.\n\nIf you think it long and mad,\nthe wind of banners\nthat passes through my life,\nand you decide\nto leave me at the shore\nof the heart where I have roots,\nremember\nthat on that day,\nat that hour,\nI shall lift my arms\nand my roots will set off\nto seek another land.\n\nBut\nif each day,\neach hour,\nyou feel that you are destined for me\nwith implacable sweetness,\nif each day a flower\nclimbs up to your lips to seek me,\nah my love, ah my own,\nin me all that fire is repeated,\nin me nothing is extinguished or forgotten,\nmy love feeds on your love, beloved,\nand as long as you live it will be in your arms\nwithout leaving mine.` },
-  { id: "BL-007", title: "To My Brother Miguel in Memoriam", collection: "Borrowed Ledger", mood: "Melancholic", language: "English", excerpt: "I'm sitting here on the old patio\nbeside your absence. It is a black well.", content: `To My Brother Miguel in Memoriam — Cesar Vallejo\n\nI'm sitting here on the old patio\nbeside your absence. It is a black well.\nWe'd be playing, now...\nI can hear Mama yell\n"Boys! Calm down!" We'd laugh, and off I'd go\nto hide where you'd never look... \nunder the stairs,\nin the hall, the attic...\nThen you'd do the same.\n\nMiguel, we were too good at that game.\nEverything would always end in tears.\nNo one was laughing on that August night\nyou went to hide away again, so late\nit was almost dawn.\n\nBut now your brother's through\nwith this hunting and hunting and never finding you.\nThe shadows crowd him.\n\nMiguel, will you hurry\nand show yourself? Mama will only worry.` },
-  { id: "BL-008", title: "Weary Rings", collection: "Borrowed Ledger", mood: "Weary", language: "English", excerpt: "There are desires to return, to love, to not disappear,\nand there are desires to die, fought by two", content: `Weary Rings — Cesar Vallejo\n\nThere are desires to return, to love, to not disappear,\nand there are desires to die, fought by two\nopposing waters that have never isthmused.\nThere are desires for a great kiss that would shroud Life,\none that ends in the Africa of a fiery agony,\na suicide!\n\nThere are desires to...\nhave no desires, Lord;\nI point my deicidal finger at you:\nthere are desires to not have had a heart.\n\nSpring returns, returns and will depart.\nAnd God,\nbent in time, repeats himself, and passes, passes\nwith the spinal column of the Universe on his back.\n\nWhen my temples beat their lugubrious drum,\nwhen the dream engraved on a dagger aches me,\nthere are desires to be left standing in this verse!` },
-  { id: "BL-009", title: "As One Listens to the Rain", collection: "Borrowed Ledger", mood: "Tranquil", language: "English", excerpt: "Listen to me as one listens to the rain,\nnot attentive, not distracted,", content: `As One Listens to the Rain — Octavio Paz\n\nListen to me as one listens to the rain,\nnot attentive, not distracted,\nlight footsteps, thin drizzle,\nwater that is air, air that is time,\nthe day is still leaving,\nthe night has yet to arrive,\nfigurations of mist\nat the turn of the corner,\nfigurations of time\nat the bend in this pause,\n\nlisten to me as one listens to the rain,\nwithout listening, hear what I say\nwith eyes open inward, asleep\nwith all five senses awake,\nit's raining, light footsteps, a murmur of syllables,\nair and water, words with no weight:\nwhat we are and are,\nthe days and years, this moment,\nweightless time and heavy sorrow,\n\nlisten to me as one listens to the rain,\nwet asphalt is shining,\nsteam rises and walks away,\nnight unfolds and looks at me,\nyou are you and your body of steam,\nyou and your face of night,\nyou and your hair, unhurried lightning,\nyou cross the street and enter my forehead,\nfootsteps of water across my eyes,\nlisten to me as one listens to the rain.` },
-  { id: "BL-010", title: "The Street", collection: "Borrowed Ledger", mood: "Mysterious", language: "English", excerpt: "Here is a long and silent street.\nI walk in blackness and I stumble and fall", content: `The Street — Octavio Paz\n\nHere is a long and silent street.\nI walk in blackness and I stumble and fall\nand rise, and I walk blind, my feet\ntrampling the silent stones and the dry leaves.\nSomeone behind me also tramples, stones, leaves:\nif I slow down, he slows;\nif I run, he runs\nI turn:\nnobody.\n\nEverything dark and doorless,\nonly my steps aware of me,\nI turning and turning among these corners\nwhich lead forever to the street\nwhere nobody waits for, nobody follows me,\nwhere I pursue a man who stumbles\nand rises and says when he sees me:\nnobody.` },
+  { id: "BL-001", title: "Browning Decides to be a Poet", collection: "Borrowed Ledger", mood: "Reflective", language: "English", excerpt: "In these red labyrinths of London\nI find that I have chosen...", content: `Browning Decides to be a Poet — Jorge Luis Borges\n\nIn these red labyrinths of London\nI find that I have chosen\nthe strangest of all callings,\nsave that, in its way, any calling is strange.\n\nLike the alchemist\nwho sought the philosopher's stone\nin quicksilver,\nI shall make everyday words—\nthe gambler's marked cards, the common coin—\ngive off the magic that was theirs\nwhen Thor was both the god and the din,\nthe thunderclap and the prayer.\n\nIn today's dialect\nI shall say, in my fashion, eternal things:\nI shall try to be worthy\nof the great echo of Byron.\n\nThis dust that I am will be invulnerable.\nIf a woman shares my love\nmy verse will touch the tenth sphere of the concentric heavens;\nif a woman turns my love aside\nI will make of my sadness a music,\na full river to resound through time.\n\nI shall live by forgetting myself.\nI shall be the face I glimpse and forget,\nI shall be Judas who takes on\nthe divine mission of being a betrayer,\nI shall be Caliban in his bog,\nI shall be a mercenary who dies\nwithout fear and without faith,\nI shall be Polycrates, who looks in awe\nupon the seal returned by fate.\n\nI will be the friend who hates me.\nThe persian will give me the nightingale, and Rome the sword.\nMasks, agonies, resurrections\nwill weave and unweave my life,\n- and in time I shall be Robert Browning.` ,
+  original_text: `BROWNING RESUELVE SER POETA
+
+En estos rojos laberintos de Londres
+descubro que he elegido
+el más extraño de los oficios,
+salvo que, a su manera, todo oficio es extraño.
+
+Como el alquimista
+que buscó la piedra filosofal
+en el azogue,
+haré que las palabras comunes —
+los naipes marcados del tahúr, la moneda de todos —
+den la magia que fue suya
+cuando Thor era tanto el dios como el estrépito,
+el trueno y la plegaria.
+
+En el dialecto de hoy
+diré, a mi modo, las cosas eternas;
+trataré de ser digno
+del gran eco de Byron.
+
+Este polvo que soy será invulnerable.
+Si una mujer comparte mi amor
+mi verso tocará la décima esfera de los cielos concéntricos;
+si una mujer aparta mi amor
+haré de mi tristeza una música,
+un río caudaloso que resuene en el tiempo.
+
+Viviré olvidándome.
+Seré la cara que vislumbro y olvido,
+seré Judas que asume
+la divina misión de ser un traidor,
+seré Calibán en su ciénaga,
+seré un mercenario que muere
+sin miedo y sin fe,
+seré Polícrates, que mira con asombro
+el sello devuelto por el destino.
+
+Seré el amigo que me odia.
+El persa me dará el ruiseñor, y Roma la espada.
+Máscaras, agonías, resurrecciones
+tejerán y destejarán mi vida,
+- y con el tiempo seré Robert Browning.`
+},
+  { id: "BL-002", title: "Instants", collection: "Borrowed Ledger", mood: "Reflective", language: "English", excerpt: "If I could live again my life,\nIn the next - I'll try, - to make more mistakes,", content: `Instants — Jorge Luis Borges\n\nIf I could live again my life,\nIn the next - I'll try, - to make more mistakes,\nI won't try to be so perfect,\nI'll be more relaxed,\nI'll be more full - than I am now,\nIn fact, I'll take fewer things seriously,\nI'll be less hygienic,\nI'll take more risks,\nI'll take more trips,\nI'll watch more sunsets,\nI'll climb more mountains,\nI'll swim more rivers,\nI'll go to more places - I've never been,\nI'll eat more ice creams and less (lime) beans,\nI'll have more real problems - and less imaginary ones.\n\nI was one of those people who live\nprudent and prolific lives -\neach minute of his life,\nOf course that I had moments of joy - but,\nif I could go back I'll try to have only good moments,\nIf you don't know - that's what life is made of,\nDon't lose the now!\n\nI was one of those who never goes anywhere\nwithout a thermometer,\nwithout a hot-water bottle,\nand without an umbrella and without a parachute,\nIf I could live again - I will travel light,\nIf I could live again - I'll try to work bare feet\nat the beginning of spring till\nthe end of autumn,\nI'll ride more carts,\nI'll watch more sunrises and play with more children,\nIf I have the life to live - but now I am 85,\nand I know that I am dying ...` ,
+  original_text: `INSTANTES
+
+Si pudiera vivir nuevamente mi vida,
+en la próxima trataría de cometer más errores.
+No intentaría ser tan perfecto, me relajaría más.
+Sería más tonto de lo que he sido,
+de hecho tomaría muy pocas cosas con seriedad.
+Sería menos higiénico.
+Correría más riesgos,
+cometería más viajes,
+contemplaría más atardeceres,
+subiría más montañas, nadaría más ríos.
+Iría a más lugares adonde nunca he ido,
+comería más helados y menos fiascos,
+tendría más problemas reales y menos imaginarios.
+
+Yo fui de esas personas que vivió sensata
+y prolíficamente cada minuto de su vida;
+claro que tuve momentos de alegría.
+Pero si pudiera volver atrás trataría
+de tener solamente buenos momentos.
+Por si no lo saben, de eso está hecha la vida,
+¡no te pierdas el ahora!
+
+Yo era uno de esos que nunca iba a ninguna parte
+sin un termómetro, una bolsa de agua caliente,
+un paraguas y un paracaídas;
+si pudiera volver a vivir, viajaría más liviano.
+Si pudiera volver a vivir comenzaría a andar descalzo
+al principio de la primavera
+y seguiría descalzo hasta el final del otoño.
+Daría más vueltas en calesita,
+contemplaría más amaneceres y jugaría con más niños,
+si tuviera otra vez la vida por delante.
+Pero ya tengo 85 años y sé que me estoy muriendo...`
+},
+  { id: "BL-003", title: "Death Sonnet I", collection: "Borrowed Ledger", mood: "Mournful", language: "English", excerpt: "From the icy niche where men placed you\nI lower your body to the sunny, poor earth.", content: `Death Sonnet I — Gabriela Mistral\n\nFrom the icy niche where men placed you\nI lower your body to the sunny, poor earth.\nThey didn't know I too must sleep in it\nand dream on the same pillow.\n\nI place you in the sunny ground, with a\nmother's sweet care for her napping child,\nand the earth will be a soft cradle\nwhen it receives your hurt childlike body.\n\nI scatter bits of earth and rose dust,\nand in the moon's airy and blue powder\nwhat is left of you is a prisoner.\n\nI leave singing my lovely revenge.\nNo hand will reach into the obscure depth\nto argue with me over your handful of bones.` ,
+  original_text: `LOS SONETOS DE LA MUERTE I
+
+Del nicho helado en que los hombres te pusieron,
+te bajaré a la tierra humilde y soleada.
+Que cohabitar con ella de mí no sospecharon,
+y que hemos de soñar sobre la misma almohada.
+
+Te acostaré en la tierra soleada con un
+dulce cuidado de madre para el hijo dormido,
+y la tierra ha de serte una cuna mullida
+al recibir tu cuerpo de niño adolorido.
+
+Luego iré espolvoreando tierra y polvo de rosas,
+y en la azul y leve polvareda de la luna,
+lo que quedó de ti va quedando prisionero.
+
+Me alejaré cantando mi hermosa venganza,
+¡porque a ese hondo recóndito ninguna mano
+bajará a disputarme tu puñado de huesos!`
+},
+  { id: "BL-004", title: "Poems of the Mothers", collection: "Borrowed Ledger", mood: "Gentle", language: "English", excerpt: "I was kissed, and I am othered: another,\nbecause of the pulse that echoes the pulse in my veins;", content: `Poems of the Mothers — Gabriela Mistral\n\nI was kissed, and I am othered: another,\nbecause of the pulse that echoes the pulse in my veins;\nanother, because of the breath I feel within my breath.\nMy belly, now, is as noble as my heart ...\n\nAnd now I feel in my own breathing an exhalation of flowers:\nall because of the one who rests inside me gently,\nas the dew on the grass!` ,
+  original_text: `POEMAS DE LAS MADRES
+
+Fui besada y soy otra: otra,
+por el pulso que duplica el pulso de mis venas;
+otra, por el aliento que siento en mi aliento.
+Mi vientre, ahora, es tan noble como mi corazón...
+
+Y ahora siento en mi propio respirar una exhalación de flores:
+¡todo por el que descansa en mí suavemente,
+como el rocío sobre la hierba!`
+},
+  { id: "BL-005", title: "Your Laughter", collection: "Borrowed Ledger", mood: "Joyful", language: "English", excerpt: "Take bread away from me, if you wish,\ntake air away, but\ndo not take from me your laughter.", content: `Your Laughter — Pablo Neruda\n\nTake bread away from me, if you wish,\ntake air away, but\ndo not take from me your laughter.\n\nDo not take away the rose,\nthe lance flower that you pluck,\nthe water that suddenly\nbursts forth in joy,\nthe sudden wave\nof silver born in you.\n\nMy struggle is harsh and I come back\nwith eyes tired\nat times from having seen\nthe unchanging earth,\nbut when your laughter enters\nit rises to the sky seeking me\nand it opens for me all\nthe doors of life.\n\nMy love, in the darkest\nhour your laughter\nopens, and if suddenly\nyou see my blood staining\nthe stones of the street,\nlaugh, because your laughter\nwill be for my hands\nlike a fresh sword.\n\nNext to the sea in the autumn,\nyour laughter must raise\nits foamy cascade,\nand in the spring, love,\nI want your laughter like\nthe flower I was waiting for,\nthe blue flower, the rose\nof my echoing country.\n\nLaugh at the night,\nat the day, at the moon,\nlaugh at the twisted\nstreets of the island,\nlaugh at this clumsy\nboy who loves you,\nbut when I open\nmy eyes and close them,\nwhen my steps go,\nwhen my steps return,\ndeny me bread, air,\nlight, spring,\nbut never your laughter\nfor I would die.` ,
+  original_text: `TU RISA
+
+Quítame el pan, si quieres,
+quítame el aire, pero
+no me quites tu risa.
+
+No me quites la rosa,
+la lanza que deshojas,
+el agua que de pronto
+estalla en tu alegría,
+la repentina ola
+de plata nacida en ti.
+
+Mi lucha es dura y vuelvo
+con los ojos cansados
+a veces de haber visto
+la tierra sin cambiar,
+pero al entrar tu risa
+sube al cielo buscándome
+y me abre todas
+las puertas de la vida.
+
+Amor mío, en la hora
+más oscura deshoja
+tu risa, y si de pronto
+ves que mi sangre mancha
+las piedras de la calle,
+ríe, porque tu risa
+será para mis manos
+como una espada fresca.
+
+Junto al mar en el otoño,
+tu risa debe alzar
+su cascada de espuma,
+y en la primavera, amor,
+quiero tu risa como
+la flor que yo esperaba,
+la flor azul, la rosa
+de mi patria sonora.
+
+Ríete de la noche,
+del día, de la luna,
+ríete de las calles
+torcidas de la isla,
+ríete de este torpe
+muchacho que te quiere,
+pero cuando yo abra
+los ojos y los cierre,
+cuando mis pasos vayan,
+cuando mis pasos vuelvan,
+niégame el pan, el aire,
+la luz, la primavera,
+pero tu risa nunca
+porque me moriría.`
+},
+  { id: "BL-006", title: "If You Forget Me", collection: "Borrowed Ledger", mood: "Melancholic", language: "English", excerpt: "I want you to know one thing.\nYou know how this is:", content: `If You Forget Me — Pablo Neruda\n\nI want you to know one thing.\nYou know how this is:\nif I look\nat the crystal moon, at the red branch\nof the slow autumn at my window,\nif I touch\nnear the fire\nthe impalpable ash\nor the wrinkled body of the log,\neverything carries me to you,\nas if everything that exists,\naromas, light, metals,\nwere little boats\nthat sail\ntoward those isles of yours that wait for me.\n\nWell, now,\nif little by little you stop loving me\nI shall stop loving you little by little.\n\nIf suddenly\nyou forget me\ndo not look for me,\nfor I shall already have forgotten you.\n\nIf you think it long and mad,\nthe wind of banners\nthat passes through my life,\nand you decide\nto leave me at the shore\nof the heart where I have roots,\nremember\nthat on that day,\nat that hour,\nI shall lift my arms\nand my roots will set off\nto seek another land.\n\nBut\nif each day,\neach hour,\nyou feel that you are destined for me\nwith implacable sweetness,\nif each day a flower\nclimbs up to your lips to seek me,\nah my love, ah my own,\nin me all that fire is repeated,\nin me nothing is extinguished or forgotten,\nmy love feeds on your love, beloved,\nand as long as you live it will be in your arms\nwithout leaving mine.` ,
+  original_text: `SI TÚ ME OLVIDAS
+
+Quiero que sepas
+una cosa.
+Tú sabes cómo es esto:
+si miro
+la luna de cristal, la rama roja
+del lento otoño en mi ventana,
+si toco
+junto al fuego
+la impalpable ceniza
+o el arrugado cuerpo de la leña,
+todo me lleva a ti,
+como si todo lo que existe,
+aromas, luz, metales,
+fueran pequeños barcos que navegan
+hacia las islas tuyas que me aguardan.
+
+Ahora bien,
+si poco a poco dejas de quererme
+dejaré de quererte poco a poco.
+Si de pronto
+me olvidas
+no me busques,
+que ya te habré olvidado.
+
+Si consideras largo y loco
+el viento de banderas
+que pasa por mi vida
+y te decides
+a dejarme a la orilla
+del corazón en que tengo raíces,
+piensa
+que en ese día,
+a esa hora,
+levantaré los brazos
+y saldrán mis raíces
+a buscar otra tierra.
+
+Pero
+si cada día,
+cada hora,
+sientes que a mí estás destinada
+con dulzura implacable,
+si cada día sube
+una flor a tus labios a buscarme,
+ay amor mío, ay mía,
+en mí todo ese fuego se repite,
+en mí nada se apaga ni se olvida,
+mi amor se alimenta de tu amor, amada,
+y mientras vivas estará en tus brazos
+sin salir de los míos.`
+},
+  { id: "BL-007", title: "To My Brother Miguel in Memoriam", collection: "Borrowed Ledger", mood: "Melancholic", language: "English", excerpt: "I'm sitting here on the old patio\nbeside your absence. It is a black well.", content: `To My Brother Miguel in Memoriam — Cesar Vallejo\n\nI'm sitting here on the old patio\nbeside your absence. It is a black well.\nWe'd be playing, now...\nI can hear Mama yell\n"Boys! Calm down!" We'd laugh, and off I'd go\nto hide where you'd never look... \nunder the stairs,\nin the hall, the attic...\nThen you'd do the same.\n\nMiguel, we were too good at that game.\nEverything would always end in tears.\nNo one was laughing on that August night\nyou went to hide away again, so late\nit was almost dawn.\n\nBut now your brother's through\nwith this hunting and hunting and never finding you.\nThe shadows crowd him.\n\nMiguel, will you hurry\nand show yourself? Mama will only worry.` ,
+  original_text: `A MI HERMANO MIGUEL
+
+Hermano, hoy estoy en el poyo de la casa,
+donde nos haces una falta sin fondo.
+Me acuerdo que jugábamos esta hora, y que mamá
+nos acariciaba: "Pero, hijos..."
+Ahora me escondo,
+como antes, todas estas oraciones
+vespertinas, y espero que tú no des conmigo.
+Por la sala, el zaguán, los corredores.
+Después, te escondes tú, y yo no doy contigo.
+Me acuerdo que nos hacíamos llorar,
+hermano, en aquel juego.
+
+Miguel, tú te escondiste
+una noche de agosto, al alborear;
+pero, en vez de ocultarte riendo, estabas triste.
+Y tu gemelo corazón de esas tardes extintas
+se ha quedado cantando en la penumbra.
+Y ya cae sombra en el alma.
+
+Oye, hermano, no tardes
+en salir. ¿Bueno? Puede inquietarse mamá.`
+},
+  { id: "BL-008", title: "Weary Rings", collection: "Borrowed Ledger", mood: "Weary", language: "English", excerpt: "There are desires to return, to love, to not disappear,\nand there are desires to die, fought by two", content: `Weary Rings — Cesar Vallejo\n\nThere are desires to return, to love, to not disappear,\nand there are desires to die, fought by two\nopposing waters that have never isthmused.\nThere are desires for a great kiss that would shroud Life,\none that ends in the Africa of a fiery agony,\na suicide!\n\nThere are desires to...\nhave no desires, Lord;\nI point my deicidal finger at you:\nthere are desires to not have had a heart.\n\nSpring returns, returns and will depart.\nAnd God,\nbent in time, repeats himself, and passes, passes\nwith the spinal column of the Universe on his back.\n\nWhen my temples beat their lugubrious drum,\nwhen the dream engraved on a dagger aches me,\nthere are desires to be left standing in this verse!` ,
+  original_text: `ANILLOS FATIGADOS
+
+Hay ganas de volver, de amar, de no ausentarse,
+y hay ganas de morir, combatidas por dos
+aguas contrarias que jamás han de istmarse.
+
+Hay ganas de un gran beso que amortaje a la Vida,
+que se acaba en el África de una ardiente agonía,
+¡suicidio!
+
+Hay ganas de... no tener ganas, Señor;
+apunto con mi dedo deicida:
+hay ganas de no haber tenido corazón.
+
+La primavera vuelve, vuelve y se irá. Y Dios,
+curvado en el tiempo, se repite, y pasa, pasa
+con la columna vertebral del Universo a cuestas.
+
+Cuando mis sienes baten su lúgubre tambor,
+cuando me duele el sueño grabado en un puñal,
+¡hay ganas de quedarse plantado en este verso!`
+},
+  { id: "BL-009", title: "As One Listens to the Rain", collection: "Borrowed Ledger", mood: "Tranquil", language: "English", excerpt: "Listen to me as one listens to the rain,\nnot attentive, not distracted,", content: `As One Listens to the Rain — Octavio Paz\n\nListen to me as one listens to the rain,\nnot attentive, not distracted,\nlight footsteps, thin drizzle,\nwater that is air, air that is time,\nthe day is still leaving,\nthe night has yet to arrive,\nfigurations of mist\nat the turn of the corner,\nfigurations of time\nat the bend in this pause,\n\nlisten to me as one listens to the rain,\nwithout listening, hear what I say\nwith eyes open inward, asleep\nwith all five senses awake,\nit's raining, light footsteps, a murmur of syllables,\nair and water, words with no weight:\nwhat we are and are,\nthe days and years, this moment,\nweightless time and heavy sorrow,\n\nlisten to me as one listens to the rain,\nwet asphalt is shining,\nsteam rises and walks away,\nnight unfolds and looks at me,\nyou are you and your body of steam,\nyou and your face of night,\nyou and your hair, unhurried lightning,\nyou cross the street and enter my forehead,\nfootsteps of water across my eyes,\nlisten to me as one listens to the rain.` ,
+  original_text: `COMO QUIEN OYE LLOVER
+
+Óyeme como quien oye llover,
+ni atento ni distraído,
+pasos leves, llovizna,
+agua que es aire, aire que es tiempo,
+el día todavía no se va,
+la noche no llega todavía,
+figuraciones de la niebla
+al doblar la esquina,
+figuraciones del tiempo
+en el recodo de esta pausa,
+
+óyeme como quien oye llover,
+sin oírme, oyendo lo que digo
+con los ojos abiertos hacia adentro, dormido
+con los cinco sentidos despiertos,
+llueve, pasos leves, rumor de sílabas,
+aire y agua, palabras sin peso:
+lo que fuimos y somos,
+los días, los años, este instante,
+tiempo ingrávido, pesadumbre pesada,
+
+óyeme como quien oye llover,
+el asfalto húmedo brilla,
+el vaho se levanta y camina,
+la noche se desenvuelve y me mira,
+tú eres tú y tu cuerpo de vaho,
+tú y tu cara de noche,
+tú y tu cabellera, relámpago lento,
+cruzas la calle y entras en mi frente,
+pasos de agua sobre mis ojos,
+óyeme como quien oye llover.`
+},
+  { id: "BL-010", title: "The Street", collection: "Borrowed Ledger", mood: "Mysterious", language: "English", excerpt: "Here is a long and silent street.\nI walk in blackness and I stumble and fall", content: `The Street — Octavio Paz\n\nHere is a long and silent street.\nI walk in blackness and I stumble and fall\nand rise, and I walk blind, my feet\ntrampling the silent stones and the dry leaves.\nSomeone behind me also tramples, stones, leaves:\nif I slow down, he slows;\nif I run, he runs\nI turn:\nnobody.\n\nEverything dark and doorless,\nonly my steps aware of me,\nI turning and turning among these corners\nwhich lead forever to the street\nwhere nobody waits for, nobody follows me,\nwhere I pursue a man who stumbles\nand rises and says when he sees me:\nnobody.` ,
+  original_text: `LA CALLE
+
+Es una calle larga y silenciosa.
+Ando en tinieblas y tropiezo y caigo
+y me levanto y piso con pies mudos
+las piedras de la calle y las hojas secas
+y alguien detrás de mí también las pisa:
+si me detengo, se detiene;
+si corro, corre. Vuelvo el rostro: nadie.
+
+Todo está oscuro y sin salida,
+y doy vueltas y vueltas en esquinas
+que dan siempre a la calle
+donde nadie me espera ni me sigue,
+donde yo sigo a un hombre que tropieza
+y se levanta y dice al verme: nadie.`
+},
   { id: "BL-011", title: "I Felt a Funeral in my Brain", collection: "Borrowed Ledger", mood: "Psychological", language: "English", excerpt: "I felt a Funeral, in my Brain,\nAnd Mourners to and fro", content: `I Felt a Funeral in my Brain — Emily Dickinson\n\nI felt a Funeral, in my Brain,\nAnd Mourners to and fro\nKept treading - treading - till it seemed\nThat Sense was breaking through -\n\nAnd when they all were seated,\nA Service, like a Drum -\nKept beating - beating - till I thought\nMy mind was going numb -\n\nAnd then I heard them lift a Box\nAnd creak across my Soul\nWith those same Boots of Lead, again,\nThen Space - began to toll,\n\nAs all the Heavens were a Bell,\nAnd Being, but an Ear,\nAnd I, and Silence, some strange Race,\nWrecked, solitary, here -\n\nAnd then a Plank in Reason, broke,\nAnd I dropped down, and down -\nAnd hit a World, at every plunge,\nAnd Finished knowing - then -` },
   { id: "BL-012", title: "A Noiseless Patient Spider", collection: "Borrowed Ledger", mood: "Contemplative", language: "English", excerpt: "A noiseless patient spider,\nI mark’d where on a little promontory it stood isolated,", content: `A Noiseless Patient Spider — Walt Whitman\n\nA noiseless patient spider,\nI mark’d where on a little promontory it stood isolated,\nMark’d how to explore the vacant vast surrounding,\nIt launch’d forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form’d, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.` },
   { id: "BL-013", title: "Brahma", collection: "Borrowed Ledger", mood: "Philosophical", language: "English", excerpt: "If the red slayer think he slays,\nOr if the slain think he is slain,", content: `Brahma — Ralph Waldo Emerson\n\nIf the red slayer think he slays,\nOr if the slain think he is slain,\nThey know not well the subtle ways\nI keep, and pass, and turn again.\n\nFar or forgot to me is near;\nShadow and sunlight are the same;\nThe vanished gods to me appear;\nAnd one to me are shame and fame.\n\nThey reckon ill who leave me out;\nWhen me they fly, I am the wings;\nI am the doubter and the doubt,\nI am the hymn the Brahmin sings.\n\nThe strong gods pine for my abode,\nAnd pine in vain the sacred Seven;\nBut thou, meek lover of the good!\nFind me, and turn thy back on heaven.` },

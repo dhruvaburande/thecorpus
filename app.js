@@ -977,6 +977,8 @@
     }
     // Update Custom Path Button
     updateReaderPathButton();
+    // Load Translator Name
+    updateReaderTranslator(item);
 
     renderRelated(item);
     applyReaderPrefs();
@@ -1129,11 +1131,46 @@
     renderThemeStudio();
     applyPalette();
   }
+  function updateReaderTranslator(item) {
+    const root = $('#readerTranslator');
+    if (!root || !item) return;
+    
+    if (state.originalMode) {
+      root.textContent = `Original ${languageOf(item)} text (No translation)`;
+      return;
+    }
+
+    const translators = {
+      "BL-001": "Translated by Alastair Reid",
+      "BL-002": "Translated by AI / Writing Assistant (often contested)",
+      "BL-003": "Translated by Langston Hughes",
+      "BL-004": "Translated by Christianne Balk",
+      "BL-005": "Translated by Donald D. Walsh",
+      "BL-006": "Translated by Donald D. Walsh",
+      "BL-007": "Translated by Richard Schaaf",
+      "BL-008": "Translated by Clayton Eshleman",
+      "BL-009": "Translated by Eliot Weinberger",
+      "BL-010": "Translated by Muriel Rukeyser"
+    };
+
+    const id = itemId(item);
+    if (translators[id]) {
+      root.textContent = translators[id];
+    } else if (item.translator) {
+      root.textContent = `Translated by ${item.translator}`;
+    } else if (languageOf(item) !== 'English') {
+      root.textContent = "Translated by AI / Writing Assistant";
+    } else {
+      root.textContent = '';
+    }
+  }
+
   function toggleOriginalLanguage() {
     if (!state.currentItem) return;
     state.originalMode = !state.originalMode;
     $('#readerContent').textContent = state.originalMode ? originalLanguageText(state.currentItem) : contentOf(state.currentItem);
     $('#readerOriginalLanguage').textContent = state.originalMode ? 'Return to archive text' : (languageOf(state.currentItem) !== 'English' ? `Translate to ${languageOf(state.currentItem)}` : 'Original language view');
+    updateReaderTranslator(state.currentItem);
   }
 
   function navigateReaderFilter(action, value) {
