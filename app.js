@@ -1141,12 +1141,48 @@
     renderThemeStudio();
     applyPalette();
   }
+  async function translateText(text, targetLang = 'en', sourceLang = 'auto') {
+    try {
+      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLang}&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      if (data && data[0]) {
+        return data[0].map(x => x[0]).join('');
+      }
+    } catch (e) {
+      console.error('Translation failed:', e);
+    }
+    return null;
+  }
+
+  function getLangCode(langName) {
+    if (!langName) return 'auto';
+    const mapping = {
+      'spanish': 'es', 'french': 'fr', 'german': 'de', 'chinese': 'zh',
+      'persian': 'fa', 'italian': 'it', 'portuguese': 'pt', 'russian': 'ru',
+      'arabic': 'ar', 'japanese': 'ja', 'hindi': 'hi', 'bengali': 'bn',
+      'urdu': 'ur', 'turkish': 'tr', 'greek': 'el', 'latin': 'la'
+    };
+    return mapping[langName.toLowerCase().trim()] || 'auto';
+  }
+
+  const translationCache = new Map();
+
   function updateReaderTranslator(item) {
     const root = $('#readerTranslator');
     if (!root || !item) return;
     
+    const id = itemId(item);
+    const lang = languageOf(item);
+
     if (state.originalMode) {
-      root.textContent = ''; // Clear credit when viewing the original native text
+      const defaultOriginal = originalLanguageText(item);
+      const defaultEnglish = contentOf(item);
+      if (defaultOriginal && defaultOriginal.trim() !== defaultEnglish.trim()) {
+        root.textContent = ''; 
+      } else {
+        root.textContent = `Original ${lang} text (Translated back by AI)`;
+      }
       return;
     }
 
@@ -1163,32 +1199,100 @@
       "BL-010": "Translated by Muriel Rukeyser (Official Translation)"
     };
 
-    const id = itemId(item);
     if (translators[id]) {
       root.textContent = translators[id];
     } else if (item.translator) {
-      root.textContent = `Translated by ${item.translator}`;
-    } else if (languageOf(item) !== 'English') {
-      root.textContent = "Translated by AI / Writing Assistant";
+      root.textContent = `Translated by ${item.translator} (Official Translation)`;
+    } else if (lang !== 'English') {
+      root.textContent = "Translated by AI Translation Assistant (Google)";
     } else {
       root.textContent = '';
     }
   }
 
-  function toggleOriginalLanguage() {
+  async function toggleOriginalLanguage() {
     if (!state.currentItem) return;
+    const item = state.currentItem;
+    const lang = languageOf(item);
+    const id = itemId(item);
     state.originalMode = !state.originalMode;
-    
-    $('#readerContent').textContent = state.originalMode ? originalLanguageText(state.currentItem) : contentOf(state.currentItem);
-    
-    const lang = languageOf(state.currentItem);
-    if (lang !== 'English') {
-      $('#readerOriginalLanguage').textContent = state.originalMode ? 'Translate to English' : `Show Original (${lang})`;
+
+    const btn = $('#readerOriginalLanguage');
+    if (btn) btn.disabled = true;
+
+    const defaultEnglish = contentOf(item);
+    const defaultOriginal = originalLanguageText(item);
+
+    if (state.originalMode) {
+      if (defaultOriginal && defaultOriginal.trim() !== defaultEnglish.trim()) {
+        $('#readerContent').textContent = defaultOriginal;
+        updateReaderTranslator(item);
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = 'Translate to English';
+        }
+      } else {
+        const cacheKey = `to_native_${id}_${lang}`;
+        if (translationCache.has(cacheKey)) {
+          $('#readerContent').textContent = translationCache.get(cacheKey);
+          if (btn) {
+            btn.disabled = false;
+            btn.textContent = 'Translate to English';
+          }
+          updateReaderTranslator(item);
+        } else {
+          showToast(`Translating into ${lang}...`);
+          const langCode = getLangCode(lang);
+          const translated = await translateText(defaultEnglish, langCode, 'en');
+          if (translated) {
+            translationCache.set(cacheKey, translated);
+            $('#readerContent').textContent = translated;
+          } else {
+            $('#readerContent').textContent = defaultEnglish;
+            showToast('Translation failed.');
+          }
+          if (btn) {
+            btn.disabled = false;
+            btn.textContent = 'Translate to English';
+          }
+          updateReaderTranslator(item);
+        }
+      }
     } else {
-      $('#readerOriginalLanguage').textContent = 'Original language view';
+      if (defaultEnglish && defaultEnglish.trim() !== defaultOriginal.trim() && lang !== 'English') {
+        $('#readerContent').textContent = defaultEnglish;
+        updateReaderTranslator(item);
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = `Show Original (${lang})`;
+        }
+      } else {
+        const cacheKey = `to_english_${id}`;
+        if (translationCache.has(cacheKey)) {
+          $('#readerContent').textContent = translationCache.get(cacheKey);
+          if (btn) {
+            btn.disabled = false;
+            btn.textContent = `Show Original (${lang})`;
+          }
+          updateReaderTranslator(item);
+        } else {
+          showToast('Translating to English...');
+          const translated = await translateText(defaultOriginal, 'en', 'auto');
+          if (translated) {
+            translationCache.set(cacheKey, translated);
+            $('#readerContent').textContent = translated;
+          } else {
+            $('#readerContent').textContent = defaultOriginal;
+            showToast('Translation failed.');
+          }
+          if (btn) {
+            btn.disabled = false;
+            btn.textContent = `Show Original (${lang})`;
+          }
+          updateReaderTranslator(item);
+        }
+      }
     }
-    
-    updateReaderTranslator(state.currentItem);
   }
 
   function navigateReaderFilter(action, value) {
