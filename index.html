@@ -37,13 +37,17 @@
 
   <header class="site-header" id="top">
     <div class="site-header-inner">
-    <button class="brand" id="logoThemeButton" type="button" aria-label="Open theme studio" aria-expanded="false" aria-controls="themeStudio">
-      <span class="brand-mark"><img src="logo.jpg" alt="" /></span>
-      <span class="brand-copy">
-        <strong>The Corpus</strong>
-        <small>Theme Studio</small>
-      </span>
-    </button>
+    <div class="brand-group" style="display:flex; align-items:center; gap:0.55rem;">
+      <button class="brand-mark-btn" id="logoThemeButton" type="button" aria-label="Open theme studio" aria-expanded="false" aria-controls="themeStudio" style="border:0; background:transparent; padding:0; display:flex; align-items:center; cursor:pointer;">
+        <span class="brand-mark"><img src="logo.jpg" alt="" /></span>
+      </button>
+      <a class="brand-text-link nav-anchor" href="#worldAtlas" aria-label="Go to World Atlas" style="text-decoration:none; display:flex; align-items:center; color:inherit;">
+        <span class="brand-copy" style="display:flex; flex-direction:column; line-height:1.2; text-align:left;">
+          <strong style="color:var(--ink);">The Corpus</strong>
+          <small style="font-size:0.68rem; color:var(--dim);">Theme Studio</small>
+        </span>
+      </a>
+    </div>
 
     <div class="theme-studio" id="themeStudio" aria-hidden="true">
       <div class="theme-studio-head">
@@ -296,8 +300,12 @@
       <div class="control-bar written-filter-dock">
         <div class="filter-intro">
           <span>Find an original</span>
-          <p>Browse Written by Hand by mood and reading length. Use the main search above for title, line, or concept.</p>
+          <p>Browse Written by Hand by mood, length, or text search.</p>
         </div>
+        <label class="written-search-label" style="display:grid; gap:.42rem;">
+          <span>Search collection</span>
+          <input id="writtenSearch" type="search" placeholder="Search title, lines..." autocomplete="off" style="width:100%; min-height:46px; border:1px solid var(--line); border-radius:12px; padding:.72rem .8rem; background:rgba(128,128,128,.06); color:var(--ink);" />
+        </label>
         <label>
           <span>Mood</span>
           <select id="moodSelect"><option value="all">All moods</option></select>
@@ -455,6 +463,30 @@
       </div>
     </article>
   </div>
+
+  <!-- Ergonomic Mobile Bottom Tab Bar -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Bottom Tab Bar">
+    <a class="mobile-tab-item active" href="#worldAtlas">
+      <span class="tab-icon">🌐</span>
+      <span class="tab-label">Atlas</span>
+    </a>
+    <a class="mobile-tab-item" href="#archive">
+      <span class="tab-icon">✍️</span>
+      <span class="tab-label">Archive</span>
+    </a>
+    <a class="mobile-tab-item" href="#eras">
+      <span class="tab-icon">⏳</span>
+      <span class="tab-label">Eras</span>
+    </a>
+    <a class="mobile-tab-item" href="#poets">
+      <span class="tab-icon">👤</span>
+      <span class="tab-label">Poets</span>
+    </a>
+    <a class="mobile-tab-item" href="#research">
+      <span class="tab-icon">📚</span>
+      <span class="tab-label">Research</span>
+    </a>
+  </nav>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 

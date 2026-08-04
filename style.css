@@ -3948,3 +3948,94 @@ body.routing-active main > .hero-shell.active-page {
     margin-left: auto !important;
   }
 }
+
+/* 5. Custom Section Ordering inside Main (Featured Work first, then Written by Hand poem list, then curated reading paths) */
+main {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Explicit order of all sections on Home / Written by Hand pages */
+.hero-shell {
+  order: 1 !important;
+}
+.atlas-section {
+  order: 2 !important;
+}
+.manuscript-status {
+  order: 3 !important;
+}
+.feature-section {
+  order: 4 !important; /* Featured Work card sits at order 4 */
+}
+.controls-section {
+  order: 5 !important; /* Written by Hand curated poem list sits immediately below Featured Work! */
+}
+.paths-section {
+  order: 6 !important; /* "Begin with a route" pathways sit after Written by Hand! */
+}
+.mood-section {
+  order: 7 !important;
+}
+.about-section {
+  order: 8 !important;
+}
+.poet-index-section {
+  order: 9 !important;
+}
+.eras-section {
+  order: 10 !important;
+}
+.research-section {
+  order: 11 !important;
+}
+
+/* 6. Ergonomic Mobile Bottom Tab Bar Styles */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(14, 14, 16, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  z-index: 9999;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  box-sizing: content-box;
+}
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+  /* Reserve layout spacing at the bottom of the page so content is not blocked by the bottom tab bar */
+  main, .site-footer {
+    padding-bottom: 74px !important;
+  }
+}
+.mobile-tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  color: var(--dim);
+  text-decoration: none;
+  gap: 0.2rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.22s ease;
+}
+.mobile-tab-item .tab-icon {
+  font-size: 1.15rem;
+}
+.mobile-tab-item.active {
+  color: var(--theme-vivid-b) !important;
+}

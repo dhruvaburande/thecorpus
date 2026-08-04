@@ -74,6 +74,7 @@
     mood: 'all',
     sort: 'archive',
     query: '',
+    writtenQuery: '',
     currentId: null,
     currentItem: null,
     originalMode: false,
@@ -205,6 +206,10 @@
     if (state.mood !== 'all') rows = rows.filter(item => item.mood === state.mood);
     if (state.query) {
       const q = clean(state.query);
+      rows = rows.filter(item => [item.title, item.id, item.collection, item.mood, item.language, item.excerpt, item.content].some(field => clean(field).includes(q)));
+    }
+    if (state.writtenQuery) {
+      const q = clean(state.writtenQuery);
       rows = rows.filter(item => [item.title, item.id, item.collection, item.mood, item.language, item.excerpt, item.content].some(field => clean(field).includes(q)));
     }
     rows.sort((a, b) => {
@@ -440,8 +445,9 @@
   }
 
   function clearFilters() {
-    state.collection = 'Written by Hand'; state.mood = 'all'; state.sort = 'archive'; state.query = '';
+    state.collection = 'Written by Hand'; state.mood = 'all'; state.sort = 'archive'; state.query = ''; state.writtenQuery = '';
     $('#archiveSearch').value = '';
+    if ($('#writtenSearch')) $('#writtenSearch').value = '';
     renderMoodSelect(); renderArchive(); renderHeroSearchResults();
   }
 
@@ -1363,6 +1369,10 @@
     $('#moodSelect').addEventListener('change', e => { state.mood = e.target.value; renderArchive(); });
     $('#sortSelect').addEventListener('change', e => { state.sort = e.target.value; renderArchive(); });
     $('#clearFilters').addEventListener('click', clearFilters);
+    $('#writtenSearch')?.addEventListener('input', e => {
+      state.writtenQuery = e.target.value.trim();
+      renderArchive();
+    });
     $('#clearSearch').addEventListener('click', () => { state.query = ''; $('#archiveSearch').value = ''; renderArchive(); renderHeroSearchResults(); });
     $('#archiveSearch').addEventListener('input', e => { state.query = e.target.value.trim(); renderArchive(); renderHeroSearchResults(); });
     $('#archiveSearch').addEventListener('keydown', e => { if (e.key === 'Enter') { const first = $('#heroSearchResults [data-open]'); if (first) openItem(first.dataset.open); else $('#archive')?.scrollIntoView({ behavior: 'smooth' }); } });
@@ -1478,7 +1488,7 @@
       if (id && allReadable.some(i => itemId(i) === id)) openItem(id, { forceModal: true }); else closeReader({ clearHash: false });
     });
     // Automatically slide mobile menu closed when clicking any navigation link
-    $$('.site-menu a[href^="#"], .desktop-nav a[href^="#"], .mobile-tabs a[href^="#"]').forEach(anchor => {
+    $$('.site-menu a[href^="#"], .desktop-nav a[href^="#"], .mobile-tabs a[href^="#"], .mobile-bottom-nav a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', () => {
         closeMenu();
         closeThemeStudio();
@@ -1708,6 +1718,15 @@
     }
     const activePill = $(activePillSelector);
     if (activePill) activePill.classList.add('active');
+
+    // Toggle active mobile bottom tab bar item cleanly!
+    $$('.mobile-bottom-nav .mobile-tab-item').forEach(item => {
+      item.classList.remove('active');
+    });
+    let activeMobileRoute = activeRoute;
+    if (activeRoute === 'archive') activeMobileRoute = 'archive';
+    const activeMobileTab = $(`.mobile-bottom-nav a[href="#${activeMobileRoute}"]`);
+    if (activeMobileTab) activeMobileTab.classList.add('active');
 
     // Trigger globe drawing if entering the World Atlas page
     if ((activeRoute === 'worldAtlas') && window.drawGlobeInstance) {
