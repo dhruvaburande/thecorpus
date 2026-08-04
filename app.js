@@ -1671,16 +1671,15 @@
       'research': ['.research-section'],
       'archive': [
         '.manuscript-status', '.feature-section', '.paths-section', 
-        '.controls-section', '.mood-section', '.about-section'
-      ],
-      'about': ['.about-section']
+        '.controls-section', '.mood-section'
+      ]
     };
 
     const activeRoute = routes[hash] ? hash : 'worldAtlas';
 
     const allViews = [
       '.hero-shell', '.manuscript-status', '.feature-section', '.paths-section',
-      '.atlas-section', '.eras-section', '.poet-index-section', '.about-section',
+      '.atlas-section', '.eras-section', '.poet-index-section',
       '.research-section', '.controls-section', '.mood-section'
     ];
     allViews.forEach(sel => {
@@ -1697,7 +1696,7 @@
       renderFeatured();
     }
 
-    if (targetHash && (targetHash === '#worldAtlas' || targetHash === '#archive' || targetHash === '#about')) {
+    if (targetHash && (targetHash === '#worldAtlas' || targetHash === '#archive')) {
       const el = $(targetHash);
       if (el) {
         requestAnimationFrame(() => {
